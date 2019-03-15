@@ -11,7 +11,7 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocument;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public abstract class DAbstractTableImpl extends DReferenceableObjectImpl implements DAbstractTable {
+public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAbstractTable {
 	/**
 	 * The default value of the '{@link #getCaption() <em>Caption</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,9 +101,9 @@ public abstract class DAbstractTableImpl extends DReferenceableObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocument getDocument() {
-		DDocument document = basicGetDocument();
-		return document != null && document.eIsProxy() ? (DDocument)eResolveProxy((InternalEObject)document) : document;
+	public DDocumentTemplate getDocument() {
+		DDocumentTemplate document = basicGetDocument();
+		return document != null && document.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)document) : document;
 	}
 
 	/**
@@ -111,7 +111,7 @@ public abstract class DAbstractTableImpl extends DReferenceableObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocument basicGetDocument() {
+	public DDocumentTemplate basicGetDocument() {
 		// TODO: implement this method to return the 'Document' reference
 		// -> do not perform proxy resolution
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -123,7 +123,7 @@ public abstract class DAbstractTableImpl extends DReferenceableObjectImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDocument(DDocument newDocument) {
+	public void setDocument(DDocumentTemplate newDocument) {
 		// TODO: implement this method to set the 'Document' reference
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -158,7 +158,7 @@ public abstract class DAbstractTableImpl extends DReferenceableObjectImpl implem
 				setCaption((String)newValue);
 				return;
 			case docPackage.DABSTRACT_TABLE__DOCUMENT:
-				setDocument((DDocument)newValue);
+				setDocument((DDocumentTemplate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,7 +176,7 @@ public abstract class DAbstractTableImpl extends DReferenceableObjectImpl implem
 				setCaption(CAPTION_EDEFAULT);
 				return;
 			case docPackage.DABSTRACT_TABLE__DOCUMENT:
-				setDocument((DDocument)null);
+				setDocument((DDocumentTemplate)null);
 				return;
 		}
 		super.eUnset(featureID);

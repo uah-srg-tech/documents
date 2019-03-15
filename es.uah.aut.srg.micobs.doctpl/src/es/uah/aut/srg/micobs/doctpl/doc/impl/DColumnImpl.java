@@ -16,6 +16,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -23,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -36,12 +38,33 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DColumnImpl#getSpan <em>Span</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DColumnImpl#getCells <em>Cells</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DColumnImpl extends MinimalEObjectImpl.Container implements DColumn {
+	/**
+	 * The default value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpan()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SPAN_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpan()
+	 * @generated
+	 * @ordered
+	 */
+	protected String span = SPAN_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getCells() <em>Cells</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -69,6 +92,27 @@ public class DColumnImpl extends MinimalEObjectImpl.Container implements DColumn
 	@Override
 	protected EClass eStaticClass() {
 		return docPackage.Literals.DCOLUMN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getSpan() {
+		return span;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSpan(String newSpan) {
+		String oldSpan = span;
+		span = newSpan;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DCOLUMN__SPAN, oldSpan, span));
 	}
 
 	/**
@@ -105,6 +149,8 @@ public class DColumnImpl extends MinimalEObjectImpl.Container implements DColumn
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case docPackage.DCOLUMN__SPAN:
+				return getSpan();
 			case docPackage.DCOLUMN__CELLS:
 				return getCells();
 		}
@@ -120,6 +166,9 @@ public class DColumnImpl extends MinimalEObjectImpl.Container implements DColumn
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case docPackage.DCOLUMN__SPAN:
+				setSpan((String)newValue);
+				return;
 			case docPackage.DCOLUMN__CELLS:
 				getCells().clear();
 				getCells().addAll((Collection<? extends DCell>)newValue);
@@ -136,6 +185,9 @@ public class DColumnImpl extends MinimalEObjectImpl.Container implements DColumn
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case docPackage.DCOLUMN__SPAN:
+				setSpan(SPAN_EDEFAULT);
+				return;
 			case docPackage.DCOLUMN__CELLS:
 				getCells().clear();
 				return;
@@ -151,10 +203,28 @@ public class DColumnImpl extends MinimalEObjectImpl.Container implements DColumn
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case docPackage.DCOLUMN__SPAN:
+				return SPAN_EDEFAULT == null ? span != null : !SPAN_EDEFAULT.equals(span);
 			case docPackage.DCOLUMN__CELLS:
 				return cells != null && !cells.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (span: ");
+		result.append(span);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DColumnImpl

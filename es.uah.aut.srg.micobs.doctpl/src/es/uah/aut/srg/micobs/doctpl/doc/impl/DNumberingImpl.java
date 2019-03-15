@@ -10,13 +10,13 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DColumn;
-import es.uah.aut.srg.micobs.doctpl.doc.DRow;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractNum;
+import es.uah.aut.srg.micobs.doctpl.doc.DNum;
+import es.uah.aut.srg.micobs.doctpl.doc.DNumbering;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -24,7 +24,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -32,55 +31,45 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>DRow</b></em>'.
+ * An implementation of the model object '<em><b>DNumbering</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRowImpl#getSpan <em>Span</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRowImpl#getColumns <em>Columns</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DNumberingImpl#getAbstractNum <em>Abstract Num</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DNumberingImpl#getNum <em>Num</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
+public class DNumberingImpl extends MinimalEObjectImpl.Container implements DNumbering {
 	/**
-	 * The default value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * The cached value of the '{@link #getAbstractNum() <em>Abstract Num</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpan()
+	 * @see #getAbstractNum()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SPAN_EDEFAULT = null;
+	protected EList<DAbstractNum> abstractNum;
 
 	/**
-	 * The cached value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * The cached value of the '{@link #getNum() <em>Num</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpan()
+	 * @see #getNum()
 	 * @generated
 	 * @ordered
 	 */
-	protected String span = SPAN_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getColumns() <em>Columns</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColumns()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DColumn> columns;
+	protected EList<DNum> num;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DRowImpl() {
+	protected DNumberingImpl() {
 		super();
 	}
 
@@ -91,7 +80,7 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return docPackage.Literals.DROW;
+		return docPackage.Literals.DNUMBERING;
 	}
 
 	/**
@@ -99,32 +88,23 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSpan() {
-		return span;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSpan(String newSpan) {
-		String oldSpan = span;
-		span = newSpan;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DROW__SPAN, oldSpan, span));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<DColumn> getColumns() {
-		if (columns == null) {
-			columns = new EObjectContainmentEList<DColumn>(DColumn.class, this, docPackage.DROW__COLUMNS);
+	public EList<DAbstractNum> getAbstractNum() {
+		if (abstractNum == null) {
+			abstractNum = new EObjectContainmentEList<DAbstractNum>(DAbstractNum.class, this, docPackage.DNUMBERING__ABSTRACT_NUM);
 		}
-		return columns;
+		return abstractNum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<DNum> getNum() {
+		if (num == null) {
+			num = new EObjectContainmentEList<DNum>(DNum.class, this, docPackage.DNUMBERING__NUM);
+		}
+		return num;
 	}
 
 	/**
@@ -135,8 +115,10 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case docPackage.DROW__COLUMNS:
-				return ((InternalEList<?>)getColumns()).basicRemove(otherEnd, msgs);
+			case docPackage.DNUMBERING__ABSTRACT_NUM:
+				return ((InternalEList<?>)getAbstractNum()).basicRemove(otherEnd, msgs);
+			case docPackage.DNUMBERING__NUM:
+				return ((InternalEList<?>)getNum()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -149,10 +131,10 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DROW__SPAN:
-				return getSpan();
-			case docPackage.DROW__COLUMNS:
-				return getColumns();
+			case docPackage.DNUMBERING__ABSTRACT_NUM:
+				return getAbstractNum();
+			case docPackage.DNUMBERING__NUM:
+				return getNum();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -166,12 +148,13 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DROW__SPAN:
-				setSpan((String)newValue);
+			case docPackage.DNUMBERING__ABSTRACT_NUM:
+				getAbstractNum().clear();
+				getAbstractNum().addAll((Collection<? extends DAbstractNum>)newValue);
 				return;
-			case docPackage.DROW__COLUMNS:
-				getColumns().clear();
-				getColumns().addAll((Collection<? extends DColumn>)newValue);
+			case docPackage.DNUMBERING__NUM:
+				getNum().clear();
+				getNum().addAll((Collection<? extends DNum>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -185,11 +168,11 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DROW__SPAN:
-				setSpan(SPAN_EDEFAULT);
+			case docPackage.DNUMBERING__ABSTRACT_NUM:
+				getAbstractNum().clear();
 				return;
-			case docPackage.DROW__COLUMNS:
-				getColumns().clear();
+			case docPackage.DNUMBERING__NUM:
+				getNum().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -203,28 +186,12 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DROW__SPAN:
-				return SPAN_EDEFAULT == null ? span != null : !SPAN_EDEFAULT.equals(span);
-			case docPackage.DROW__COLUMNS:
-				return columns != null && !columns.isEmpty();
+			case docPackage.DNUMBERING__ABSTRACT_NUM:
+				return abstractNum != null && !abstractNum.isEmpty();
+			case docPackage.DNUMBERING__NUM:
+				return num != null && !num.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (span: ");
-		result.append(span);
-		result.append(')');
-		return result.toString();
-	}
-
-} //DRowImpl
+} //DNumberingImpl

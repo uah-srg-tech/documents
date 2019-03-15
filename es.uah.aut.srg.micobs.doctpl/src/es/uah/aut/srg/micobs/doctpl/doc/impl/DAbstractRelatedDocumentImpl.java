@@ -11,7 +11,7 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocument;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -185,9 +185,9 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocument getRefDocument() {
-		DDocument refDocument = basicGetRefDocument();
-		return refDocument != null && refDocument.eIsProxy() ? (DDocument)eResolveProxy((InternalEObject)refDocument) : refDocument;
+	public DDocumentTemplate getRefDocument() {
+		DDocumentTemplate refDocument = basicGetRefDocument();
+		return refDocument != null && refDocument.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)refDocument) : refDocument;
 	}
 
 	/**
@@ -195,7 +195,7 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocument basicGetRefDocument() {
+	public DDocumentTemplate basicGetRefDocument() {
 		// TODO: implement this method to return the 'Ref Document' reference
 		// -> do not perform proxy resolution
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -207,7 +207,7 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRefDocument(DDocument newRefDocument) {
+	public void setRefDocument(DDocumentTemplate newRefDocument) {
 		// TODO: implement this method to set the 'Ref Document' reference
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -252,7 +252,7 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 				setRevision((String)newValue);
 				return;
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
-				setRefDocument((DDocument)newValue);
+				setRefDocument((DDocumentTemplate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -276,7 +276,7 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 				setRevision(REVISION_EDEFAULT);
 				return;
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
-				setRefDocument((DDocument)null);
+				setRefDocument((DDocumentTemplate)null);
 				return;
 		}
 		super.eUnset(featureID);

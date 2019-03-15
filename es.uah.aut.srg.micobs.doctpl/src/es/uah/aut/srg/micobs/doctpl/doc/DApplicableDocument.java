@@ -37,12 +37,12 @@ public interface DApplicableDocument extends DAbstractRelatedDocument {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Document</em>' reference.
-	 * @see #setDocument(DDocument)
+	 * @see #setDocument(DDocumentTemplate)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDApplicableDocument_Document()
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	DDocument getDocument();
+	DDocumentTemplate getDocument();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument#getDocument <em>Document</em>}' reference.
@@ -52,6 +52,6 @@ public interface DApplicableDocument extends DAbstractRelatedDocument {
 	 * @see #getDocument()
 	 * @generated
 	 */
-	void setDocument(DDocument value);
+	void setDocument(DDocumentTemplate value);
 
 } // DApplicableDocument

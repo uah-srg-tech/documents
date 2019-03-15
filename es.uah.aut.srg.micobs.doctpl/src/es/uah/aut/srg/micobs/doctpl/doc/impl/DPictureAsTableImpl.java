@@ -10,49 +10,55 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DText;
+import es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>DText</b></em>'.
+ * An implementation of the model object '<em><b>DPicture As Table</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DTextImpl#getContent <em>Content</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DPictureAsTableImpl#getReference <em>Reference</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
+public abstract class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureAsTable {
 	/**
-	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute list.
+	 * The default value of the '{@link #getReference() <em>Reference</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContent()
+	 * @see #getReference()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> content;
+	protected static final String REFERENCE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReference() <em>Reference</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReference()
+	 * @generated
+	 * @ordered
+	 */
+	protected String reference = REFERENCE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DTextImpl() {
+	protected DPictureAsTableImpl() {
 		super();
 	}
 
@@ -63,7 +69,7 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return docPackage.Literals.DTEXT;
+		return docPackage.Literals.DPICTURE_AS_TABLE;
 	}
 
 	/**
@@ -71,11 +77,20 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getContent() {
-		if (content == null) {
-			content = new EDataTypeUniqueEList<String>(String.class, this, docPackage.DTEXT__CONTENT);
-		}
-		return content;
+	public String getReference() {
+		return reference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReference(String newReference) {
+		String oldReference = reference;
+		reference = newReference;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DPICTURE_AS_TABLE__REFERENCE, oldReference, reference));
 	}
 
 	/**
@@ -86,8 +101,8 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DTEXT__CONTENT:
-				return getContent();
+			case docPackage.DPICTURE_AS_TABLE__REFERENCE:
+				return getReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -97,13 +112,11 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DTEXT__CONTENT:
-				getContent().clear();
-				getContent().addAll((Collection<? extends String>)newValue);
+			case docPackage.DPICTURE_AS_TABLE__REFERENCE:
+				setReference((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -117,8 +130,8 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DTEXT__CONTENT:
-				getContent().clear();
+			case docPackage.DPICTURE_AS_TABLE__REFERENCE:
+				setReference(REFERENCE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -132,8 +145,8 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DTEXT__CONTENT:
-				return content != null && !content.isEmpty();
+			case docPackage.DPICTURE_AS_TABLE__REFERENCE:
+				return REFERENCE_EDEFAULT == null ? reference != null : !REFERENCE_EDEFAULT.equals(reference);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -148,10 +161,10 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (content: ");
-		result.append(content);
+		result.append(" (reference: ");
+		result.append(reference);
 		result.append(')');
 		return result.toString();
 	}
 
-} //DTextImpl
+} //DPictureAsTableImpl

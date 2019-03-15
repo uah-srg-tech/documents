@@ -10,16 +10,17 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>DCell</b></em>'.
+ * A representation of the model object '<em><b>DParagraph Content</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDCell()
- * @model
+ * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraphContent()
+ * @model abstract="true"
  * @generated
  */
-public interface DCell extends DBody {
-} // DCell
+public interface DParagraphContent extends EObject {
+} // DParagraphContent

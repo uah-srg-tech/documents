@@ -10,25 +10,27 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DCell;
+import es.uah.aut.srg.micobs.doctpl.doc.DParagraphContent;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>DCell</b></em>'.
+ * An implementation of the model object '<em><b>DParagraph Content</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class DCellImpl extends DBodyImpl implements DCell {
+public abstract class DParagraphContentImpl extends MinimalEObjectImpl.Container implements DParagraphContent {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DCellImpl() {
+	protected DParagraphContentImpl() {
 		super();
 	}
 
@@ -39,7 +41,7 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return docPackage.Literals.DCELL;
+		return docPackage.Literals.DPARAGRAPH_CONTENT;
 	}
 
-} //DCellImpl
+} //DParagraphContentImpl

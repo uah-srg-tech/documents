@@ -11,11 +11,13 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DParagraph;
-import es.uah.aut.srg.micobs.doctpl.doc.DText;
+import es.uah.aut.srg.micobs.doctpl.doc.DParagraphContent;
+import es.uah.aut.srg.micobs.doctpl.doc.DParagraphProperties;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -23,8 +25,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -36,21 +37,31 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DParagraphImpl#getText <em>Text</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DParagraphImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DParagraphImpl#getContent <em>Content</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DParagraphImpl extends MinimalEObjectImpl.Container implements DParagraph {
+public class DParagraphImpl extends DBodyContentImpl implements DParagraph {
 	/**
-	 * The cached value of the '{@link #getText() <em>Text</em>}' containment reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getText()
+	 * @see #getProperties()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DText> text;
+	protected DParagraphProperties properties;
+	/**
+	 * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContent()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DParagraphContent> content;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,11 +87,54 @@ public class DParagraphImpl extends MinimalEObjectImpl.Container implements DPar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DText> getText() {
-		if (text == null) {
-			text = new EObjectContainmentEList<DText>(DText.class, this, docPackage.DPARAGRAPH__TEXT);
+	public DParagraphProperties getProperties() {
+		return properties;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetProperties(DParagraphProperties newProperties, NotificationChain msgs) {
+		DParagraphProperties oldProperties = properties;
+		properties = newProperties;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, docPackage.DPARAGRAPH__PROPERTIES, oldProperties, newProperties);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return text;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProperties(DParagraphProperties newProperties) {
+		if (newProperties != properties) {
+			NotificationChain msgs = null;
+			if (properties != null)
+				msgs = ((InternalEObject)properties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - docPackage.DPARAGRAPH__PROPERTIES, null, msgs);
+			if (newProperties != null)
+				msgs = ((InternalEObject)newProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - docPackage.DPARAGRAPH__PROPERTIES, null, msgs);
+			msgs = basicSetProperties(newProperties, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DPARAGRAPH__PROPERTIES, newProperties, newProperties));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<DParagraphContent> getContent() {
+		if (content == null) {
+			content = new EObjectContainmentEList<DParagraphContent>(DParagraphContent.class, this, docPackage.DPARAGRAPH__CONTENT);
+		}
+		return content;
 	}
 
 	/**
@@ -91,8 +145,10 @@ public class DParagraphImpl extends MinimalEObjectImpl.Container implements DPar
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__TEXT:
-				return ((InternalEList<?>)getText()).basicRemove(otherEnd, msgs);
+			case docPackage.DPARAGRAPH__PROPERTIES:
+				return basicSetProperties(null, msgs);
+			case docPackage.DPARAGRAPH__CONTENT:
+				return ((InternalEList<?>)getContent()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -105,8 +161,10 @@ public class DParagraphImpl extends MinimalEObjectImpl.Container implements DPar
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__TEXT:
-				return getText();
+			case docPackage.DPARAGRAPH__PROPERTIES:
+				return getProperties();
+			case docPackage.DPARAGRAPH__CONTENT:
+				return getContent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,9 +178,12 @@ public class DParagraphImpl extends MinimalEObjectImpl.Container implements DPar
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__TEXT:
-				getText().clear();
-				getText().addAll((Collection<? extends DText>)newValue);
+			case docPackage.DPARAGRAPH__PROPERTIES:
+				setProperties((DParagraphProperties)newValue);
+				return;
+			case docPackage.DPARAGRAPH__CONTENT:
+				getContent().clear();
+				getContent().addAll((Collection<? extends DParagraphContent>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,8 +197,11 @@ public class DParagraphImpl extends MinimalEObjectImpl.Container implements DPar
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__TEXT:
-				getText().clear();
+			case docPackage.DPARAGRAPH__PROPERTIES:
+				setProperties((DParagraphProperties)null);
+				return;
+			case docPackage.DPARAGRAPH__CONTENT:
+				getContent().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -151,8 +215,10 @@ public class DParagraphImpl extends MinimalEObjectImpl.Container implements DPar
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__TEXT:
-				return text != null && !text.isEmpty();
+			case docPackage.DPARAGRAPH__PROPERTIES:
+				return properties != null;
+			case docPackage.DPARAGRAPH__CONTENT:
+				return content != null && !content.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

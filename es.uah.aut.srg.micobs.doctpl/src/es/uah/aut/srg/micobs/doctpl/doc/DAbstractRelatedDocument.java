@@ -118,12 +118,12 @@ public interface DAbstractRelatedDocument extends DReferenceableObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ref Document</em>' reference.
-	 * @see #setRefDocument(DDocument)
+	 * @see #setRefDocument(DDocumentTemplate)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractRelatedDocument_RefDocument()
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	DDocument getRefDocument();
+	DDocumentTemplate getRefDocument();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getRefDocument <em>Ref Document</em>}' reference.
@@ -133,6 +133,6 @@ public interface DAbstractRelatedDocument extends DReferenceableObject {
 	 * @see #getRefDocument()
 	 * @generated
 	 */
-	void setRefDocument(DDocument value);
+	void setRefDocument(DDocumentTemplate value);
 
 } // DAbstractRelatedDocument

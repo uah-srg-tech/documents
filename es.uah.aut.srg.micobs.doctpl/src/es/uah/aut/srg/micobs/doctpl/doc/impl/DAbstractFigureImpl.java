@@ -11,7 +11,7 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocument;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public abstract class DAbstractFigureImpl extends DReferenceableObjectImpl implements DAbstractFigure {
+public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DAbstractFigure {
 	/**
 	 * The default value of the '{@link #getReference() <em>Reference</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -143,9 +143,9 @@ public abstract class DAbstractFigureImpl extends DReferenceableObjectImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocument getDocument() {
-		DDocument document = basicGetDocument();
-		return document != null && document.eIsProxy() ? (DDocument)eResolveProxy((InternalEObject)document) : document;
+	public DDocumentTemplate getDocument() {
+		DDocumentTemplate document = basicGetDocument();
+		return document != null && document.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)document) : document;
 	}
 
 	/**
@@ -153,7 +153,7 @@ public abstract class DAbstractFigureImpl extends DReferenceableObjectImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocument basicGetDocument() {
+	public DDocumentTemplate basicGetDocument() {
 		// TODO: implement this method to return the 'Document' reference
 		// -> do not perform proxy resolution
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -165,7 +165,7 @@ public abstract class DAbstractFigureImpl extends DReferenceableObjectImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDocument(DDocument newDocument) {
+	public void setDocument(DDocumentTemplate newDocument) {
 		// TODO: implement this method to set the 'Document' reference
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -205,7 +205,7 @@ public abstract class DAbstractFigureImpl extends DReferenceableObjectImpl imple
 				setCaption((String)newValue);
 				return;
 			case docPackage.DABSTRACT_FIGURE__DOCUMENT:
-				setDocument((DDocument)newValue);
+				setDocument((DDocumentTemplate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,7 +226,7 @@ public abstract class DAbstractFigureImpl extends DReferenceableObjectImpl imple
 				setCaption(CAPTION_EDEFAULT);
 				return;
 			case docPackage.DABSTRACT_FIGURE__DOCUMENT:
-				setDocument((DDocument)null);
+				setDocument((DDocumentTemplate)null);
 				return;
 		}
 		super.eUnset(featureID);

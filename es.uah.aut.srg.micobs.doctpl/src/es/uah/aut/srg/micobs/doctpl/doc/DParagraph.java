@@ -12,8 +12,6 @@ package es.uah.aut.srg.micobs.doctpl.doc;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>DParagraph</b></em>'.
@@ -23,28 +21,55 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getText <em>Text</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getProperties <em>Properties</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getContent <em>Content</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraph()
  * @model
  * @generated
  */
-public interface DParagraph extends EObject {
+public interface DParagraph extends DBodyContent {
 	/**
-	 * Returns the value of the '<em><b>Text</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DText}.
+	 * Returns the value of the '<em><b>Properties</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Text</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Properties</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Text</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraph_Text()
+	 * @return the value of the '<em>Properties</em>' containment reference.
+	 * @see #setProperties(DParagraphProperties)
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraph_Properties()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DText> getText();
+	DParagraphProperties getProperties();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getProperties <em>Properties</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Properties</em>' containment reference.
+	 * @see #getProperties()
+	 * @generated
+	 */
+	void setProperties(DParagraphProperties value);
+
+	/**
+	 * Returns the value of the '<em><b>Content</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DParagraphContent}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Content</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Content</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraph_Content()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<DParagraphContent> getContent();
 
 } // DParagraph

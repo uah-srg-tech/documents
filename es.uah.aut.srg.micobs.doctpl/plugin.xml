@@ -22,4 +22,12 @@
             genModel="model/doc.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated body -->
+      <package
+            uri="http://srg.aut.uah.es/micobs/doctpl/body"
+            class="es.uah.aut.srg.micobs.doctpl.body.bodyPackage"
+            genModel="model/body.genmodel"/>
+   </extension>
+
 </plugin>

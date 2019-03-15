@@ -10,8 +10,8 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DColumn;
-import es.uah.aut.srg.micobs.doctpl.doc.DRow;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractNum;
+import es.uah.aut.srg.micobs.doctpl.doc.DLevel;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import java.util.Collection;
@@ -32,55 +32,55 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>DRow</b></em>'.
+ * An implementation of the model object '<em><b>DAbstract Num</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRowImpl#getSpan <em>Span</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRowImpl#getColumns <em>Columns</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractNumImpl#getId <em>Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractNumImpl#getLevel <em>Level</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
+public class DAbstractNumImpl extends MinimalEObjectImpl.Container implements DAbstractNum {
 	/**
-	 * The default value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpan()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SPAN_EDEFAULT = null;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpan()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String span = SPAN_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getColumns() <em>Columns</em>}' containment reference list.
+	 * The cached value of the '{@link #getLevel() <em>Level</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getColumns()
+	 * @see #getLevel()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DColumn> columns;
+	protected EList<DLevel> level;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DRowImpl() {
+	protected DAbstractNumImpl() {
 		super();
 	}
 
@@ -91,7 +91,7 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return docPackage.Literals.DROW;
+		return docPackage.Literals.DABSTRACT_NUM;
 	}
 
 	/**
@@ -99,8 +99,8 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSpan() {
-		return span;
+	public String getId() {
+		return id;
 	}
 
 	/**
@@ -108,11 +108,11 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSpan(String newSpan) {
-		String oldSpan = span;
-		span = newSpan;
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DROW__SPAN, oldSpan, span));
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DABSTRACT_NUM__ID, oldId, id));
 	}
 
 	/**
@@ -120,11 +120,11 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DColumn> getColumns() {
-		if (columns == null) {
-			columns = new EObjectContainmentEList<DColumn>(DColumn.class, this, docPackage.DROW__COLUMNS);
+	public EList<DLevel> getLevel() {
+		if (level == null) {
+			level = new EObjectContainmentEList<DLevel>(DLevel.class, this, docPackage.DABSTRACT_NUM__LEVEL);
 		}
-		return columns;
+		return level;
 	}
 
 	/**
@@ -135,8 +135,8 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case docPackage.DROW__COLUMNS:
-				return ((InternalEList<?>)getColumns()).basicRemove(otherEnd, msgs);
+			case docPackage.DABSTRACT_NUM__LEVEL:
+				return ((InternalEList<?>)getLevel()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -149,10 +149,10 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DROW__SPAN:
-				return getSpan();
-			case docPackage.DROW__COLUMNS:
-				return getColumns();
+			case docPackage.DABSTRACT_NUM__ID:
+				return getId();
+			case docPackage.DABSTRACT_NUM__LEVEL:
+				return getLevel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -166,12 +166,12 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DROW__SPAN:
-				setSpan((String)newValue);
+			case docPackage.DABSTRACT_NUM__ID:
+				setId((String)newValue);
 				return;
-			case docPackage.DROW__COLUMNS:
-				getColumns().clear();
-				getColumns().addAll((Collection<? extends DColumn>)newValue);
+			case docPackage.DABSTRACT_NUM__LEVEL:
+				getLevel().clear();
+				getLevel().addAll((Collection<? extends DLevel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -185,11 +185,11 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DROW__SPAN:
-				setSpan(SPAN_EDEFAULT);
+			case docPackage.DABSTRACT_NUM__ID:
+				setId(ID_EDEFAULT);
 				return;
-			case docPackage.DROW__COLUMNS:
-				getColumns().clear();
+			case docPackage.DABSTRACT_NUM__LEVEL:
+				getLevel().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -203,10 +203,10 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DROW__SPAN:
-				return SPAN_EDEFAULT == null ? span != null : !SPAN_EDEFAULT.equals(span);
-			case docPackage.DROW__COLUMNS:
-				return columns != null && !columns.isEmpty();
+			case docPackage.DABSTRACT_NUM__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case docPackage.DABSTRACT_NUM__LEVEL:
+				return level != null && !level.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -221,10 +221,10 @@ public class DRowImpl extends MinimalEObjectImpl.Container implements DRow {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (span: ");
-		result.append(span);
+		result.append(" (id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}
 
-} //DRowImpl
+} //DAbstractNumImpl

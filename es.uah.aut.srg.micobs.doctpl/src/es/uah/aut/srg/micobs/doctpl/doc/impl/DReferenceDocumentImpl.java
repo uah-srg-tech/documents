@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DDocument;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
@@ -55,9 +55,9 @@ public class DReferenceDocumentImpl extends DAbstractRelatedDocumentImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocument getDocument() {
-		DDocument document = basicGetDocument();
-		return document != null && document.eIsProxy() ? (DDocument)eResolveProxy((InternalEObject)document) : document;
+	public DDocumentTemplate getDocument() {
+		DDocumentTemplate document = basicGetDocument();
+		return document != null && document.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)document) : document;
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class DReferenceDocumentImpl extends DAbstractRelatedDocumentImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocument basicGetDocument() {
+	public DDocumentTemplate basicGetDocument() {
 		// TODO: implement this method to return the 'Document' reference
 		// -> do not perform proxy resolution
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -77,7 +77,7 @@ public class DReferenceDocumentImpl extends DAbstractRelatedDocumentImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDocument(DDocument newDocument) {
+	public void setDocument(DDocumentTemplate newDocument) {
 		// TODO: implement this method to set the 'Document' reference
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -107,7 +107,7 @@ public class DReferenceDocumentImpl extends DAbstractRelatedDocumentImpl impleme
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case docPackage.DREFERENCE_DOCUMENT__DOCUMENT:
-				setDocument((DDocument)newValue);
+				setDocument((DDocumentTemplate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,7 +122,7 @@ public class DReferenceDocumentImpl extends DAbstractRelatedDocumentImpl impleme
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case docPackage.DREFERENCE_DOCUMENT__DOCUMENT:
-				setDocument((DDocument)null);
+				setDocument((DDocumentTemplate)null);
 				return;
 		}
 		super.eUnset(featureID);

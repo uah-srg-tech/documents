@@ -29,7 +29,7 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  * @model abstract="true"
  * @generated
  */
-public interface DAbstractFigure extends DReferenceableObject {
+public interface DAbstractFigure extends DBodyContent, DReferenceableObject {
 	/**
 	 * Returns the value of the '<em><b>Reference</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,12 +91,12 @@ public interface DAbstractFigure extends DReferenceableObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Document</em>' reference.
-	 * @see #setDocument(DDocument)
+	 * @see #setDocument(DDocumentTemplate)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractFigure_Document()
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	DDocument getDocument();
+	DDocumentTemplate getDocument();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getDocument <em>Document</em>}' reference.
@@ -106,6 +106,6 @@ public interface DAbstractFigure extends DReferenceableObject {
 	 * @see #getDocument()
 	 * @generated
 	 */
-	void setDocument(DDocument value);
+	void setDocument(DDocumentTemplate value);
 
 } // DAbstractFigure

@@ -16,35 +16,35 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>DText</b></em>'.
+ * A representation of the model object '<em><b>DBody</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DText#getContent <em>Content</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DBody#getContent <em>Content</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDText()
+ * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDBody()
  * @model
  * @generated
  */
-public interface DText extends EObject {
+public interface DBody extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Content</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Content</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DBodyContent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Content</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Content</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDText_Content()
-	 * @model required="true"
+	 * @return the value of the '<em>Content</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDBody_Content()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<String> getContent();
+	EList<DBodyContent> getContent();
 
-} // DText
+} // DBody

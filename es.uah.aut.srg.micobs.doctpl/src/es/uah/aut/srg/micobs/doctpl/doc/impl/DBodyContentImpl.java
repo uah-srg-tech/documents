@@ -10,25 +10,27 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DCell;
+import es.uah.aut.srg.micobs.doctpl.doc.DBodyContent;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>DCell</b></em>'.
+ * An implementation of the model object '<em><b>DBody Content</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class DCellImpl extends DBodyImpl implements DCell {
+public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container implements DBodyContent {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DCellImpl() {
+	protected DBodyContentImpl() {
 		super();
 	}
 
@@ -39,7 +41,7 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return docPackage.Literals.DCELL;
+		return docPackage.Literals.DBODY_CONTENT;
 	}
 
-} //DCellImpl
+} //DBodyContentImpl

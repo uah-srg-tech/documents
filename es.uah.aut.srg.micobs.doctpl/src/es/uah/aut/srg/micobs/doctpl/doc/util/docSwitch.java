@@ -74,9 +74,9 @@ public class docSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case docPackage.DDOCUMENT: {
-				DDocument dDocument = (DDocument)theEObject;
-				T result = caseDDocument(dDocument);
+			case docPackage.DDOCUMENT_TEMPLATE: {
+				DDocumentTemplate dDocumentTemplate = (DDocumentTemplate)theEObject;
+				T result = caseDDocumentTemplate(dDocumentTemplate);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -106,6 +106,7 @@ public class docSwitch<T> extends Switch<T> {
 			case docPackage.DABSTRACT_FIGURE: {
 				DAbstractFigure dAbstractFigure = (DAbstractFigure)theEObject;
 				T result = caseDAbstractFigure(dAbstractFigure);
+				if (result == null) result = caseDBodyContent(dAbstractFigure);
 				if (result == null) result = caseDReferenceableObject(dAbstractFigure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -114,6 +115,7 @@ public class docSwitch<T> extends Switch<T> {
 				DFigure dFigure = (DFigure)theEObject;
 				T result = caseDFigure(dFigure);
 				if (result == null) result = caseDAbstractFigure(dFigure);
+				if (result == null) result = caseDBodyContent(dFigure);
 				if (result == null) result = caseDReferenceableObject(dFigure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -121,23 +123,26 @@ public class docSwitch<T> extends Switch<T> {
 			case docPackage.DABSTRACT_TABLE: {
 				DAbstractTable dAbstractTable = (DAbstractTable)theEObject;
 				T result = caseDAbstractTable(dAbstractTable);
+				if (result == null) result = caseDBodyContent(dAbstractTable);
 				if (result == null) result = caseDReferenceableObject(dAbstractTable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case docPackage.DTABLE_FROM_PICTURE: {
-				DTableFromPicture dTableFromPicture = (DTableFromPicture)theEObject;
-				T result = caseDTableFromPicture(dTableFromPicture);
-				if (result == null) result = caseDAbstractTable(dTableFromPicture);
-				if (result == null) result = caseDReferenceableObject(dTableFromPicture);
+			case docPackage.DPICTURE_AS_TABLE: {
+				DPictureAsTable dPictureAsTable = (DPictureAsTable)theEObject;
+				T result = caseDPictureAsTable(dPictureAsTable);
+				if (result == null) result = caseDAbstractTable(dPictureAsTable);
+				if (result == null) result = caseDBodyContent(dPictureAsTable);
+				if (result == null) result = caseDReferenceableObject(dPictureAsTable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case docPackage.DTABLE: {
-				DTable dTable = (DTable)theEObject;
-				T result = caseDTable(dTable);
-				if (result == null) result = caseDAbstractTable(dTable);
-				if (result == null) result = caseDReferenceableObject(dTable);
+			case docPackage.DBASIC_TABLE: {
+				DBasicTable dBasicTable = (DBasicTable)theEObject;
+				T result = caseDBasicTable(dBasicTable);
+				if (result == null) result = caseDAbstractTable(dBasicTable);
+				if (result == null) result = caseDBodyContent(dBasicTable);
+				if (result == null) result = caseDReferenceableObject(dBasicTable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -156,13 +161,45 @@ public class docSwitch<T> extends Switch<T> {
 			case docPackage.DCELL: {
 				DCell dCell = (DCell)theEObject;
 				T result = caseDCell(dCell);
-				if (result == null) result = caseDParagraph(dCell);
+				if (result == null) result = caseDBody(dCell);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case docPackage.DBODY: {
+				DBody dBody = (DBody)theEObject;
+				T result = caseDBody(dBody);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case docPackage.DBODY_CONTENT: {
+				DBodyContent dBodyContent = (DBodyContent)theEObject;
+				T result = caseDBodyContent(dBodyContent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case docPackage.DPARAGRAPH: {
 				DParagraph dParagraph = (DParagraph)theEObject;
 				T result = caseDParagraph(dParagraph);
+				if (result == null) result = caseDBodyContent(dParagraph);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case docPackage.DPARAGRAPH_PROPERTIES: {
+				DParagraphProperties dParagraphProperties = (DParagraphProperties)theEObject;
+				T result = caseDParagraphProperties(dParagraphProperties);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case docPackage.DPARAGRAPH_CONTENT: {
+				DParagraphContent dParagraphContent = (DParagraphContent)theEObject;
+				T result = caseDParagraphContent(dParagraphContent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case docPackage.DRUN: {
+				DRun dRun = (DRun)theEObject;
+				T result = caseDRun(dRun);
+				if (result == null) result = caseDParagraphContent(dRun);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -172,9 +209,40 @@ public class docSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case docPackage.DHYPERLINK: {
+				DHyperlink dHyperlink = (DHyperlink)theEObject;
+				T result = caseDHyperlink(dHyperlink);
+				if (result == null) result = caseDParagraphContent(dHyperlink);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case docPackage.DREFERENCEABLE_OBJECT: {
 				DReferenceableObject dReferenceableObject = (DReferenceableObject)theEObject;
 				T result = caseDReferenceableObject(dReferenceableObject);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case docPackage.DNUMBERING: {
+				DNumbering dNumbering = (DNumbering)theEObject;
+				T result = caseDNumbering(dNumbering);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case docPackage.DABSTRACT_NUM: {
+				DAbstractNum dAbstractNum = (DAbstractNum)theEObject;
+				T result = caseDAbstractNum(dAbstractNum);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case docPackage.DLEVEL: {
+				DLevel dLevel = (DLevel)theEObject;
+				T result = caseDLevel(dLevel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case docPackage.DNUM: {
+				DNum dNum = (DNum)theEObject;
+				T result = caseDNum(dNum);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -183,17 +251,17 @@ public class docSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>DDocument</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>DDocument Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>DDocument</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>DDocument Template</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDDocument(DDocument object) {
+	public T caseDDocumentTemplate(DDocumentTemplate object) {
 		return null;
 	}
 
@@ -288,32 +356,32 @@ public class docSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>DTable From Picture</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>DPicture As Table</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>DTable From Picture</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>DPicture As Table</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDTableFromPicture(DTableFromPicture object) {
+	public T caseDPictureAsTable(DPictureAsTable object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>DTable</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>DBasic Table</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>DTable</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>DBasic Table</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDTable(DTable object) {
+	public T caseDBasicTable(DBasicTable object) {
 		return null;
 	}
 
@@ -363,6 +431,36 @@ public class docSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DBody</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DBody</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDBody(DBody object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DBody Content</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DBody Content</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDBodyContent(DBodyContent object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>DParagraph</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -374,6 +472,51 @@ public class docSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDParagraph(DParagraph object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DParagraph Properties</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DParagraph Properties</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDParagraphProperties(DParagraphProperties object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DParagraph Content</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DParagraph Content</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDParagraphContent(DParagraphContent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DRun</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DRun</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDRun(DRun object) {
 		return null;
 	}
 
@@ -393,6 +536,21 @@ public class docSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DHyperlink</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DHyperlink</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDHyperlink(DHyperlink object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>DReferenceable Object</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -404,6 +562,66 @@ public class docSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDReferenceableObject(DReferenceableObject object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DNumbering</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DNumbering</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDNumbering(DNumbering object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DAbstract Num</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DAbstract Num</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDAbstractNum(DAbstractNum object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DLevel</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DLevel</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDLevel(DLevel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DNum</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DNum</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDNum(DNum object) {
 		return null;
 	}
 

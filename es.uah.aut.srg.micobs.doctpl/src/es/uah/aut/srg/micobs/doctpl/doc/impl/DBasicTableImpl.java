@@ -10,33 +10,52 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.DBasicTable;
+import es.uah.aut.srg.micobs.doctpl.doc.DRow;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>DApplicable Document</b></em>'.
+ * An implementation of the model object '<em><b>DBasic Table</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DApplicableDocumentImpl#getDocument <em>Document</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DBasicTableImpl#getRows <em>Rows</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DApplicableDocumentImpl extends DAbstractRelatedDocumentImpl implements DApplicableDocument {
+public abstract class DBasicTableImpl extends DAbstractTableImpl implements DBasicTable {
+	/**
+	 * The cached value of the '{@link #getRows() <em>Rows</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRows()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DRow> rows;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DApplicableDocumentImpl() {
+	protected DBasicTableImpl() {
 		super();
 	}
 
@@ -47,7 +66,7 @@ public class DApplicableDocumentImpl extends DAbstractRelatedDocumentImpl implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return docPackage.Literals.DAPPLICABLE_DOCUMENT;
+		return docPackage.Literals.DBASIC_TABLE;
 	}
 
 	/**
@@ -55,9 +74,11 @@ public class DApplicableDocumentImpl extends DAbstractRelatedDocumentImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocumentTemplate getDocument() {
-		DDocumentTemplate document = basicGetDocument();
-		return document != null && document.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)document) : document;
+	public EList<DRow> getRows() {
+		if (rows == null) {
+			rows = new EObjectContainmentEList<DRow>(DRow.class, this, docPackage.DBASIC_TABLE__ROWS);
+		}
+		return rows;
 	}
 
 	/**
@@ -65,22 +86,13 @@ public class DApplicableDocumentImpl extends DAbstractRelatedDocumentImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocumentTemplate basicGetDocument() {
-		// TODO: implement this method to return the 'Document' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDocument(DDocumentTemplate newDocument) {
-		// TODO: implement this method to set the 'Document' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case docPackage.DBASIC_TABLE__ROWS:
+				return ((InternalEList<?>)getRows()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -91,9 +103,8 @@ public class DApplicableDocumentImpl extends DAbstractRelatedDocumentImpl implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DAPPLICABLE_DOCUMENT__DOCUMENT:
-				if (resolve) return getDocument();
-				return basicGetDocument();
+			case docPackage.DBASIC_TABLE__ROWS:
+				return getRows();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -103,11 +114,13 @@ public class DApplicableDocumentImpl extends DAbstractRelatedDocumentImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DAPPLICABLE_DOCUMENT__DOCUMENT:
-				setDocument((DDocumentTemplate)newValue);
+			case docPackage.DBASIC_TABLE__ROWS:
+				getRows().clear();
+				getRows().addAll((Collection<? extends DRow>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -121,8 +134,8 @@ public class DApplicableDocumentImpl extends DAbstractRelatedDocumentImpl implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DAPPLICABLE_DOCUMENT__DOCUMENT:
-				setDocument((DDocumentTemplate)null);
+			case docPackage.DBASIC_TABLE__ROWS:
+				getRows().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -136,10 +149,10 @@ public class DApplicableDocumentImpl extends DAbstractRelatedDocumentImpl implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DAPPLICABLE_DOCUMENT__DOCUMENT:
-				return basicGetDocument() != null;
+			case docPackage.DBASIC_TABLE__ROWS:
+				return rows != null && !rows.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //DApplicableDocumentImpl
+} //DBasicTableImpl

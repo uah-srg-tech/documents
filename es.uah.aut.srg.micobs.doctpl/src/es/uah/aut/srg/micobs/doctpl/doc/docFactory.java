@@ -75,6 +75,15 @@ public interface docFactory extends EFactory {
 	DCell createDCell();
 
 	/**
+	 * Returns a new object of class '<em>DBody</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DBody</em>'.
+	 * @generated
+	 */
+	DBody createDBody();
+
+	/**
 	 * Returns a new object of class '<em>DParagraph</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,6 +91,24 @@ public interface docFactory extends EFactory {
 	 * @generated
 	 */
 	DParagraph createDParagraph();
+
+	/**
+	 * Returns a new object of class '<em>DParagraph Properties</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DParagraph Properties</em>'.
+	 * @generated
+	 */
+	DParagraphProperties createDParagraphProperties();
+
+	/**
+	 * Returns a new object of class '<em>DRun</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DRun</em>'.
+	 * @generated
+	 */
+	DRun createDRun();
 
 	/**
 	 * Returns a new object of class '<em>DText</em>'.
@@ -93,6 +120,15 @@ public interface docFactory extends EFactory {
 	DText createDText();
 
 	/**
+	 * Returns a new object of class '<em>DHyperlink</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DHyperlink</em>'.
+	 * @generated
+	 */
+	DHyperlink createDHyperlink();
+
+	/**
 	 * Returns a new object of class '<em>DReferenceable Object</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -100,6 +136,42 @@ public interface docFactory extends EFactory {
 	 * @generated
 	 */
 	DReferenceableObject createDReferenceableObject();
+
+	/**
+	 * Returns a new object of class '<em>DNumbering</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DNumbering</em>'.
+	 * @generated
+	 */
+	DNumbering createDNumbering();
+
+	/**
+	 * Returns a new object of class '<em>DAbstract Num</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DAbstract Num</em>'.
+	 * @generated
+	 */
+	DAbstractNum createDAbstractNum();
+
+	/**
+	 * Returns a new object of class '<em>DLevel</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DLevel</em>'.
+	 * @generated
+	 */
+	DLevel createDLevel();
+
+	/**
+	 * Returns a new object of class '<em>DNum</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DNum</em>'.
+	 * @generated
+	 */
+	DNum createDNum();
 
 	/**
 	 * Returns the package supported by this factory.
