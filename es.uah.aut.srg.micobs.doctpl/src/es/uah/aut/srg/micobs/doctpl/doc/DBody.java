@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DBody#getContent <em>Content</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DBody#getBContent <em>BContent</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDBody()
@@ -32,19 +32,19 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface DBody extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Content</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>BContent</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DBodyContent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Content</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>BContent</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDBody_Content()
+	 * @return the value of the '<em>BContent</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDBody_BContent()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<DBodyContent> getContent();
+	EList<DBodyContent> getBContent();
 
 } // DBody

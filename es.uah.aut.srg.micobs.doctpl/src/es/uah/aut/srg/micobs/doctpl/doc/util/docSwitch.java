@@ -80,6 +80,14 @@ public class docSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case docPackage.DSECTION: {
+				DSection dSection = (DSection)theEObject;
+				T result = caseDSection(dSection);
+				if (result == null) result = caseDParagraph(dSection);
+				if (result == null) result = caseDBodyContent(dSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case docPackage.DABSTRACT_RELATED_DOCUMENT: {
 				DAbstractRelatedDocument dAbstractRelatedDocument = (DAbstractRelatedDocument)theEObject;
 				T result = caseDAbstractRelatedDocument(dAbstractRelatedDocument);
@@ -262,6 +270,21 @@ public class docSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDDocumentTemplate(DDocumentTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DSection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DSection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDSection(DSection object) {
 		return null;
 	}
 

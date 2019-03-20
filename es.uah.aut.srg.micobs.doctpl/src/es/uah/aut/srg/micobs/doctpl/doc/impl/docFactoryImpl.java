@@ -65,6 +65,7 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case docPackage.DSECTION: return createDSection();
 			case docPackage.DAPPLICABLE_DOCUMENT: return createDApplicableDocument();
 			case docPackage.DREFERENCE_DOCUMENT: return createDReferenceDocument();
 			case docPackage.DROW: return createDRow();
@@ -114,6 +115,16 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DSection createDSection() {
+		DSectionImpl dSection = new DSectionImpl();
+		return dSection;
 	}
 
 	/**

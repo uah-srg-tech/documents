@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate#getReferenceDocuments <em>Reference Documents</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate#getFigures <em>Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate#getTables <em>Tables</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate#getSections <em>Sections</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDDocumentTemplate()
@@ -97,5 +98,21 @@ public interface DDocumentTemplate extends EObject {
 	 * @generated
 	 */
 	EList<DAbstractTable> getTables();
+
+	/**
+	 * Returns the value of the '<em><b>Sections</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DSection}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sections</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sections</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDDocumentTemplate_Sections()
+	 * @model transient="true" volatile="true" derived="true"
+	 * @generated
+	 */
+	EList<DSection> getSections();
 
 } // DDocumentTemplate

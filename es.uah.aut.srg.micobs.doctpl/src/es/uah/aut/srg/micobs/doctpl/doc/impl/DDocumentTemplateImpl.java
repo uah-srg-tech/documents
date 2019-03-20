@@ -14,6 +14,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.DSection;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import java.util.Collection;
@@ -36,6 +37,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DDocumentTemplateImpl#getReferenceDocuments <em>Reference Documents</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DDocumentTemplateImpl#getFigures <em>Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DDocumentTemplateImpl#getTables <em>Tables</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DDocumentTemplateImpl#getSections <em>Sections</em>}</li>
  * </ul>
  *
  * @generated
@@ -117,6 +119,19 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DSection> getSections() {
+		// TODO: implement this method to return the 'Sections' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -128,6 +143,8 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 				return getFigures();
 			case docPackage.DDOCUMENT_TEMPLATE__TABLES:
 				return getTables();
+			case docPackage.DDOCUMENT_TEMPLATE__SECTIONS:
+				return getSections();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,6 +174,10 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 				getTables().clear();
 				getTables().addAll((Collection<? extends DAbstractTable>)newValue);
 				return;
+			case docPackage.DDOCUMENT_TEMPLATE__SECTIONS:
+				getSections().clear();
+				getSections().addAll((Collection<? extends DSection>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -181,6 +202,9 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 			case docPackage.DDOCUMENT_TEMPLATE__TABLES:
 				getTables().clear();
 				return;
+			case docPackage.DDOCUMENT_TEMPLATE__SECTIONS:
+				getSections().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -201,6 +225,8 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 				return !getFigures().isEmpty();
 			case docPackage.DDOCUMENT_TEMPLATE__TABLES:
 				return !getTables().isEmpty();
+			case docPackage.DDOCUMENT_TEMPLATE__SECTIONS:
+				return !getSections().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

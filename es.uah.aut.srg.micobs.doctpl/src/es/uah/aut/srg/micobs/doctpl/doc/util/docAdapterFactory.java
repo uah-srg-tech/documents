@@ -80,6 +80,10 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 				return createDDocumentTemplateAdapter();
 			}
 			@Override
+			public Adapter caseDSection(DSection object) {
+				return createDSectionAdapter();
+			}
+			@Override
 			public Adapter caseDAbstractRelatedDocument(DAbstractRelatedDocument object) {
 				return createDAbstractRelatedDocumentAdapter();
 			}
@@ -206,6 +210,20 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDDocumentTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DSection <em>DSection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DSection
+	 * @generated
+	 */
+	public Adapter createDSectionAdapter() {
 		return null;
 	}
 

@@ -30,6 +30,15 @@ public interface docFactory extends EFactory {
 	docFactory eINSTANCE = es.uah.aut.srg.micobs.doctpl.doc.impl.docFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>DSection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DSection</em>'.
+	 * @generated
+	 */
+	DSection createDSection();
+
+	/**
 	 * Returns a new object of class '<em>DApplicable Document</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

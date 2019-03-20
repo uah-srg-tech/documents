@@ -36,22 +36,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DBodyImpl#getContent <em>Content</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DBodyImpl#getBContent <em>BContent</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 	/**
-	 * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference list.
+	 * The cached value of the '{@link #getBContent() <em>BContent</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContent()
+	 * @see #getBContent()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DBodyContent> content;
-
+	protected EList<DBodyContent> bContent;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,11 +75,11 @@ public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DBodyContent> getContent() {
-		if (content == null) {
-			content = new EObjectContainmentEList<DBodyContent>(DBodyContent.class, this, docPackage.DBODY__CONTENT);
+	public EList<DBodyContent> getBContent() {
+		if (bContent == null) {
+			bContent = new EObjectContainmentEList<DBodyContent>(DBodyContent.class, this, docPackage.DBODY__BCONTENT);
 		}
-		return content;
+		return bContent;
 	}
 
 	/**
@@ -91,8 +90,8 @@ public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case docPackage.DBODY__CONTENT:
-				return ((InternalEList<?>)getContent()).basicRemove(otherEnd, msgs);
+			case docPackage.DBODY__BCONTENT:
+				return ((InternalEList<?>)getBContent()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -105,8 +104,8 @@ public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DBODY__CONTENT:
-				return getContent();
+			case docPackage.DBODY__BCONTENT:
+				return getBContent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,9 +119,9 @@ public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DBODY__CONTENT:
-				getContent().clear();
-				getContent().addAll((Collection<? extends DBodyContent>)newValue);
+			case docPackage.DBODY__BCONTENT:
+				getBContent().clear();
+				getBContent().addAll((Collection<? extends DBodyContent>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,8 +135,8 @@ public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DBODY__CONTENT:
-				getContent().clear();
+			case docPackage.DBODY__BCONTENT:
+				getBContent().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -151,8 +150,8 @@ public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DBODY__CONTENT:
-				return content != null && !content.isEmpty();
+			case docPackage.DBODY__BCONTENT:
+				return bContent != null && !bContent.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
