@@ -51,6 +51,7 @@ public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 	 * @ordered
 	 */
 	protected EList<DBodyContent> bContent;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

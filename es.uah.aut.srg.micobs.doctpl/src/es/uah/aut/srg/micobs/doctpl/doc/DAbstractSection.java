@@ -10,50 +10,43 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc;
 
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>DSection</b></em>'.
+ * A representation of the model object '<em><b>DAbstract Section</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DSection#getOutlineLvl <em>Outline Lvl</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DSection#getDocument <em>Document</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection#getSubsections <em>Subsections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection#getDocument <em>Document</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDSection()
+ * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractSection()
  * @model
  * @generated
  */
-public interface DSection extends DParagraph {
+public interface DAbstractSection extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Outline Lvl</b></em>' attribute.
+	 * Returns the value of the '<em><b>Subsections</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Outline Lvl</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Subsections</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Outline Lvl</em>' attribute.
-	 * @see #setOutlineLvl(String)
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDSection_OutlineLvl()
-	 * @model required="true"
+	 * @return the value of the '<em>Subsections</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractSection_Subsections()
+	 * @model transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	String getOutlineLvl();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DSection#getOutlineLvl <em>Outline Lvl</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Outline Lvl</em>' attribute.
-	 * @see #getOutlineLvl()
-	 * @generated
-	 */
-	void setOutlineLvl(String value);
+	EList<DAbstractSection> getSubsections();
 
 	/**
 	 * Returns the value of the '<em><b>Document</b></em>' reference.
@@ -65,14 +58,14 @@ public interface DSection extends DParagraph {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Document</em>' reference.
 	 * @see #setDocument(DDocumentTemplate)
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDSection_Document()
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractSection_Document()
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
 	DDocumentTemplate getDocument();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DSection#getDocument <em>Document</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection#getDocument <em>Document</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Document</em>' reference.
@@ -81,4 +74,4 @@ public interface DSection extends DParagraph {
 	 */
 	void setDocument(DDocumentTemplate value);
 
-} // DSection
+} // DAbstractSection

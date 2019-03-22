@@ -11,8 +11,8 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractNum;
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.DBasicTable;
@@ -21,21 +21,22 @@ import es.uah.aut.srg.micobs.doctpl.doc.DBodyContent;
 import es.uah.aut.srg.micobs.doctpl.doc.DCell;
 import es.uah.aut.srg.micobs.doctpl.doc.DColumn;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.DEnumerate;
 import es.uah.aut.srg.micobs.doctpl.doc.DFigure;
+import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DHyperlink;
-import es.uah.aut.srg.micobs.doctpl.doc.DLevel;
-import es.uah.aut.srg.micobs.doctpl.doc.DNum;
-import es.uah.aut.srg.micobs.doctpl.doc.DNumberFormat;
-import es.uah.aut.srg.micobs.doctpl.doc.DNumbering;
+import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DItemize;
+import es.uah.aut.srg.micobs.doctpl.doc.DListContent;
+import es.uah.aut.srg.micobs.doctpl.doc.DListItem;
 import es.uah.aut.srg.micobs.doctpl.doc.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doc.DParagraphContent;
-import es.uah.aut.srg.micobs.doctpl.doc.DParagraphProperties;
 import es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable;
 import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doc.DRow;
 import es.uah.aut.srg.micobs.doctpl.doc.DRun;
-import es.uah.aut.srg.micobs.doctpl.doc.DSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DRunFormat;
 import es.uah.aut.srg.micobs.doctpl.doc.DText;
 import es.uah.aut.srg.micobs.doctpl.doc.docFactory;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
@@ -61,13 +62,6 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * @generated
 	 */
 	private EClass dDocumentTemplateEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dSectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,6 +145,27 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass dAbstractSectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dFixedSectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dInstantiableSectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass dBodyEClass = null;
 
 	/**
@@ -166,13 +181,6 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * @generated
 	 */
 	private EClass dParagraphEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dParagraphPropertiesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,35 +222,35 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dNumberingEClass = null;
+	private EClass dListContentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dAbstractNumEClass = null;
+	private EClass dListItemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dLevelEClass = null;
+	private EClass dItemizeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dNumEClass = null;
+	private EClass dEnumerateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum dNumberFormatEEnum = null;
+	private EEnum dRunFormatEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -357,33 +365,6 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 */
 	public EReference getDDocumentTemplate_Sections() {
 		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDSection() {
-		return dSectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDSection_OutlineLvl() {
-		return (EAttribute)dSectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDSection_Document() {
-		return (EReference)dSectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -643,6 +624,60 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDAbstractSection() {
+		return dAbstractSectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDAbstractSection_Subsections() {
+		return (EReference)dAbstractSectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDAbstractSection_Document() {
+		return (EReference)dAbstractSectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDFixedSection() {
+		return dFixedSectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDInstantiableSection() {
+		return dInstantiableSectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDInstantiableSection_Name() {
+		return (EAttribute)dInstantiableSectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDBody() {
 		return dBodyEClass;
 	}
@@ -679,44 +714,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDParagraph_Properties() {
-		return (EReference)dParagraphEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDParagraph_PContent() {
-		return (EReference)dParagraphEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDParagraphProperties() {
-		return dParagraphPropertiesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDParagraphProperties_Number() {
-		return (EReference)dParagraphPropertiesEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDParagraphProperties_Level() {
-		return (EReference)dParagraphPropertiesEClass.getEStructuralFeatures().get(1);
+		return (EReference)dParagraphEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -744,6 +743,15 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 */
 	public EReference getDRun_Text() {
 		return (EReference)dRunEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDRun_Format() {
+		return (EAttribute)dRunEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -805,8 +813,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDNumbering() {
-		return dNumberingEClass;
+	public EClass getDListContent() {
+		return dListContentEClass;
 	}
 
 	/**
@@ -814,8 +822,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDNumbering_AbstractNum() {
-		return (EReference)dNumberingEClass.getEStructuralFeatures().get(0);
+	public EReference getDListContent_Items() {
+		return (EReference)dListContentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -823,8 +831,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDNumbering_Num() {
-		return (EReference)dNumberingEClass.getEStructuralFeatures().get(1);
+	public EClass getDListItem() {
+		return dListItemEClass;
 	}
 
 	/**
@@ -832,8 +840,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDAbstractNum() {
-		return dAbstractNumEClass;
+	public EReference getDListItem_Paragraph() {
+		return (EReference)dListItemEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -841,8 +849,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDAbstractNum_Id() {
-		return (EAttribute)dAbstractNumEClass.getEStructuralFeatures().get(0);
+	public EReference getDListItem_Sublist() {
+		return (EReference)dListItemEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -850,8 +858,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDAbstractNum_Level() {
-		return (EReference)dAbstractNumEClass.getEStructuralFeatures().get(1);
+	public EClass getDItemize() {
+		return dItemizeEClass;
 	}
 
 	/**
@@ -859,8 +867,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDLevel() {
-		return dLevelEClass;
+	public EClass getDEnumerate() {
+		return dEnumerateEClass;
 	}
 
 	/**
@@ -868,53 +876,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDLevel_Id() {
-		return (EAttribute)dLevelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDLevel_Format() {
-		return (EAttribute)dLevelEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDNum() {
-		return dNumEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDNum_Id() {
-		return (EAttribute)dNumEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDNum_AbstractNum() {
-		return (EReference)dNumEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getDNumberFormat() {
-		return dNumberFormatEEnum;
+	public EEnum getDRunFormat() {
+		return dRunFormatEEnum;
 	}
 
 	/**
@@ -951,10 +914,6 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__FIGURES);
 		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__TABLES);
 		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__SECTIONS);
-
-		dSectionEClass = createEClass(DSECTION);
-		createEAttribute(dSectionEClass, DSECTION__OUTLINE_LVL);
-		createEReference(dSectionEClass, DSECTION__DOCUMENT);
 
 		dAbstractRelatedDocumentEClass = createEClass(DABSTRACT_RELATED_DOCUMENT);
 		createEAttribute(dAbstractRelatedDocumentEClass, DABSTRACT_RELATED_DOCUMENT__TITLE);
@@ -995,23 +954,28 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 
 		dCellEClass = createEClass(DCELL);
 
+		dAbstractSectionEClass = createEClass(DABSTRACT_SECTION);
+		createEReference(dAbstractSectionEClass, DABSTRACT_SECTION__SUBSECTIONS);
+		createEReference(dAbstractSectionEClass, DABSTRACT_SECTION__DOCUMENT);
+
+		dFixedSectionEClass = createEClass(DFIXED_SECTION);
+
+		dInstantiableSectionEClass = createEClass(DINSTANTIABLE_SECTION);
+		createEAttribute(dInstantiableSectionEClass, DINSTANTIABLE_SECTION__NAME);
+
 		dBodyEClass = createEClass(DBODY);
 		createEReference(dBodyEClass, DBODY__BCONTENT);
 
 		dBodyContentEClass = createEClass(DBODY_CONTENT);
 
 		dParagraphEClass = createEClass(DPARAGRAPH);
-		createEReference(dParagraphEClass, DPARAGRAPH__PROPERTIES);
 		createEReference(dParagraphEClass, DPARAGRAPH__PCONTENT);
-
-		dParagraphPropertiesEClass = createEClass(DPARAGRAPH_PROPERTIES);
-		createEReference(dParagraphPropertiesEClass, DPARAGRAPH_PROPERTIES__NUMBER);
-		createEReference(dParagraphPropertiesEClass, DPARAGRAPH_PROPERTIES__LEVEL);
 
 		dParagraphContentEClass = createEClass(DPARAGRAPH_CONTENT);
 
 		dRunEClass = createEClass(DRUN);
 		createEReference(dRunEClass, DRUN__TEXT);
+		createEAttribute(dRunEClass, DRUN__FORMAT);
 
 		dTextEClass = createEClass(DTEXT);
 		createEAttribute(dTextEClass, DTEXT__CONTENT);
@@ -1022,24 +986,19 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 
 		dReferenceableObjectEClass = createEClass(DREFERENCEABLE_OBJECT);
 
-		dNumberingEClass = createEClass(DNUMBERING);
-		createEReference(dNumberingEClass, DNUMBERING__ABSTRACT_NUM);
-		createEReference(dNumberingEClass, DNUMBERING__NUM);
+		dListContentEClass = createEClass(DLIST_CONTENT);
+		createEReference(dListContentEClass, DLIST_CONTENT__ITEMS);
 
-		dAbstractNumEClass = createEClass(DABSTRACT_NUM);
-		createEAttribute(dAbstractNumEClass, DABSTRACT_NUM__ID);
-		createEReference(dAbstractNumEClass, DABSTRACT_NUM__LEVEL);
+		dListItemEClass = createEClass(DLIST_ITEM);
+		createEReference(dListItemEClass, DLIST_ITEM__PARAGRAPH);
+		createEReference(dListItemEClass, DLIST_ITEM__SUBLIST);
 
-		dLevelEClass = createEClass(DLEVEL);
-		createEAttribute(dLevelEClass, DLEVEL__ID);
-		createEAttribute(dLevelEClass, DLEVEL__FORMAT);
+		dItemizeEClass = createEClass(DITEMIZE);
 
-		dNumEClass = createEClass(DNUM);
-		createEAttribute(dNumEClass, DNUM__ID);
-		createEReference(dNumEClass, DNUM__ABSTRACT_NUM);
+		dEnumerateEClass = createEClass(DENUMERATE);
 
 		// Create enums
-		dNumberFormatEEnum = createEEnum(DNUMBER_FORMAT);
+		dRunFormatEEnum = createEEnum(DRUN_FORMAT);
 	}
 
 	/**
@@ -1070,7 +1029,6 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		dSectionEClass.getESuperTypes().add(this.getDParagraph());
 		dAbstractRelatedDocumentEClass.getESuperTypes().add(this.getDReferenceableObject());
 		dApplicableDocumentEClass.getESuperTypes().add(this.getDAbstractRelatedDocument());
 		dReferenceDocumentEClass.getESuperTypes().add(this.getDAbstractRelatedDocument());
@@ -1082,9 +1040,14 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		dPictureAsTableEClass.getESuperTypes().add(this.getDAbstractTable());
 		dBasicTableEClass.getESuperTypes().add(this.getDAbstractTable());
 		dCellEClass.getESuperTypes().add(this.getDBody());
+		dFixedSectionEClass.getESuperTypes().add(this.getDAbstractSection());
+		dInstantiableSectionEClass.getESuperTypes().add(this.getDAbstractSection());
 		dParagraphEClass.getESuperTypes().add(this.getDBodyContent());
 		dRunEClass.getESuperTypes().add(this.getDParagraphContent());
 		dHyperlinkEClass.getESuperTypes().add(this.getDParagraphContent());
+		dListContentEClass.getESuperTypes().add(this.getDBodyContent());
+		dItemizeEClass.getESuperTypes().add(this.getDListContent());
+		dEnumerateEClass.getESuperTypes().add(this.getDListContent());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(dDocumentTemplateEClass, DDocumentTemplate.class, "DDocumentTemplate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1092,11 +1055,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		initEReference(getDDocumentTemplate_ReferenceDocuments(), this.getDApplicableDocument(), null, "referenceDocuments", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDDocumentTemplate_Figures(), this.getDAbstractFigure(), null, "figures", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDDocumentTemplate_Tables(), this.getDAbstractTable(), null, "tables", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getDDocumentTemplate_Sections(), this.getDSection(), null, "sections", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(dSectionEClass, DSection.class, "DSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDSection_OutlineLvl(), ecorePackage.getEString(), "outlineLvl", null, 1, 1, DSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDSection_Document(), this.getDDocumentTemplate(), null, "document", null, 1, 1, DSection.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDDocumentTemplate_Sections(), this.getDAbstractSection(), null, "sections", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(dAbstractRelatedDocumentEClass, DAbstractRelatedDocument.class, "DAbstractRelatedDocument", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDAbstractRelatedDocument_Title(), ecorePackage.getEString(), "title", null, 1, 1, DAbstractRelatedDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1137,23 +1096,28 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 
 		initEClass(dCellEClass, DCell.class, "DCell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(dAbstractSectionEClass, DAbstractSection.class, "DAbstractSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDAbstractSection_Subsections(), this.getDAbstractSection(), null, "subsections", null, 0, -1, DAbstractSection.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDAbstractSection_Document(), this.getDDocumentTemplate(), null, "document", null, 1, 1, DAbstractSection.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(dFixedSectionEClass, DFixedSection.class, "DFixedSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dInstantiableSectionEClass, DInstantiableSection.class, "DInstantiableSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDInstantiableSection_Name(), ecorePackage.getEString(), "name", null, 1, 1, DInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(dBodyEClass, DBody.class, "DBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDBody_BContent(), this.getDBodyContent(), null, "bContent", null, 1, -1, DBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dBodyContentEClass, DBodyContent.class, "DBodyContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dParagraphEClass, DParagraph.class, "DParagraph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDParagraph_Properties(), this.getDParagraphProperties(), null, "properties", null, 0, 1, DParagraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDParagraph_PContent(), this.getDParagraphContent(), null, "pContent", null, 1, -1, DParagraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(dParagraphPropertiesEClass, DParagraphProperties.class, "DParagraphProperties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDParagraphProperties_Number(), this.getDNum(), null, "number", null, 1, 1, DParagraphProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDParagraphProperties_Level(), this.getDLevel(), null, "level", null, 1, 1, DParagraphProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dParagraphContentEClass, DParagraphContent.class, "DParagraphContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dRunEClass, DRun.class, "DRun", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDRun_Text(), this.getDText(), null, "text", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Format(), this.getDRunFormat(), "format", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dTextEClass, DText.class, "DText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDText_Content(), ecorePackage.getEString(), "content", null, 1, -1, DText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1164,31 +1128,22 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 
 		initEClass(dReferenceableObjectEClass, DReferenceableObject.class, "DReferenceableObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(dNumberingEClass, DNumbering.class, "DNumbering", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDNumbering_AbstractNum(), this.getDAbstractNum(), null, "abstractNum", null, 0, -1, DNumbering.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDNumbering_Num(), this.getDNum(), null, "num", null, 0, -1, DNumbering.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dListContentEClass, DListContent.class, "DListContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDListContent_Items(), this.getDListItem(), null, "items", null, 1, -1, DListContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(dAbstractNumEClass, DAbstractNum.class, "DAbstractNum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDAbstractNum_Id(), ecorePackage.getEString(), "id", null, 1, 1, DAbstractNum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDAbstractNum_Level(), this.getDLevel(), null, "level", null, 1, -1, DAbstractNum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dListItemEClass, DListItem.class, "DListItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDListItem_Paragraph(), this.getDParagraph(), null, "paragraph", null, 1, -1, DListItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDListItem_Sublist(), this.getDListContent(), null, "sublist", null, 0, 1, DListItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(dLevelEClass, DLevel.class, "DLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDLevel_Id(), ecorePackage.getEString(), "id", null, 1, 1, DLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDLevel_Format(), this.getDNumberFormat(), "format", null, 1, 1, DLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dItemizeEClass, DItemize.class, "DItemize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(dNumEClass, DNum.class, "DNum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDNum_Id(), ecorePackage.getEString(), "id", null, 1, 1, DNum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDNum_AbstractNum(), this.getDAbstractNum(), null, "abstractNum", null, 1, 1, DNum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dEnumerateEClass, DEnumerate.class, "DEnumerate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
-		initEEnum(dNumberFormatEEnum, DNumberFormat.class, "DNumberFormat");
-		addEEnumLiteral(dNumberFormatEEnum, DNumberFormat.BULLET);
-		addEEnumLiteral(dNumberFormatEEnum, DNumberFormat.DECIMAL);
-		addEEnumLiteral(dNumberFormatEEnum, DNumberFormat.ORDINAL);
-		addEEnumLiteral(dNumberFormatEEnum, DNumberFormat.UPPER_ROMAN);
-		addEEnumLiteral(dNumberFormatEEnum, DNumberFormat.LOWER_ROMAN);
-		addEEnumLiteral(dNumberFormatEEnum, DNumberFormat.UPPER_LETTER);
-		addEEnumLiteral(dNumberFormatEEnum, DNumberFormat.LOWER_LETTER);
+		initEEnum(dRunFormatEEnum, DRunFormat.class, "DRunFormat");
+		addEEnumLiteral(dRunFormatEEnum, DRunFormat.BOLD);
+		addEEnumLiteral(dRunFormatEEnum, DRunFormat.ITALIC);
+		addEEnumLiteral(dRunFormatEEnum, DRunFormat.UNDERSCORE);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -21,6 +21,7 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getText <em>Text</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getFormat <em>Format</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun()
@@ -53,5 +54,34 @@ public interface DRun extends DParagraphContent {
 	 * @generated
 	 */
 	void setText(DText value);
+
+	/**
+	 * Returns the value of the '<em><b>Format</b></em>' attribute.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.doctpl.doc.DRunFormat}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Format</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Format</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormat
+	 * @see #setFormat(DRunFormat)
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun_Format()
+	 * @model
+	 * @generated
+	 */
+	DRunFormat getFormat();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getFormat <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Format</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormat
+	 * @see #getFormat()
+	 * @generated
+	 */
+	void setFormat(DRunFormat value);
 
 } // DRun

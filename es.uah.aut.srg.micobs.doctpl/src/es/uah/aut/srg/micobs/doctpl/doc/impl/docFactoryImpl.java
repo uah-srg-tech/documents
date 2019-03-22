@@ -65,23 +65,23 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case docPackage.DSECTION: return createDSection();
 			case docPackage.DAPPLICABLE_DOCUMENT: return createDApplicableDocument();
 			case docPackage.DREFERENCE_DOCUMENT: return createDReferenceDocument();
 			case docPackage.DROW: return createDRow();
 			case docPackage.DCOLUMN: return createDColumn();
 			case docPackage.DCELL: return createDCell();
+			case docPackage.DABSTRACT_SECTION: return createDAbstractSection();
+			case docPackage.DFIXED_SECTION: return createDFixedSection();
+			case docPackage.DINSTANTIABLE_SECTION: return createDInstantiableSection();
 			case docPackage.DBODY: return createDBody();
 			case docPackage.DPARAGRAPH: return createDParagraph();
-			case docPackage.DPARAGRAPH_PROPERTIES: return createDParagraphProperties();
 			case docPackage.DRUN: return createDRun();
 			case docPackage.DTEXT: return createDText();
 			case docPackage.DHYPERLINK: return createDHyperlink();
 			case docPackage.DREFERENCEABLE_OBJECT: return createDReferenceableObject();
-			case docPackage.DNUMBERING: return createDNumbering();
-			case docPackage.DABSTRACT_NUM: return createDAbstractNum();
-			case docPackage.DLEVEL: return createDLevel();
-			case docPackage.DNUM: return createDNum();
+			case docPackage.DLIST_ITEM: return createDListItem();
+			case docPackage.DITEMIZE: return createDItemize();
+			case docPackage.DENUMERATE: return createDEnumerate();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,8 +95,8 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case docPackage.DNUMBER_FORMAT:
-				return createDNumberFormatFromString(eDataType, initialValue);
+			case docPackage.DRUN_FORMAT:
+				return createDRunFormatFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -110,21 +110,11 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case docPackage.DNUMBER_FORMAT:
-				return convertDNumberFormatToString(eDataType, instanceValue);
+			case docPackage.DRUN_FORMAT:
+				return convertDRunFormatToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DSection createDSection() {
-		DSectionImpl dSection = new DSectionImpl();
-		return dSection;
 	}
 
 	/**
@@ -182,6 +172,36 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DAbstractSection createDAbstractSection() {
+		DAbstractSectionImpl dAbstractSection = new DAbstractSectionImpl();
+		return dAbstractSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DFixedSection createDFixedSection() {
+		DFixedSectionImpl dFixedSection = new DFixedSectionImpl();
+		return dFixedSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DInstantiableSection createDInstantiableSection() {
+		DInstantiableSectionImpl dInstantiableSection = new DInstantiableSectionImpl();
+		return dInstantiableSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DBody createDBody() {
 		DBodyImpl dBody = new DBodyImpl();
 		return dBody;
@@ -195,16 +215,6 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	public DParagraph createDParagraph() {
 		DParagraphImpl dParagraph = new DParagraphImpl();
 		return dParagraph;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DParagraphProperties createDParagraphProperties() {
-		DParagraphPropertiesImpl dParagraphProperties = new DParagraphPropertiesImpl();
-		return dParagraphProperties;
 	}
 
 	/**
@@ -252,9 +262,9 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DNumbering createDNumbering() {
-		DNumberingImpl dNumbering = new DNumberingImpl();
-		return dNumbering;
+	public DListItem createDListItem() {
+		DListItemImpl dListItem = new DListItemImpl();
+		return dListItem;
 	}
 
 	/**
@@ -262,9 +272,9 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DAbstractNum createDAbstractNum() {
-		DAbstractNumImpl dAbstractNum = new DAbstractNumImpl();
-		return dAbstractNum;
+	public DItemize createDItemize() {
+		DItemizeImpl dItemize = new DItemizeImpl();
+		return dItemize;
 	}
 
 	/**
@@ -272,9 +282,9 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DLevel createDLevel() {
-		DLevelImpl dLevel = new DLevelImpl();
-		return dLevel;
+	public DEnumerate createDEnumerate() {
+		DEnumerateImpl dEnumerate = new DEnumerateImpl();
+		return dEnumerate;
 	}
 
 	/**
@@ -282,18 +292,8 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DNum createDNum() {
-		DNumImpl dNum = new DNumImpl();
-		return dNum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DNumberFormat createDNumberFormatFromString(EDataType eDataType, String initialValue) {
-		DNumberFormat result = DNumberFormat.get(initialValue);
+	public DRunFormat createDRunFormatFromString(EDataType eDataType, String initialValue) {
+		DRunFormat result = DRunFormat.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -303,7 +303,7 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertDNumberFormatToString(EDataType eDataType, Object instanceValue) {
+	public String convertDRunFormatToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -11,13 +11,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tables" upperBound="-1"
         eType="#//DAbstractTable" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
-        eType="#//DSection" volatile="true" transient="true" derived="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DSection" eSuperTypes="#//DParagraph">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outlineLvl" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="document" lowerBound="1"
-        eType="#//DDocumentTemplate" volatile="true" transient="true" derived="true"/>
+        eType="#//DAbstractSection" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DAbstractRelatedDocument" abstract="true"
       eSuperTypes="#//DReferenceableObject">
@@ -70,26 +64,35 @@
         eType="#//DCell" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DCell" eSuperTypes="#//DBody"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DAbstractSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subsections" upperBound="-1"
+        eType="#//DAbstractSection" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="document" lowerBound="1"
+        eType="#//DDocumentTemplate" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DFixedSection" eSuperTypes="#//DAbstractSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DInstantiableSection" eSuperTypes="#//DAbstractSection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DBody">
     <eStructuralFeatures xsi:type="ecore:EReference" name="bContent" lowerBound="1"
         upperBound="-1" eType="#//DBodyContent" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DBodyContent" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="DParagraph" eSuperTypes="#//DBodyContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" eType="#//DParagraphProperties"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pContent" lowerBound="1"
         upperBound="-1" eType="#//DParagraphContent" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DParagraphProperties">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="number" lowerBound="1"
-        eType="#//DNum"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//DLevel"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DParagraphContent" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="DRun" eSuperTypes="#//DParagraphContent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="text" lowerBound="1" eType="#//DText"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="#//DRunFormat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DRunFormat">
+    <eLiterals name="bold"/>
+    <eLiterals name="italic" value="1"/>
+    <eLiterals name="underscore" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DText">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" lowerBound="1"
@@ -102,34 +105,16 @@
         eType="#//DReferenceableObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DReferenceableObject"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DNumbering">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractNum" upperBound="-1"
-        eType="#//DAbstractNum" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="num" upperBound="-1" eType="#//DNum"
+  <eClassifiers xsi:type="ecore:EClass" name="DListContent" abstract="true" eSuperTypes="#//DBodyContent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" upperBound="-1"
+        eType="#//DListItem" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DListItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraph" lowerBound="1"
+        upperBound="-1" eType="#//DParagraph" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sublist" eType="#//DListContent"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DAbstractNum">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" upperBound="-1"
-        eType="#//DLevel" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DLevel">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
-        eType="#//DNumberFormat"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DNum">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractNum" lowerBound="1"
-        eType="#//DAbstractNum"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DNumberFormat">
-    <eLiterals name="bullet"/>
-    <eLiterals name="decimal" value="1"/>
-    <eLiterals name="ordinal" value="2"/>
-    <eLiterals name="upperRoman" value="3"/>
-    <eLiterals name="lowerRoman" value="4" literal="lowerRoman"/>
-    <eLiterals name="upperLetter" value="5"/>
-    <eLiterals name="lowerLetter" value="6"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DItemize" eSuperTypes="#//DListContent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DEnumerate" eSuperTypes="#//DListContent"/>
 </ecore:EPackage>

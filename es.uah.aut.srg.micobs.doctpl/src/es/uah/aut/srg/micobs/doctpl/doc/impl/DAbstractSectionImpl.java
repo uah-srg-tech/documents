@@ -10,58 +10,40 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
-import es.uah.aut.srg.micobs.doctpl.doc.DSection;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>DSection</b></em>'.
+ * An implementation of the model object '<em><b>DAbstract Section</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl#getOutlineLvl <em>Outline Lvl</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl#getDocument <em>Document</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractSectionImpl#getSubsections <em>Subsections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractSectionImpl#getDocument <em>Document</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DSectionImpl extends DParagraphImpl implements DSection {
-	/**
-	 * The default value of the '{@link #getOutlineLvl() <em>Outline Lvl</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutlineLvl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String OUTLINE_LVL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getOutlineLvl() <em>Outline Lvl</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutlineLvl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String outlineLvl = OUTLINE_LVL_EDEFAULT;
-
+public class DAbstractSectionImpl extends MinimalEObjectImpl.Container implements DAbstractSection {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DSectionImpl() {
+	protected DAbstractSectionImpl() {
 		super();
 	}
 
@@ -72,7 +54,7 @@ public class DSectionImpl extends DParagraphImpl implements DSection {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return docPackage.Literals.DSECTION;
+		return docPackage.Literals.DABSTRACT_SECTION;
 	}
 
 	/**
@@ -80,20 +62,12 @@ public class DSectionImpl extends DParagraphImpl implements DSection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOutlineLvl() {
-		return outlineLvl;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOutlineLvl(String newOutlineLvl) {
-		String oldOutlineLvl = outlineLvl;
-		outlineLvl = newOutlineLvl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DSECTION__OUTLINE_LVL, oldOutlineLvl, outlineLvl));
+	public EList<DAbstractSection> getSubsections() {
+		// TODO: implement this method to return the 'Subsections' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -137,9 +111,9 @@ public class DSectionImpl extends DParagraphImpl implements DSection {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DSECTION__OUTLINE_LVL:
-				return getOutlineLvl();
-			case docPackage.DSECTION__DOCUMENT:
+			case docPackage.DABSTRACT_SECTION__SUBSECTIONS:
+				return getSubsections();
+			case docPackage.DABSTRACT_SECTION__DOCUMENT:
 				if (resolve) return getDocument();
 				return basicGetDocument();
 		}
@@ -151,13 +125,15 @@ public class DSectionImpl extends DParagraphImpl implements DSection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DSECTION__OUTLINE_LVL:
-				setOutlineLvl((String)newValue);
+			case docPackage.DABSTRACT_SECTION__SUBSECTIONS:
+				getSubsections().clear();
+				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
-			case docPackage.DSECTION__DOCUMENT:
+			case docPackage.DABSTRACT_SECTION__DOCUMENT:
 				setDocument((DDocumentTemplate)newValue);
 				return;
 		}
@@ -172,10 +148,10 @@ public class DSectionImpl extends DParagraphImpl implements DSection {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DSECTION__OUTLINE_LVL:
-				setOutlineLvl(OUTLINE_LVL_EDEFAULT);
+			case docPackage.DABSTRACT_SECTION__SUBSECTIONS:
+				getSubsections().clear();
 				return;
-			case docPackage.DSECTION__DOCUMENT:
+			case docPackage.DABSTRACT_SECTION__DOCUMENT:
 				setDocument((DDocumentTemplate)null);
 				return;
 		}
@@ -190,28 +166,12 @@ public class DSectionImpl extends DParagraphImpl implements DSection {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DSECTION__OUTLINE_LVL:
-				return OUTLINE_LVL_EDEFAULT == null ? outlineLvl != null : !OUTLINE_LVL_EDEFAULT.equals(outlineLvl);
-			case docPackage.DSECTION__DOCUMENT:
+			case docPackage.DABSTRACT_SECTION__SUBSECTIONS:
+				return !getSubsections().isEmpty();
+			case docPackage.DABSTRACT_SECTION__DOCUMENT:
 				return basicGetDocument() != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (outlineLvl: ");
-		result.append(outlineLvl);
-		result.append(')');
-		return result.toString();
-	}
-
-} //DSectionImpl
+} //DAbstractSectionImpl

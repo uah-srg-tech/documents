@@ -14,35 +14,35 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>DParagraph</b></em>'.
+ * A representation of the model object '<em><b>DList Content</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getPContent <em>PContent</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DListContent#getItems <em>Items</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraph()
- * @model
+ * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDListContent()
+ * @model abstract="true"
  * @generated
  */
-public interface DParagraph extends DBodyContent {
+public interface DListContent extends DBodyContent {
 	/**
-	 * Returns the value of the '<em><b>PContent</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DParagraphContent}.
+	 * Returns the value of the '<em><b>Items</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DListItem}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>PContent</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Items</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>PContent</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraph_PContent()
+	 * @return the value of the '<em>Items</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDListContent_Items()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<DParagraphContent> getPContent();
+	EList<DListItem> getItems();
 
-} // DParagraph
+} // DListContent

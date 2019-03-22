@@ -80,10 +80,6 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 				return createDDocumentTemplateAdapter();
 			}
 			@Override
-			public Adapter caseDSection(DSection object) {
-				return createDSectionAdapter();
-			}
-			@Override
 			public Adapter caseDAbstractRelatedDocument(DAbstractRelatedDocument object) {
 				return createDAbstractRelatedDocumentAdapter();
 			}
@@ -128,6 +124,18 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 				return createDCellAdapter();
 			}
 			@Override
+			public Adapter caseDAbstractSection(DAbstractSection object) {
+				return createDAbstractSectionAdapter();
+			}
+			@Override
+			public Adapter caseDFixedSection(DFixedSection object) {
+				return createDFixedSectionAdapter();
+			}
+			@Override
+			public Adapter caseDInstantiableSection(DInstantiableSection object) {
+				return createDInstantiableSectionAdapter();
+			}
+			@Override
 			public Adapter caseDBody(DBody object) {
 				return createDBodyAdapter();
 			}
@@ -138,10 +146,6 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDParagraph(DParagraph object) {
 				return createDParagraphAdapter();
-			}
-			@Override
-			public Adapter caseDParagraphProperties(DParagraphProperties object) {
-				return createDParagraphPropertiesAdapter();
 			}
 			@Override
 			public Adapter caseDParagraphContent(DParagraphContent object) {
@@ -164,20 +168,20 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 				return createDReferenceableObjectAdapter();
 			}
 			@Override
-			public Adapter caseDNumbering(DNumbering object) {
-				return createDNumberingAdapter();
+			public Adapter caseDListContent(DListContent object) {
+				return createDListContentAdapter();
 			}
 			@Override
-			public Adapter caseDAbstractNum(DAbstractNum object) {
-				return createDAbstractNumAdapter();
+			public Adapter caseDListItem(DListItem object) {
+				return createDListItemAdapter();
 			}
 			@Override
-			public Adapter caseDLevel(DLevel object) {
-				return createDLevelAdapter();
+			public Adapter caseDItemize(DItemize object) {
+				return createDItemizeAdapter();
 			}
 			@Override
-			public Adapter caseDNum(DNum object) {
-				return createDNumAdapter();
+			public Adapter caseDEnumerate(DEnumerate object) {
+				return createDEnumerateAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -210,20 +214,6 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDDocumentTemplateAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DSection <em>DSection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DSection
-	 * @generated
-	 */
-	public Adapter createDSectionAdapter() {
 		return null;
 	}
 
@@ -382,6 +372,48 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection <em>DAbstract Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection
+	 * @generated
+	 */
+	public Adapter createDAbstractSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DFixedSection <em>DFixed Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DFixedSection
+	 * @generated
+	 */
+	public Adapter createDFixedSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection <em>DInstantiable Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection
+	 * @generated
+	 */
+	public Adapter createDInstantiableSectionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DBody <em>DBody</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -420,20 +452,6 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDParagraphAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraphProperties <em>DParagraph Properties</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DParagraphProperties
-	 * @generated
-	 */
-	public Adapter createDParagraphPropertiesAdapter() {
 		return null;
 	}
 
@@ -508,58 +526,58 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DNumbering <em>DNumbering</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DListContent <em>DList Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DNumbering
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DListContent
 	 * @generated
 	 */
-	public Adapter createDNumberingAdapter() {
+	public Adapter createDListContentAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractNum <em>DAbstract Num</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DListItem <em>DList Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractNum
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DListItem
 	 * @generated
 	 */
-	public Adapter createDAbstractNumAdapter() {
+	public Adapter createDListItemAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DLevel <em>DLevel</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DItemize <em>DItemize</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DLevel
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DItemize
 	 * @generated
 	 */
-	public Adapter createDLevelAdapter() {
+	public Adapter createDItemizeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DNum <em>DNum</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DEnumerate <em>DEnumerate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DNum
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DEnumerate
 	 * @generated
 	 */
-	public Adapter createDNumAdapter() {
+	public Adapter createDEnumerateAdapter() {
 		return null;
 	}
 

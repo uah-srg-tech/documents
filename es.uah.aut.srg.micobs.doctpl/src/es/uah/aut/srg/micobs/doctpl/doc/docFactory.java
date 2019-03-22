@@ -30,15 +30,6 @@ public interface docFactory extends EFactory {
 	docFactory eINSTANCE = es.uah.aut.srg.micobs.doctpl.doc.impl.docFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>DSection</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DSection</em>'.
-	 * @generated
-	 */
-	DSection createDSection();
-
-	/**
 	 * Returns a new object of class '<em>DApplicable Document</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,6 +75,33 @@ public interface docFactory extends EFactory {
 	DCell createDCell();
 
 	/**
+	 * Returns a new object of class '<em>DAbstract Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DAbstract Section</em>'.
+	 * @generated
+	 */
+	DAbstractSection createDAbstractSection();
+
+	/**
+	 * Returns a new object of class '<em>DFixed Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DFixed Section</em>'.
+	 * @generated
+	 */
+	DFixedSection createDFixedSection();
+
+	/**
+	 * Returns a new object of class '<em>DInstantiable Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DInstantiable Section</em>'.
+	 * @generated
+	 */
+	DInstantiableSection createDInstantiableSection();
+
+	/**
 	 * Returns a new object of class '<em>DBody</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -100,15 +118,6 @@ public interface docFactory extends EFactory {
 	 * @generated
 	 */
 	DParagraph createDParagraph();
-
-	/**
-	 * Returns a new object of class '<em>DParagraph Properties</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DParagraph Properties</em>'.
-	 * @generated
-	 */
-	DParagraphProperties createDParagraphProperties();
 
 	/**
 	 * Returns a new object of class '<em>DRun</em>'.
@@ -147,40 +156,31 @@ public interface docFactory extends EFactory {
 	DReferenceableObject createDReferenceableObject();
 
 	/**
-	 * Returns a new object of class '<em>DNumbering</em>'.
+	 * Returns a new object of class '<em>DList Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DNumbering</em>'.
+	 * @return a new object of class '<em>DList Item</em>'.
 	 * @generated
 	 */
-	DNumbering createDNumbering();
+	DListItem createDListItem();
 
 	/**
-	 * Returns a new object of class '<em>DAbstract Num</em>'.
+	 * Returns a new object of class '<em>DItemize</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DAbstract Num</em>'.
+	 * @return a new object of class '<em>DItemize</em>'.
 	 * @generated
 	 */
-	DAbstractNum createDAbstractNum();
+	DItemize createDItemize();
 
 	/**
-	 * Returns a new object of class '<em>DLevel</em>'.
+	 * Returns a new object of class '<em>DEnumerate</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DLevel</em>'.
+	 * @return a new object of class '<em>DEnumerate</em>'.
 	 * @generated
 	 */
-	DLevel createDLevel();
-
-	/**
-	 * Returns a new object of class '<em>DNum</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DNum</em>'.
-	 * @generated
-	 */
-	DNum createDNum();
+	DEnumerate createDEnumerate();
 
 	/**
 	 * Returns the package supported by this factory.

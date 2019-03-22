@@ -10,9 +10,8 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractNum;
-import es.uah.aut.srg.micobs.doctpl.doc.DNum;
-import es.uah.aut.srg.micobs.doctpl.doc.DNumbering;
+import es.uah.aut.srg.micobs.doctpl.doc.DListContent;
+import es.uah.aut.srg.micobs.doctpl.doc.DListItem;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import java.util.Collection;
@@ -24,52 +23,39 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>DNumbering</b></em>'.
+ * An implementation of the model object '<em><b>DList Content</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DNumberingImpl#getAbstractNum <em>Abstract Num</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DNumberingImpl#getNum <em>Num</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DListContentImpl#getItems <em>Items</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DNumberingImpl extends MinimalEObjectImpl.Container implements DNumbering {
+public abstract class DListContentImpl extends DBodyContentImpl implements DListContent {
 	/**
-	 * The cached value of the '{@link #getAbstractNum() <em>Abstract Num</em>}' containment reference list.
+	 * The cached value of the '{@link #getItems() <em>Items</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAbstractNum()
+	 * @see #getItems()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DAbstractNum> abstractNum;
-
-	/**
-	 * The cached value of the '{@link #getNum() <em>Num</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNum()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DNum> num;
+	protected EList<DListItem> items;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DNumberingImpl() {
+	protected DListContentImpl() {
 		super();
 	}
 
@@ -80,7 +66,7 @@ public class DNumberingImpl extends MinimalEObjectImpl.Container implements DNum
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return docPackage.Literals.DNUMBERING;
+		return docPackage.Literals.DLIST_CONTENT;
 	}
 
 	/**
@@ -88,23 +74,11 @@ public class DNumberingImpl extends MinimalEObjectImpl.Container implements DNum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DAbstractNum> getAbstractNum() {
-		if (abstractNum == null) {
-			abstractNum = new EObjectContainmentEList<DAbstractNum>(DAbstractNum.class, this, docPackage.DNUMBERING__ABSTRACT_NUM);
+	public EList<DListItem> getItems() {
+		if (items == null) {
+			items = new EObjectContainmentEList<DListItem>(DListItem.class, this, docPackage.DLIST_CONTENT__ITEMS);
 		}
-		return abstractNum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<DNum> getNum() {
-		if (num == null) {
-			num = new EObjectContainmentEList<DNum>(DNum.class, this, docPackage.DNUMBERING__NUM);
-		}
-		return num;
+		return items;
 	}
 
 	/**
@@ -115,10 +89,8 @@ public class DNumberingImpl extends MinimalEObjectImpl.Container implements DNum
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case docPackage.DNUMBERING__ABSTRACT_NUM:
-				return ((InternalEList<?>)getAbstractNum()).basicRemove(otherEnd, msgs);
-			case docPackage.DNUMBERING__NUM:
-				return ((InternalEList<?>)getNum()).basicRemove(otherEnd, msgs);
+			case docPackage.DLIST_CONTENT__ITEMS:
+				return ((InternalEList<?>)getItems()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -131,10 +103,8 @@ public class DNumberingImpl extends MinimalEObjectImpl.Container implements DNum
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DNUMBERING__ABSTRACT_NUM:
-				return getAbstractNum();
-			case docPackage.DNUMBERING__NUM:
-				return getNum();
+			case docPackage.DLIST_CONTENT__ITEMS:
+				return getItems();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -148,13 +118,9 @@ public class DNumberingImpl extends MinimalEObjectImpl.Container implements DNum
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DNUMBERING__ABSTRACT_NUM:
-				getAbstractNum().clear();
-				getAbstractNum().addAll((Collection<? extends DAbstractNum>)newValue);
-				return;
-			case docPackage.DNUMBERING__NUM:
-				getNum().clear();
-				getNum().addAll((Collection<? extends DNum>)newValue);
+			case docPackage.DLIST_CONTENT__ITEMS:
+				getItems().clear();
+				getItems().addAll((Collection<? extends DListItem>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -168,11 +134,8 @@ public class DNumberingImpl extends MinimalEObjectImpl.Container implements DNum
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DNUMBERING__ABSTRACT_NUM:
-				getAbstractNum().clear();
-				return;
-			case docPackage.DNUMBERING__NUM:
-				getNum().clear();
+			case docPackage.DLIST_CONTENT__ITEMS:
+				getItems().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -186,12 +149,10 @@ public class DNumberingImpl extends MinimalEObjectImpl.Container implements DNum
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DNUMBERING__ABSTRACT_NUM:
-				return abstractNum != null && !abstractNum.isEmpty();
-			case docPackage.DNUMBERING__NUM:
-				return num != null && !num.isEmpty();
+			case docPackage.DLIST_CONTENT__ITEMS:
+				return items != null && !items.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //DNumberingImpl
+} //DListContentImpl

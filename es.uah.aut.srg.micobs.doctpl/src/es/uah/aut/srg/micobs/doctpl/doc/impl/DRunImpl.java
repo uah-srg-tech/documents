@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DRun;
+import es.uah.aut.srg.micobs.doctpl.doc.DRunFormat;
 import es.uah.aut.srg.micobs.doctpl.doc.DText;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRunImpl#getText <em>Text</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRunImpl#getFormat <em>Format</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +47,26 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * @ordered
 	 */
 	protected DText text;
+
+	/**
+	 * The default value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final DRunFormat FORMAT_EDEFAULT = DRunFormat.BOLD;
+
+	/**
+	 * The cached value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected DRunFormat format = FORMAT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,6 +135,27 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DRunFormat getFormat() {
+		return format;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormat(DRunFormat newFormat) {
+		DRunFormat oldFormat = format;
+		format = newFormat == null ? FORMAT_EDEFAULT : newFormat;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DRUN__FORMAT, oldFormat, format));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -132,6 +175,8 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 		switch (featureID) {
 			case docPackage.DRUN__TEXT:
 				return getText();
+			case docPackage.DRUN__FORMAT:
+				return getFormat();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -146,6 +191,9 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 		switch (featureID) {
 			case docPackage.DRUN__TEXT:
 				setText((DText)newValue);
+				return;
+			case docPackage.DRUN__FORMAT:
+				setFormat((DRunFormat)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -162,6 +210,9 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 			case docPackage.DRUN__TEXT:
 				setText((DText)null);
 				return;
+			case docPackage.DRUN__FORMAT:
+				setFormat(FORMAT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -176,8 +227,26 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 		switch (featureID) {
 			case docPackage.DRUN__TEXT:
 				return text != null;
+			case docPackage.DRUN__FORMAT:
+				return format != FORMAT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (format: ");
+		result.append(format);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DRunImpl

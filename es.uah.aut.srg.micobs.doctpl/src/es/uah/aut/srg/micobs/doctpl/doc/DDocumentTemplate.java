@@ -101,7 +101,7 @@ public interface DDocumentTemplate extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Sections</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DSection}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sections</em>' reference list isn't clear,
@@ -113,6 +113,6 @@ public interface DDocumentTemplate extends EObject {
 	 * @model transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	EList<DSection> getSections();
+	EList<DAbstractSection> getSections();
 
 } // DDocumentTemplate
