@@ -15,6 +15,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import java.util.Collection;
@@ -80,7 +81,7 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DApplicableDocument> getReferenceDocuments() {
+	public EList<DReferenceDocument> getReferenceDocuments() {
 		// TODO: implement this method to return the 'Reference Documents' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
@@ -164,7 +165,7 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 				return;
 			case docPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS:
 				getReferenceDocuments().clear();
-				getReferenceDocuments().addAll((Collection<? extends DApplicableDocument>)newValue);
+				getReferenceDocuments().addAll((Collection<? extends DReferenceDocument>)newValue);
 				return;
 			case docPackage.DDOCUMENT_TEMPLATE__FIGURES:
 				getFigures().clear();

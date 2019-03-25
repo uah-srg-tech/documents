@@ -53,7 +53,7 @@ public interface DDocumentTemplate extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Reference Documents</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reference Documents</em>' reference list isn't clear,
@@ -65,7 +65,7 @@ public interface DDocumentTemplate extends EObject {
 	 * @model transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	EList<DApplicableDocument> getReferenceDocuments();
+	EList<DReferenceDocument> getReferenceDocuments();
 
 	/**
 	 * Returns the value of the '<em><b>Figures</b></em>' reference list.

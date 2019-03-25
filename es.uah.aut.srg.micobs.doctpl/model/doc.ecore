@@ -5,7 +5,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocuments" upperBound="-1"
         eType="#//DApplicableDocument" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="referenceDocuments" upperBound="-1"
-        eType="#//DApplicableDocument" volatile="true" transient="true" derived="true"/>
+        eType="#//DReferenceDocument" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="figures" upperBound="-1"
         eType="#//DAbstractFigure" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tables" upperBound="-1"
