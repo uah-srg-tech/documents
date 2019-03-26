@@ -18,121 +18,95 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>DRun Format</b></em>',
+ * A representation of the literals of the enumeration '<em><b>DRun Format Enable Disable</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRunFormat()
+ * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRunFormatEnableDisable()
  * @model
  * @generated
  */
-public enum DRunFormat implements Enumerator {
+public enum DRunFormatEnableDisable implements Enumerator {
 	/**
-	 * The '<em><b>Bold</b></em>' literal object.
+	 * The '<em><b>Disabled</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BOLD_VALUE
+	 * @see #DISABLED_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	BOLD(0, "bold", "bold"),
+	DISABLED(0, "disabled", "disabled"),
 
 	/**
-	 * The '<em><b>Italic</b></em>' literal object.
+	 * The '<em><b>Enabled</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ITALIC_VALUE
+	 * @see #ENABLED_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ITALIC(1, "italic", "italic"),
+	ENABLED(1, "enabled", "enabled");
 
 	/**
-	 * The '<em><b>Underscore</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #UNDERSCORE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	UNDERSCORE(2, "underscore", "underscore");
-
-	/**
-	 * The '<em><b>Bold</b></em>' literal value.
+	 * The '<em><b>Disabled</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Bold</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Disabled</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #BOLD
-	 * @model name="bold"
+	 * @see #DISABLED
+	 * @model name="disabled"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int BOLD_VALUE = 0;
+	public static final int DISABLED_VALUE = 0;
 
 	/**
-	 * The '<em><b>Italic</b></em>' literal value.
+	 * The '<em><b>Enabled</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Italic</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Enabled</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ITALIC
-	 * @model name="italic"
+	 * @see #ENABLED
+	 * @model name="enabled"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ITALIC_VALUE = 1;
+	public static final int ENABLED_VALUE = 1;
 
 	/**
-	 * The '<em><b>Underscore</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Underscore</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #UNDERSCORE
-	 * @model name="underscore"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int UNDERSCORE_VALUE = 2;
-
-	/**
-	 * An array of all the '<em><b>DRun Format</b></em>' enumerators.
+	 * An array of all the '<em><b>DRun Format Enable Disable</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final DRunFormat[] VALUES_ARRAY =
-		new DRunFormat[] {
-			BOLD,
-			ITALIC,
-			UNDERSCORE,
+	private static final DRunFormatEnableDisable[] VALUES_ARRAY =
+		new DRunFormatEnableDisable[] {
+			DISABLED,
+			ENABLED,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>DRun Format</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>DRun Format Enable Disable</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<DRunFormat> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<DRunFormatEnableDisable> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>DRun Format</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>DRun Format Enable Disable</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static DRunFormat get(String literal) {
+	public static DRunFormatEnableDisable get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			DRunFormat result = VALUES_ARRAY[i];
+			DRunFormatEnableDisable result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -141,16 +115,16 @@ public enum DRunFormat implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>DRun Format</b></em>' literal with the specified name.
+	 * Returns the '<em><b>DRun Format Enable Disable</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static DRunFormat getByName(String name) {
+	public static DRunFormatEnableDisable getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			DRunFormat result = VALUES_ARRAY[i];
+			DRunFormatEnableDisable result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -159,18 +133,17 @@ public enum DRunFormat implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>DRun Format</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>DRun Format Enable Disable</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static DRunFormat get(int value) {
+	public static DRunFormatEnableDisable get(int value) {
 		switch (value) {
-			case BOLD_VALUE: return BOLD;
-			case ITALIC_VALUE: return ITALIC;
-			case UNDERSCORE_VALUE: return UNDERSCORE;
+			case DISABLED_VALUE: return DISABLED;
+			case ENABLED_VALUE: return ENABLED;
 		}
 		return null;
 	}
@@ -202,7 +175,7 @@ public enum DRunFormat implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private DRunFormat(int value, String name, String literal) {
+	private DRunFormatEnableDisable(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -246,4 +219,4 @@ public enum DRunFormat implements Enumerator {
 		return literal;
 	}
 	
-} //DRunFormat
+} //DRunFormatEnableDisable

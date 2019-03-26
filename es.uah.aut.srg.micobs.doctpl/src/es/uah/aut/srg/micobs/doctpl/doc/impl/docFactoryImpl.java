@@ -95,8 +95,8 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case docPackage.DRUN_FORMAT:
-				return createDRunFormatFromString(eDataType, initialValue);
+			case docPackage.DRUN_FORMAT_ENABLE_DISABLE:
+				return createDRunFormatEnableDisableFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -110,8 +110,8 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case docPackage.DRUN_FORMAT:
-				return convertDRunFormatToString(eDataType, instanceValue);
+			case docPackage.DRUN_FORMAT_ENABLE_DISABLE:
+				return convertDRunFormatEnableDisableToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -292,8 +292,8 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DRunFormat createDRunFormatFromString(EDataType eDataType, String initialValue) {
-		DRunFormat result = DRunFormat.get(initialValue);
+	public DRunFormatEnableDisable createDRunFormatEnableDisableFromString(EDataType eDataType, String initialValue) {
+		DRunFormatEnableDisable result = DRunFormatEnableDisable.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -303,7 +303,7 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertDRunFormatToString(EDataType eDataType, Object instanceValue) {
+	public String convertDRunFormatEnableDisableToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

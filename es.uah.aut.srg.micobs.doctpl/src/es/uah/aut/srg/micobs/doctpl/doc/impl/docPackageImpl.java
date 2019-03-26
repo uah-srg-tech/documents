@@ -36,7 +36,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doc.DRow;
 import es.uah.aut.srg.micobs.doctpl.doc.DRun;
-import es.uah.aut.srg.micobs.doctpl.doc.DRunFormat;
+import es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable;
 import es.uah.aut.srg.micobs.doctpl.doc.DText;
 import es.uah.aut.srg.micobs.doctpl.doc.docFactory;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
@@ -250,7 +250,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum dRunFormatEEnum = null;
+	private EEnum dRunFormatEnableDisableEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -750,8 +750,26 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDRun_Format() {
+	public EAttribute getDRun_Bold() {
 		return (EAttribute)dRunEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDRun_Italic() {
+		return (EAttribute)dRunEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDRun_Underscore() {
+		return (EAttribute)dRunEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -876,8 +894,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getDRunFormat() {
-		return dRunFormatEEnum;
+	public EEnum getDRunFormatEnableDisable() {
+		return dRunFormatEnableDisableEEnum;
 	}
 
 	/**
@@ -975,7 +993,9 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 
 		dRunEClass = createEClass(DRUN);
 		createEReference(dRunEClass, DRUN__TEXT);
-		createEAttribute(dRunEClass, DRUN__FORMAT);
+		createEAttribute(dRunEClass, DRUN__BOLD);
+		createEAttribute(dRunEClass, DRUN__ITALIC);
+		createEAttribute(dRunEClass, DRUN__UNDERSCORE);
 
 		dTextEClass = createEClass(DTEXT);
 		createEAttribute(dTextEClass, DTEXT__CONTENT);
@@ -998,7 +1018,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		dEnumerateEClass = createEClass(DENUMERATE);
 
 		// Create enums
-		dRunFormatEEnum = createEEnum(DRUN_FORMAT);
+		dRunFormatEnableDisableEEnum = createEEnum(DRUN_FORMAT_ENABLE_DISABLE);
 	}
 
 	/**
@@ -1117,7 +1137,9 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 
 		initEClass(dRunEClass, DRun.class, "DRun", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDRun_Text(), this.getDText(), null, "text", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDRun_Format(), this.getDRunFormat(), "format", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Bold(), this.getDRunFormatEnableDisable(), "bold", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Italic(), this.getDRunFormatEnableDisable(), "italic", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Underscore(), this.getDRunFormatEnableDisable(), "underscore", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dTextEClass, DText.class, "DText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDText_Content(), ecorePackage.getEString(), "content", null, 1, -1, DText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1140,10 +1162,9 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		initEClass(dEnumerateEClass, DEnumerate.class, "DEnumerate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
-		initEEnum(dRunFormatEEnum, DRunFormat.class, "DRunFormat");
-		addEEnumLiteral(dRunFormatEEnum, DRunFormat.BOLD);
-		addEEnumLiteral(dRunFormatEEnum, DRunFormat.ITALIC);
-		addEEnumLiteral(dRunFormatEEnum, DRunFormat.UNDERSCORE);
+		initEEnum(dRunFormatEnableDisableEEnum, DRunFormatEnableDisable.class, "DRunFormatEnableDisable");
+		addEEnumLiteral(dRunFormatEnableDisableEEnum, DRunFormatEnableDisable.DISABLED);
+		addEEnumLiteral(dRunFormatEnableDisableEEnum, DRunFormatEnableDisable.ENABLED);
 
 		// Create resource
 		createResource(eNS_URI);
