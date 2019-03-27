@@ -22,28 +22,18 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="refDocument" lowerBound="1"
         eType="#//DDocumentTemplate" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DApplicableDocument" eSuperTypes="#//DAbstractRelatedDocument">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="document" lowerBound="1"
-        eType="#//DDocumentTemplate" volatile="true" transient="true" derived="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DReferenceDocument" eSuperTypes="#//DAbstractRelatedDocument">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="document" lowerBound="1"
-        eType="#//DDocumentTemplate" volatile="true" transient="true" derived="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DApplicableDocument" eSuperTypes="#//DAbstractRelatedDocument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DReferenceDocument" eSuperTypes="#//DAbstractRelatedDocument"/>
   <eClassifiers xsi:type="ecore:EClass" name="DAbstractFigure" abstract="true" eSuperTypes="#//DBodyContent #//DReferenceableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reference" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="caption" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="document" lowerBound="1"
-        eType="#//DDocumentTemplate" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DFigure" abstract="true" eSuperTypes="#//DAbstractFigure"/>
   <eClassifiers xsi:type="ecore:EClass" name="DAbstractTable" abstract="true" eSuperTypes="#//DBodyContent #//DReferenceableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="caption" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="document" lowerBound="1"
-        eType="#//DDocumentTemplate" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DPictureAsTable" abstract="true" eSuperTypes="#//DAbstractTable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reference" lowerBound="1"
@@ -67,20 +57,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="DAbstractSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subsections" upperBound="-1"
         eType="#//DAbstractSection" volatile="true" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="document" lowerBound="1"
-        eType="#//DDocumentTemplate" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DFixedSection" eSuperTypes="#//DAbstractSection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DInstantiableSection" eSuperTypes="#//DAbstractSection">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DInstantiableSection" eSuperTypes="#//DAbstractSection ../../es.uah.aut.srg.micobs/model/common.ecore#//MCommonReferenceableObj"/>
   <eClassifiers xsi:type="ecore:EClass" name="DBody">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bContent" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyContent" lowerBound="1"
         upperBound="-1" eType="#//DBodyContent" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DBodyContent" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="DParagraph" eSuperTypes="#//DBodyContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pContent" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraphContent" lowerBound="1"
         upperBound="-1" eType="#//DParagraphContent" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DParagraphContent" abstract="true"/>
@@ -99,7 +85,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DText">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" lowerBound="1"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DHyperlink" eSuperTypes="#//DParagraphContent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="run" lowerBound="1" eType="#//DRun"
