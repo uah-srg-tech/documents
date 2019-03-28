@@ -22,7 +22,6 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getReference <em>Reference</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getCaption <em>Caption</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getDocument <em>Document</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractFigure()
@@ -81,31 +80,5 @@ public interface DAbstractFigure extends DBodyContent, DReferenceableObject {
 	 * @generated
 	 */
 	void setCaption(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Document</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Document</em>' reference.
-	 * @see #setDocument(DDocumentTemplate)
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractFigure_Document()
-	 * @model required="true" transient="true" volatile="true" derived="true"
-	 * @generated
-	 */
-	DDocumentTemplate getDocument();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getDocument <em>Document</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Document</em>' reference.
-	 * @see #getDocument()
-	 * @generated
-	 */
-	void setDocument(DDocumentTemplate value);
 
 } // DAbstractFigure

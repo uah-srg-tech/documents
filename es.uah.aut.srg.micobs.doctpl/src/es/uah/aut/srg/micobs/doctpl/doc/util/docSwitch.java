@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.util;
 
+import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 import es.uah.aut.srg.micobs.doctpl.doc.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -182,6 +183,7 @@ public class docSwitch<T> extends Switch<T> {
 				DInstantiableSection dInstantiableSection = (DInstantiableSection)theEObject;
 				T result = caseDInstantiableSection(dInstantiableSection);
 				if (result == null) result = caseDAbstractSection(dInstantiableSection);
+				if (result == null) result = caseMCommonReferenceableObj(dInstantiableSection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -671,6 +673,21 @@ public class docSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDEnumerate(DEnumerate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMCommonReferenceableObj(MCommonReferenceableObj object) {
 		return null;
 	}
 

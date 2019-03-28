@@ -12,16 +12,11 @@ package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DText;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,14 +33,23 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  */
 public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	/**
-	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute list.
+	 * The default value of the '{@link #getContent() <em>Content</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getContent()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> content;
+	protected static final String CONTENT_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContent()
+	 * @generated
+	 * @ordered
+	 */
+	protected String content = CONTENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,11 +75,20 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getContent() {
-		if (content == null) {
-			content = new EDataTypeUniqueEList<String>(String.class, this, docPackage.DTEXT__CONTENT);
-		}
+	public String getContent() {
 		return content;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setContent(String newContent) {
+		String oldContent = content;
+		content = newContent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DTEXT__CONTENT, oldContent, content));
 	}
 
 	/**
@@ -102,8 +115,7 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case docPackage.DTEXT__CONTENT:
-				getContent().clear();
-				getContent().addAll((Collection<? extends String>)newValue);
+				setContent((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -118,7 +130,7 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case docPackage.DTEXT__CONTENT:
-				getContent().clear();
+				setContent(CONTENT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -133,7 +145,7 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case docPackage.DTEXT__CONTENT:
-				return content != null && !content.isEmpty();
+				return CONTENT_EDEFAULT == null ? content != null : !CONTENT_EDEFAULT.equals(content);
 		}
 		return super.eIsSet(featureID);
 	}

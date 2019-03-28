@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.util;
 
+import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 import es.uah.aut.srg.micobs.doctpl.doc.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -182,6 +183,10 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDEnumerate(DEnumerate object) {
 				return createDEnumerateAdapter();
+			}
+			@Override
+			public Adapter caseMCommonReferenceableObj(MCommonReferenceableObj object) {
+				return createMCommonReferenceableObjAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -578,6 +583,20 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDEnumerateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.common.MCommonReferenceableObj <em>MCommon Referenceable Obj</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.common.MCommonReferenceableObj
+	 * @generated
+	 */
+	public Adapter createMCommonReferenceableObjAdapter() {
 		return null;
 	}
 

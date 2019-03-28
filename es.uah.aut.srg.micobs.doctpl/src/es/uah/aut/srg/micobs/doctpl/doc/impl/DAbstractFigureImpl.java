@@ -11,14 +11,11 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -31,7 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractFigureImpl#getReference <em>Reference</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractFigureImpl#getCaption <em>Caption</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractFigureImpl#getDocument <em>Document</em>}</li>
  * </ul>
  *
  * @generated
@@ -143,39 +139,6 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocumentTemplate getDocument() {
-		DDocumentTemplate document = basicGetDocument();
-		return document != null && document.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)document) : document;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DDocumentTemplate basicGetDocument() {
-		// TODO: implement this method to return the 'Document' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDocument(DDocumentTemplate newDocument) {
-		// TODO: implement this method to set the 'Document' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -183,9 +146,6 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 				return getReference();
 			case docPackage.DABSTRACT_FIGURE__CAPTION:
 				return getCaption();
-			case docPackage.DABSTRACT_FIGURE__DOCUMENT:
-				if (resolve) return getDocument();
-				return basicGetDocument();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -203,9 +163,6 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 				return;
 			case docPackage.DABSTRACT_FIGURE__CAPTION:
 				setCaption((String)newValue);
-				return;
-			case docPackage.DABSTRACT_FIGURE__DOCUMENT:
-				setDocument((DDocumentTemplate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,9 +182,6 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 			case docPackage.DABSTRACT_FIGURE__CAPTION:
 				setCaption(CAPTION_EDEFAULT);
 				return;
-			case docPackage.DABSTRACT_FIGURE__DOCUMENT:
-				setDocument((DDocumentTemplate)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,8 +198,6 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 				return REFERENCE_EDEFAULT == null ? reference != null : !REFERENCE_EDEFAULT.equals(reference);
 			case docPackage.DABSTRACT_FIGURE__CAPTION:
 				return CAPTION_EDEFAULT == null ? caption != null : !CAPTION_EDEFAULT.equals(caption);
-			case docPackage.DABSTRACT_FIGURE__DOCUMENT:
-				return basicGetDocument() != null;
 		}
 		return super.eIsSet(featureID);
 	}

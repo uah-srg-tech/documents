@@ -11,7 +11,6 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import java.util.Collection;
@@ -19,8 +18,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
@@ -32,7 +29,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractSectionImpl#getSubsections <em>Subsections</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractSectionImpl#getDocument <em>Document</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,47 +71,11 @@ public class DAbstractSectionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocumentTemplate getDocument() {
-		DDocumentTemplate document = basicGetDocument();
-		return document != null && document.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)document) : document;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DDocumentTemplate basicGetDocument() {
-		// TODO: implement this method to return the 'Document' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDocument(DDocumentTemplate newDocument) {
-		// TODO: implement this method to set the 'Document' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case docPackage.DABSTRACT_SECTION__SUBSECTIONS:
 				return getSubsections();
-			case docPackage.DABSTRACT_SECTION__DOCUMENT:
-				if (resolve) return getDocument();
-				return basicGetDocument();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -133,9 +93,6 @@ public class DAbstractSectionImpl extends MinimalEObjectImpl.Container implement
 				getSubsections().clear();
 				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
-			case docPackage.DABSTRACT_SECTION__DOCUMENT:
-				setDocument((DDocumentTemplate)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -151,9 +108,6 @@ public class DAbstractSectionImpl extends MinimalEObjectImpl.Container implement
 			case docPackage.DABSTRACT_SECTION__SUBSECTIONS:
 				getSubsections().clear();
 				return;
-			case docPackage.DABSTRACT_SECTION__DOCUMENT:
-				setDocument((DDocumentTemplate)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -168,8 +122,6 @@ public class DAbstractSectionImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case docPackage.DABSTRACT_SECTION__SUBSECTIONS:
 				return !getSubsections().isEmpty();
-			case docPackage.DABSTRACT_SECTION__DOCUMENT:
-				return basicGetDocument() != null;
 		}
 		return super.eIsSet(featureID);
 	}

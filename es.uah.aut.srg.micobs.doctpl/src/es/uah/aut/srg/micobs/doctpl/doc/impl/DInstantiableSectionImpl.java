@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
+import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
+import es.uah.aut.srg.micobs.common.commonPackage;
 import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
@@ -28,6 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DInstantiableSectionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DInstantiableSectionImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,6 +55,26 @@ public class DInstantiableSectionImpl extends DAbstractSectionImpl implements DI
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,11 +121,34 @@ public class DInstantiableSectionImpl extends DAbstractSectionImpl implements DI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DINSTANTIABLE_SECTION__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case docPackage.DINSTANTIABLE_SECTION__NAME:
 				return getName();
+			case docPackage.DINSTANTIABLE_SECTION__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,6 +163,9 @@ public class DInstantiableSectionImpl extends DAbstractSectionImpl implements DI
 		switch (featureID) {
 			case docPackage.DINSTANTIABLE_SECTION__NAME:
 				setName((String)newValue);
+				return;
+			case docPackage.DINSTANTIABLE_SECTION__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,6 +182,9 @@ public class DInstantiableSectionImpl extends DAbstractSectionImpl implements DI
 			case docPackage.DINSTANTIABLE_SECTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case docPackage.DINSTANTIABLE_SECTION__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -147,8 +199,44 @@ public class DInstantiableSectionImpl extends DAbstractSectionImpl implements DI
 		switch (featureID) {
 			case docPackage.DINSTANTIABLE_SECTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case docPackage.DINSTANTIABLE_SECTION__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == MCommonReferenceableObj.class) {
+			switch (derivedFeatureID) {
+				case docPackage.DINSTANTIABLE_SECTION__NAME: return commonPackage.MCOMMON_REFERENCEABLE_OBJ__NAME;
+				case docPackage.DINSTANTIABLE_SECTION__DESCRIPTION: return commonPackage.MCOMMON_REFERENCEABLE_OBJ__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == MCommonReferenceableObj.class) {
+			switch (baseFeatureID) {
+				case commonPackage.MCOMMON_REFERENCEABLE_OBJ__NAME: return docPackage.DINSTANTIABLE_SECTION__NAME;
+				case commonPackage.MCOMMON_REFERENCEABLE_OBJ__DESCRIPTION: return docPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -163,6 +251,8 @@ public class DInstantiableSectionImpl extends DAbstractSectionImpl implements DI
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

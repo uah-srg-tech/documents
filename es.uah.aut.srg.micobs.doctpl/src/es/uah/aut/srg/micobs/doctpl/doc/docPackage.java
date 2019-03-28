@@ -277,22 +277,13 @@ public interface docPackage extends EPackage {
 	int DAPPLICABLE_DOCUMENT__REF_DOCUMENT = DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT;
 
 	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DAPPLICABLE_DOCUMENT__DOCUMENT = DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>DApplicable Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DAPPLICABLE_DOCUMENT_FEATURE_COUNT = DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT + 1;
+	int DAPPLICABLE_DOCUMENT_FEATURE_COUNT = DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>DApplicable Document</em>' class.
@@ -350,22 +341,13 @@ public interface docPackage extends EPackage {
 	int DREFERENCE_DOCUMENT__REF_DOCUMENT = DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT;
 
 	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DREFERENCE_DOCUMENT__DOCUMENT = DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>DReference Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DREFERENCE_DOCUMENT_FEATURE_COUNT = DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT + 1;
+	int DREFERENCE_DOCUMENT_FEATURE_COUNT = DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>DReference Document</em>' class.
@@ -433,22 +415,13 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_FIGURE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DABSTRACT_FIGURE__DOCUMENT = DBODY_CONTENT_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>DAbstract Figure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_FIGURE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 3;
+	int DABSTRACT_FIGURE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Figure</em>' class.
@@ -488,15 +461,6 @@ public interface docPackage extends EPackage {
 	int DFIGURE__CAPTION = DABSTRACT_FIGURE__CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DFIGURE__DOCUMENT = DABSTRACT_FIGURE__DOCUMENT;
-
-	/**
 	 * The number of structural features of the '<em>DFigure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -534,22 +498,13 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_TABLE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DABSTRACT_TABLE__DOCUMENT = DBODY_CONTENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>DAbstract Table</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_TABLE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
+	int DABSTRACT_TABLE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Table</em>' class.
@@ -578,15 +533,6 @@ public interface docPackage extends EPackage {
 	 * @ordered
 	 */
 	int DPICTURE_AS_TABLE__CAPTION = DABSTRACT_TABLE__CAPTION;
-
-	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DPICTURE_AS_TABLE__DOCUMENT = DABSTRACT_TABLE__DOCUMENT;
 
 	/**
 	 * The feature id for the '<em><b>Reference</b></em>' attribute.
@@ -633,15 +579,6 @@ public interface docPackage extends EPackage {
 	 * @ordered
 	 */
 	int DBASIC_TABLE__CAPTION = DABSTRACT_TABLE__CAPTION;
-
-	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DBASIC_TABLE__DOCUMENT = DABSTRACT_TABLE__DOCUMENT;
 
 	/**
 	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
@@ -773,13 +710,13 @@ public interface docPackage extends EPackage {
 	int DBODY = 15;
 
 	/**
-	 * The feature id for the '<em><b>BContent</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Body Content</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DBODY__BCONTENT = 0;
+	int DBODY__BODY_CONTENT = 0;
 
 	/**
 	 * The number of structural features of the '<em>DBody</em>' class.
@@ -810,13 +747,13 @@ public interface docPackage extends EPackage {
 	int DCELL = 11;
 
 	/**
-	 * The feature id for the '<em><b>BContent</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Body Content</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DCELL__BCONTENT = DBODY__BCONTENT;
+	int DCELL__BODY_CONTENT = DBODY__BODY_CONTENT;
 
 	/**
 	 * The number of structural features of the '<em>DCell</em>' class.
@@ -856,22 +793,13 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_SECTION__SUBSECTIONS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DABSTRACT_SECTION__DOCUMENT = 1;
-
-	/**
 	 * The number of structural features of the '<em>DAbstract Section</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_SECTION_FEATURE_COUNT = 2;
+	int DABSTRACT_SECTION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Section</em>' class.
@@ -900,15 +828,6 @@ public interface docPackage extends EPackage {
 	 * @ordered
 	 */
 	int DFIXED_SECTION__SUBSECTIONS = DABSTRACT_SECTION__SUBSECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DFIXED_SECTION__DOCUMENT = DABSTRACT_SECTION__DOCUMENT;
 
 	/**
 	 * The number of structural features of the '<em>DFixed Section</em>' class.
@@ -948,15 +867,6 @@ public interface docPackage extends EPackage {
 	int DINSTANTIABLE_SECTION__SUBSECTIONS = DABSTRACT_SECTION__SUBSECTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DINSTANTIABLE_SECTION__DOCUMENT = DABSTRACT_SECTION__DOCUMENT;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -966,13 +876,22 @@ public interface docPackage extends EPackage {
 	int DINSTANTIABLE_SECTION__NAME = DABSTRACT_SECTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DINSTANTIABLE_SECTION__DESCRIPTION = DABSTRACT_SECTION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>DInstantiable Section</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DINSTANTIABLE_SECTION_FEATURE_COUNT = DABSTRACT_SECTION_FEATURE_COUNT + 1;
+	int DINSTANTIABLE_SECTION_FEATURE_COUNT = DABSTRACT_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>DInstantiable Section</em>' class.
@@ -994,13 +913,13 @@ public interface docPackage extends EPackage {
 	int DPARAGRAPH = 17;
 
 	/**
-	 * The feature id for the '<em><b>PContent</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Paragraph Content</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH__PCONTENT = DBODY_CONTENT_FEATURE_COUNT + 0;
+	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>DParagraph</em>' class.
@@ -1123,7 +1042,7 @@ public interface docPackage extends EPackage {
 	int DTEXT = 20;
 
 	/**
-	 * The feature id for the '<em><b>Content</b></em>' attribute list.
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1493,17 +1412,6 @@ public interface docPackage extends EPackage {
 	EClass getDApplicableDocument();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument#getDocument <em>Document</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Document</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument#getDocument()
-	 * @see #getDApplicableDocument()
-	 * @generated
-	 */
-	EReference getDApplicableDocument_Document();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument <em>DReference Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1512,17 +1420,6 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDReferenceDocument();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument#getDocument <em>Document</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Document</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument#getDocument()
-	 * @see #getDReferenceDocument()
-	 * @generated
-	 */
-	EReference getDReferenceDocument_Document();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure <em>DAbstract Figure</em>}'.
@@ -1557,17 +1454,6 @@ public interface docPackage extends EPackage {
 	EAttribute getDAbstractFigure_Caption();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getDocument <em>Document</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Document</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getDocument()
-	 * @see #getDAbstractFigure()
-	 * @generated
-	 */
-	EReference getDAbstractFigure_Document();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DFigure <em>DFigure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1597,17 +1483,6 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDAbstractTable_Caption();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable#getDocument <em>Document</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Document</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable#getDocument()
-	 * @see #getDAbstractTable()
-	 * @generated
-	 */
-	EReference getDAbstractTable_Document();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable <em>DPicture As Table</em>}'.
@@ -1747,17 +1622,6 @@ public interface docPackage extends EPackage {
 	EReference getDAbstractSection_Subsections();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection#getDocument <em>Document</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Document</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection#getDocument()
-	 * @see #getDAbstractSection()
-	 * @generated
-	 */
-	EReference getDAbstractSection_Document();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DFixedSection <em>DFixed Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1778,17 +1642,6 @@ public interface docPackage extends EPackage {
 	EClass getDInstantiableSection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection#getName()
-	 * @see #getDInstantiableSection()
-	 * @generated
-	 */
-	EAttribute getDInstantiableSection_Name();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DBody <em>DBody</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1799,15 +1652,15 @@ public interface docPackage extends EPackage {
 	EClass getDBody();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doc.DBody#getBContent <em>BContent</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doc.DBody#getBodyContent <em>Body Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>BContent</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DBody#getBContent()
+	 * @return the meta object for the containment reference list '<em>Body Content</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DBody#getBodyContent()
 	 * @see #getDBody()
 	 * @generated
 	 */
-	EReference getDBody_BContent();
+	EReference getDBody_BodyContent();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DBodyContent <em>DBody Content</em>}'.
@@ -1830,15 +1683,15 @@ public interface docPackage extends EPackage {
 	EClass getDParagraph();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getPContent <em>PContent</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getParagraphContent <em>Paragraph Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>PContent</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getPContent()
+	 * @return the meta object for the containment reference list '<em>Paragraph Content</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getParagraphContent()
 	 * @see #getDParagraph()
 	 * @generated
 	 */
-	EReference getDParagraph_PContent();
+	EReference getDParagraph_ParagraphContent();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraphContent <em>DParagraph Content</em>}'.
@@ -1915,10 +1768,10 @@ public interface docPackage extends EPackage {
 	EClass getDText();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link es.uah.aut.srg.micobs.doctpl.doc.DText#getContent <em>Content</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DText#getContent <em>Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Content</em>'.
+	 * @return the meta object for the attribute '<em>Content</em>'.
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.DText#getContent()
 	 * @see #getDText()
 	 * @generated
@@ -2176,14 +2029,6 @@ public interface docPackage extends EPackage {
 		EClass DAPPLICABLE_DOCUMENT = eINSTANCE.getDApplicableDocument();
 
 		/**
-		 * The meta object literal for the '<em><b>Document</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DAPPLICABLE_DOCUMENT__DOCUMENT = eINSTANCE.getDApplicableDocument_Document();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DReferenceDocumentImpl <em>DReference Document</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2192,14 +2037,6 @@ public interface docPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DREFERENCE_DOCUMENT = eINSTANCE.getDReferenceDocument();
-
-		/**
-		 * The meta object literal for the '<em><b>Document</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DREFERENCE_DOCUMENT__DOCUMENT = eINSTANCE.getDReferenceDocument_Document();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractFigureImpl <em>DAbstract Figure</em>}' class.
@@ -2228,14 +2065,6 @@ public interface docPackage extends EPackage {
 		EAttribute DABSTRACT_FIGURE__CAPTION = eINSTANCE.getDAbstractFigure_Caption();
 
 		/**
-		 * The meta object literal for the '<em><b>Document</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DABSTRACT_FIGURE__DOCUMENT = eINSTANCE.getDAbstractFigure_Document();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DFigureImpl <em>DFigure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2262,14 +2091,6 @@ public interface docPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DABSTRACT_TABLE__CAPTION = eINSTANCE.getDAbstractTable_Caption();
-
-		/**
-		 * The meta object literal for the '<em><b>Document</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DABSTRACT_TABLE__DOCUMENT = eINSTANCE.getDAbstractTable_Document();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DPictureAsTableImpl <em>DPicture As Table</em>}' class.
@@ -2388,14 +2209,6 @@ public interface docPackage extends EPackage {
 		EReference DABSTRACT_SECTION__SUBSECTIONS = eINSTANCE.getDAbstractSection_Subsections();
 
 		/**
-		 * The meta object literal for the '<em><b>Document</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DABSTRACT_SECTION__DOCUMENT = eINSTANCE.getDAbstractSection_Document();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl <em>DFixed Section</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2416,14 +2229,6 @@ public interface docPackage extends EPackage {
 		EClass DINSTANTIABLE_SECTION = eINSTANCE.getDInstantiableSection();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DINSTANTIABLE_SECTION__NAME = eINSTANCE.getDInstantiableSection_Name();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DBodyImpl <em>DBody</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2434,12 +2239,12 @@ public interface docPackage extends EPackage {
 		EClass DBODY = eINSTANCE.getDBody();
 
 		/**
-		 * The meta object literal for the '<em><b>BContent</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Body Content</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DBODY__BCONTENT = eINSTANCE.getDBody_BContent();
+		EReference DBODY__BODY_CONTENT = eINSTANCE.getDBody_BodyContent();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DBodyContentImpl <em>DBody Content</em>}' class.
@@ -2462,12 +2267,12 @@ public interface docPackage extends EPackage {
 		EClass DPARAGRAPH = eINSTANCE.getDParagraph();
 
 		/**
-		 * The meta object literal for the '<em><b>PContent</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Paragraph Content</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DPARAGRAPH__PCONTENT = eINSTANCE.getDParagraph_PContent();
+		EReference DPARAGRAPH__PARAGRAPH_CONTENT = eINSTANCE.getDParagraph_ParagraphContent();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DParagraphContentImpl <em>DParagraph Content</em>}' class.
@@ -2532,7 +2337,7 @@ public interface docPackage extends EPackage {
 		EClass DTEXT = eINSTANCE.getDText();
 
 		/**
-		 * The meta object literal for the '<em><b>Content</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Content</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

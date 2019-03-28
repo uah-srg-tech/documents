@@ -11,14 +11,11 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -30,7 +27,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractTableImpl#getCaption <em>Caption</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractTableImpl#getDocument <em>Document</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,47 +97,11 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocumentTemplate getDocument() {
-		DDocumentTemplate document = basicGetDocument();
-		return document != null && document.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)document) : document;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DDocumentTemplate basicGetDocument() {
-		// TODO: implement this method to return the 'Document' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDocument(DDocumentTemplate newDocument) {
-		// TODO: implement this method to set the 'Document' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case docPackage.DABSTRACT_TABLE__CAPTION:
 				return getCaption();
-			case docPackage.DABSTRACT_TABLE__DOCUMENT:
-				if (resolve) return getDocument();
-				return basicGetDocument();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,9 +116,6 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 		switch (featureID) {
 			case docPackage.DABSTRACT_TABLE__CAPTION:
 				setCaption((String)newValue);
-				return;
-			case docPackage.DABSTRACT_TABLE__DOCUMENT:
-				setDocument((DDocumentTemplate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,9 +132,6 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 			case docPackage.DABSTRACT_TABLE__CAPTION:
 				setCaption(CAPTION_EDEFAULT);
 				return;
-			case docPackage.DABSTRACT_TABLE__DOCUMENT:
-				setDocument((DDocumentTemplate)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -192,8 +146,6 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 		switch (featureID) {
 			case docPackage.DABSTRACT_TABLE__CAPTION:
 				return CAPTION_EDEFAULT == null ? caption != null : !CAPTION_EDEFAULT.equals(caption);
-			case docPackage.DABSTRACT_TABLE__DOCUMENT:
-				return basicGetDocument() != null;
 		}
 		return super.eIsSet(featureID);
 	}

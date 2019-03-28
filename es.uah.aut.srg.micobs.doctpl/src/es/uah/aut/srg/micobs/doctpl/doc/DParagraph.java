@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getPContent <em>PContent</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DParagraph#getParagraphContent <em>Paragraph Content</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraph()
@@ -30,19 +30,19 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface DParagraph extends DBodyContent {
 	/**
-	 * Returns the value of the '<em><b>PContent</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Paragraph Content</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DParagraphContent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>PContent</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Paragraph Content</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>PContent</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraph_PContent()
+	 * @return the value of the '<em>Paragraph Content</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDParagraph_ParagraphContent()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<DParagraphContent> getPContent();
+	EList<DParagraphContent> getParagraphContent();
 
 } // DParagraph

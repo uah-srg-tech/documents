@@ -34,22 +34,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DParagraphImpl#getPContent <em>PContent</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DParagraphImpl#getParagraphContent <em>Paragraph Content</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DParagraphImpl extends DBodyContentImpl implements DParagraph {
 	/**
-	 * The cached value of the '{@link #getPContent() <em>PContent</em>}' containment reference list.
+	 * The cached value of the '{@link #getParagraphContent() <em>Paragraph Content</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPContent()
+	 * @see #getParagraphContent()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DParagraphContent> pContent;
-
+	protected EList<DParagraphContent> paragraphContent;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,11 +73,11 @@ public class DParagraphImpl extends DBodyContentImpl implements DParagraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DParagraphContent> getPContent() {
-		if (pContent == null) {
-			pContent = new EObjectContainmentEList<DParagraphContent>(DParagraphContent.class, this, docPackage.DPARAGRAPH__PCONTENT);
+	public EList<DParagraphContent> getParagraphContent() {
+		if (paragraphContent == null) {
+			paragraphContent = new EObjectContainmentEList<DParagraphContent>(DParagraphContent.class, this, docPackage.DPARAGRAPH__PARAGRAPH_CONTENT);
 		}
-		return pContent;
+		return paragraphContent;
 	}
 
 	/**
@@ -89,8 +88,8 @@ public class DParagraphImpl extends DBodyContentImpl implements DParagraph {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__PCONTENT:
-				return ((InternalEList<?>)getPContent()).basicRemove(otherEnd, msgs);
+			case docPackage.DPARAGRAPH__PARAGRAPH_CONTENT:
+				return ((InternalEList<?>)getParagraphContent()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -103,8 +102,8 @@ public class DParagraphImpl extends DBodyContentImpl implements DParagraph {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__PCONTENT:
-				return getPContent();
+			case docPackage.DPARAGRAPH__PARAGRAPH_CONTENT:
+				return getParagraphContent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,9 +117,9 @@ public class DParagraphImpl extends DBodyContentImpl implements DParagraph {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__PCONTENT:
-				getPContent().clear();
-				getPContent().addAll((Collection<? extends DParagraphContent>)newValue);
+			case docPackage.DPARAGRAPH__PARAGRAPH_CONTENT:
+				getParagraphContent().clear();
+				getParagraphContent().addAll((Collection<? extends DParagraphContent>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,8 +133,8 @@ public class DParagraphImpl extends DBodyContentImpl implements DParagraph {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__PCONTENT:
-				getPContent().clear();
+			case docPackage.DPARAGRAPH__PARAGRAPH_CONTENT:
+				getParagraphContent().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -149,8 +148,8 @@ public class DParagraphImpl extends DBodyContentImpl implements DParagraph {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DPARAGRAPH__PCONTENT:
-				return pContent != null && !pContent.isEmpty();
+			case docPackage.DPARAGRAPH__PARAGRAPH_CONTENT:
+				return paragraphContent != null && !paragraphContent.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

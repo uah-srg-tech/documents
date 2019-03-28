@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection#getSubsections <em>Subsections</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection#getDocument <em>Document</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractSection()
@@ -47,31 +46,5 @@ public interface DAbstractSection extends EObject {
 	 * @generated
 	 */
 	EList<DAbstractSection> getSubsections();
-
-	/**
-	 * Returns the value of the '<em><b>Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Document</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Document</em>' reference.
-	 * @see #setDocument(DDocumentTemplate)
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractSection_Document()
-	 * @model required="true" transient="true" volatile="true" derived="true"
-	 * @generated
-	 */
-	DDocumentTemplate getDocument();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection#getDocument <em>Document</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Document</em>' reference.
-	 * @see #getDocument()
-	 * @generated
-	 */
-	void setDocument(DDocumentTemplate value);
 
 } // DAbstractSection
