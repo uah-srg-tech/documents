@@ -55,7 +55,7 @@ public interface docPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "doctpl";
+	String eNS_PREFIX = "micobs.doctpl";
 
 	/**
 	 * The singleton instance of the package.
