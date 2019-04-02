@@ -18,7 +18,7 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  *
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDFigure()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface DFigure extends DAbstractFigure {

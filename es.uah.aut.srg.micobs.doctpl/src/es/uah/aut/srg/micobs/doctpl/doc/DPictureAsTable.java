@@ -24,7 +24,7 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDPictureAsTable()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface DPictureAsTable extends DAbstractTable {

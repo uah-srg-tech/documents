@@ -66,6 +66,9 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 		switch (eClass.getClassifierID()) {
 			case docPackage.DAPPLICABLE_DOCUMENT: return createDApplicableDocument();
 			case docPackage.DREFERENCE_DOCUMENT: return createDReferenceDocument();
+			case docPackage.DFIGURE: return createDFigure();
+			case docPackage.DPICTURE_AS_TABLE: return createDPictureAsTable();
+			case docPackage.DBASIC_TABLE: return createDBasicTable();
 			case docPackage.DROW: return createDRow();
 			case docPackage.DCOLUMN: return createDColumn();
 			case docPackage.DCELL: return createDCell();
@@ -104,6 +107,36 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	public DReferenceDocument createDReferenceDocument() {
 		DReferenceDocumentImpl dReferenceDocument = new DReferenceDocumentImpl();
 		return dReferenceDocument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DFigure createDFigure() {
+		DFigureImpl dFigure = new DFigureImpl();
+		return dFigure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DPictureAsTable createDPictureAsTable() {
+		DPictureAsTableImpl dPictureAsTable = new DPictureAsTableImpl();
+		return dPictureAsTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DBasicTable createDBasicTable() {
+		DBasicTableImpl dBasicTable = new DBasicTableImpl();
+		return dBasicTable;
 	}
 
 	/**

@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public abstract class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureAsTable {
+public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureAsTable {
 	/**
 	 * The default value of the '{@link #getReference() <em>Reference</em>}' attribute.
 	 * <!-- begin-user-doc -->

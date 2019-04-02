@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class DBasicTableImpl extends DAbstractTableImpl implements DBasicTable {
+public class DBasicTableImpl extends DAbstractTableImpl implements DBasicTable {
 	/**
 	 * The cached value of the '{@link #getRows() <em>Rows</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

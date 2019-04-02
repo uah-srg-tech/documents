@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDBasicTable()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface DBasicTable extends DAbstractTable {

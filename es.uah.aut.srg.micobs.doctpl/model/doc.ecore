@@ -30,16 +30,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="caption" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DFigure" abstract="true" eSuperTypes="#//DAbstractFigure"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DFigure" eSuperTypes="#//DAbstractFigure"/>
   <eClassifiers xsi:type="ecore:EClass" name="DAbstractTable" abstract="true" eSuperTypes="#//DBodyContent #//DReferenceableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="caption" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DPictureAsTable" abstract="true" eSuperTypes="#//DAbstractTable">
+  <eClassifiers xsi:type="ecore:EClass" name="DPictureAsTable" eSuperTypes="#//DAbstractTable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reference" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DBasicTable" abstract="true" eSuperTypes="#//DAbstractTable">
+  <eClassifiers xsi:type="ecore:EClass" name="DBasicTable" eSuperTypes="#//DAbstractTable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rows" lowerBound="1" upperBound="-1"
         eType="#//DRow" containment="true"/>
   </eClassifiers>

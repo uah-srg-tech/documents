@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class DFigureImpl extends DAbstractFigureImpl implements DFigure {
+public class DFigureImpl extends DAbstractFigureImpl implements DFigure {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
