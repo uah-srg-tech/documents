@@ -11,7 +11,6 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DRun;
-import es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable;
 import es.uah.aut.srg.micobs.doctpl.doc.DText;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
@@ -32,9 +31,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRunImpl#getText <em>Text</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRunImpl#getBold <em>Bold</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRunImpl#getItalic <em>Italic</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRunImpl#getUnderscore <em>Underscore</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRunImpl#isBold <em>Bold</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRunImpl#isItalic <em>Italic</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DRunImpl#isUnderscore <em>Underscore</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,64 +50,64 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	protected DText text;
 
 	/**
-	 * The default value of the '{@link #getBold() <em>Bold</em>}' attribute.
+	 * The default value of the '{@link #isBold() <em>Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBold()
+	 * @see #isBold()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final DRunFormatEnableDisable BOLD_EDEFAULT = DRunFormatEnableDisable.DISABLED;
+	protected static final boolean BOLD_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getBold() <em>Bold</em>}' attribute.
+	 * The cached value of the '{@link #isBold() <em>Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBold()
+	 * @see #isBold()
 	 * @generated
 	 * @ordered
 	 */
-	protected DRunFormatEnableDisable bold = BOLD_EDEFAULT;
+	protected boolean bold = BOLD_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getItalic() <em>Italic</em>}' attribute.
+	 * The default value of the '{@link #isItalic() <em>Italic</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItalic()
+	 * @see #isItalic()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final DRunFormatEnableDisable ITALIC_EDEFAULT = DRunFormatEnableDisable.DISABLED;
+	protected static final boolean ITALIC_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getItalic() <em>Italic</em>}' attribute.
+	 * The cached value of the '{@link #isItalic() <em>Italic</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItalic()
+	 * @see #isItalic()
 	 * @generated
 	 * @ordered
 	 */
-	protected DRunFormatEnableDisable italic = ITALIC_EDEFAULT;
+	protected boolean italic = ITALIC_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUnderscore() <em>Underscore</em>}' attribute.
+	 * The default value of the '{@link #isUnderscore() <em>Underscore</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnderscore()
+	 * @see #isUnderscore()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final DRunFormatEnableDisable UNDERSCORE_EDEFAULT = DRunFormatEnableDisable.DISABLED;
+	protected static final boolean UNDERSCORE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getUnderscore() <em>Underscore</em>}' attribute.
+	 * The cached value of the '{@link #isUnderscore() <em>Underscore</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnderscore()
+	 * @see #isUnderscore()
 	 * @generated
 	 * @ordered
 	 */
-	protected DRunFormatEnableDisable underscore = UNDERSCORE_EDEFAULT;
+	protected boolean underscore = UNDERSCORE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,7 +176,7 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DRunFormatEnableDisable getBold() {
+	public boolean isBold() {
 		return bold;
 	}
 
@@ -186,9 +185,9 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBold(DRunFormatEnableDisable newBold) {
-		DRunFormatEnableDisable oldBold = bold;
-		bold = newBold == null ? BOLD_EDEFAULT : newBold;
+	public void setBold(boolean newBold) {
+		boolean oldBold = bold;
+		bold = newBold;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DRUN__BOLD, oldBold, bold));
 	}
@@ -198,7 +197,7 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DRunFormatEnableDisable getItalic() {
+	public boolean isItalic() {
 		return italic;
 	}
 
@@ -207,9 +206,9 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setItalic(DRunFormatEnableDisable newItalic) {
-		DRunFormatEnableDisable oldItalic = italic;
-		italic = newItalic == null ? ITALIC_EDEFAULT : newItalic;
+	public void setItalic(boolean newItalic) {
+		boolean oldItalic = italic;
+		italic = newItalic;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DRUN__ITALIC, oldItalic, italic));
 	}
@@ -219,7 +218,7 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DRunFormatEnableDisable getUnderscore() {
+	public boolean isUnderscore() {
 		return underscore;
 	}
 
@@ -228,9 +227,9 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUnderscore(DRunFormatEnableDisable newUnderscore) {
-		DRunFormatEnableDisable oldUnderscore = underscore;
-		underscore = newUnderscore == null ? UNDERSCORE_EDEFAULT : newUnderscore;
+	public void setUnderscore(boolean newUnderscore) {
+		boolean oldUnderscore = underscore;
+		underscore = newUnderscore;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DRUN__UNDERSCORE, oldUnderscore, underscore));
 	}
@@ -260,11 +259,11 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 			case docPackage.DRUN__TEXT:
 				return getText();
 			case docPackage.DRUN__BOLD:
-				return getBold();
+				return isBold();
 			case docPackage.DRUN__ITALIC:
-				return getItalic();
+				return isItalic();
 			case docPackage.DRUN__UNDERSCORE:
-				return getUnderscore();
+				return isUnderscore();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -281,13 +280,13 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 				setText((DText)newValue);
 				return;
 			case docPackage.DRUN__BOLD:
-				setBold((DRunFormatEnableDisable)newValue);
+				setBold((Boolean)newValue);
 				return;
 			case docPackage.DRUN__ITALIC:
-				setItalic((DRunFormatEnableDisable)newValue);
+				setItalic((Boolean)newValue);
 				return;
 			case docPackage.DRUN__UNDERSCORE:
-				setUnderscore((DRunFormatEnableDisable)newValue);
+				setUnderscore((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

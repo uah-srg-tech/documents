@@ -13,7 +13,6 @@ package es.uah.aut.srg.micobs.doctpl.doc.impl;
 import es.uah.aut.srg.micobs.doctpl.doc.*;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -84,36 +83,6 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 			case docPackage.DENUMERATE: return createDEnumerate();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case docPackage.DRUN_FORMAT_ENABLE_DISABLE:
-				return createDRunFormatEnableDisableFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case docPackage.DRUN_FORMAT_ENABLE_DISABLE:
-				return convertDRunFormatEnableDisableToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -285,26 +254,6 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	public DEnumerate createDEnumerate() {
 		DEnumerateImpl dEnumerate = new DEnumerateImpl();
 		return dEnumerate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DRunFormatEnableDisable createDRunFormatEnableDisableFromString(EDataType eDataType, String initialValue) {
-		DRunFormatEnableDisable result = DRunFormatEnableDisable.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertDRunFormatEnableDisableToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

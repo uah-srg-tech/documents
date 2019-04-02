@@ -73,15 +73,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="DRun" eSuperTypes="#//DParagraphContent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="text" lowerBound="1" eType="#//DText"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bold" lowerBound="1" eType="#//DRunFormatEnableDisable"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="italic" lowerBound="1"
-        eType="#//DRunFormatEnableDisable"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="underscore" lowerBound="1"
-        eType="#//DRunFormatEnableDisable"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DRunFormatEnableDisable">
-    <eLiterals name="disabled" literal="disabled"/>
-    <eLiterals name="enabled" value="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="italic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="underscore" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DText">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" lowerBound="1"

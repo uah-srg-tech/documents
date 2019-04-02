@@ -12,7 +12,6 @@ package es.uah.aut.srg.micobs.doctpl.doc;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -1272,17 +1271,6 @@ public interface docPackage extends EPackage {
 	int DENUMERATE_OPERATION_COUNT = DLIST_CONTENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable <em>DRun Format Enable Disable</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDRunFormatEnableDisable()
-	 * @generated
-	 */
-	int DRUN_FORMAT_ENABLE_DISABLE = 27;
-
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate <em>DDocument Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1725,33 +1713,33 @@ public interface docPackage extends EPackage {
 	EReference getDRun_Text();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getBold <em>Bold</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isBold <em>Bold</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Bold</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#getBold()
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#isBold()
 	 * @see #getDRun()
 	 * @generated
 	 */
 	EAttribute getDRun_Bold();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getItalic <em>Italic</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalic <em>Italic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Italic</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#getItalic()
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalic()
 	 * @see #getDRun()
 	 * @generated
 	 */
 	EAttribute getDRun_Italic();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getUnderscore <em>Underscore</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderscore <em>Underscore</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Underscore</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#getUnderscore()
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderscore()
 	 * @see #getDRun()
 	 * @generated
 	 */
@@ -1892,16 +1880,6 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDEnumerate();
-
-	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable <em>DRun Format Enable Disable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>DRun Format Enable Disable</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable
-	 * @generated
-	 */
-	EEnum getDRunFormatEnableDisable();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2443,16 +2421,6 @@ public interface docPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DENUMERATE = eINSTANCE.getDEnumerate();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable <em>DRun Format Enable Disable</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable
-		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDRunFormatEnableDisable()
-		 * @generated
-		 */
-		EEnum DRUN_FORMAT_ENABLE_DISABLE = eINSTANCE.getDRunFormatEnableDisable();
 
 	}
 
