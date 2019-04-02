@@ -12,7 +12,9 @@ package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DText;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -41,6 +43,7 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	 * @ordered
 	 */
 	protected static final String CONTENT_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -110,7 +113,6 @@ public class DTextImpl extends MinimalEObjectImpl.Container implements DText {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

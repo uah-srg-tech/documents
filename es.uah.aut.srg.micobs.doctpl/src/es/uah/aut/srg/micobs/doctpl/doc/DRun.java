@@ -21,9 +21,9 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getText <em>Text</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getBold <em>Bold</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getItalic <em>Italic</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getUnderscore <em>Underscore</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isBold <em>Bold</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalic <em>Italic</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderscore <em>Underscore</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun()
@@ -59,7 +59,6 @@ public interface DRun extends DParagraphContent {
 
 	/**
 	 * Returns the value of the '<em><b>Bold</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Bold</em>' attribute isn't clear,
@@ -67,28 +66,25 @@ public interface DRun extends DParagraphContent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bold</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable
-	 * @see #setBold(DRunFormatEnableDisable)
+	 * @see #setBold(boolean)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun_Bold()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
-	DRunFormatEnableDisable getBold();
+	boolean isBold();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getBold <em>Bold</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isBold <em>Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Bold</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable
-	 * @see #getBold()
+	 * @see #isBold()
 	 * @generated
 	 */
-	void setBold(DRunFormatEnableDisable value);
+	void setBold(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Italic</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Italic</em>' attribute isn't clear,
@@ -96,28 +92,25 @@ public interface DRun extends DParagraphContent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Italic</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable
-	 * @see #setItalic(DRunFormatEnableDisable)
+	 * @see #setItalic(boolean)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun_Italic()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
-	DRunFormatEnableDisable getItalic();
+	boolean isItalic();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getItalic <em>Italic</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalic <em>Italic</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Italic</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable
-	 * @see #getItalic()
+	 * @see #isItalic()
 	 * @generated
 	 */
-	void setItalic(DRunFormatEnableDisable value);
+	void setItalic(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Underscore</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Underscore</em>' attribute isn't clear,
@@ -125,23 +118,21 @@ public interface DRun extends DParagraphContent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Underscore</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable
-	 * @see #setUnderscore(DRunFormatEnableDisable)
+	 * @see #setUnderscore(boolean)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun_Underscore()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
-	DRunFormatEnableDisable getUnderscore();
+	boolean isUnderscore();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getUnderscore <em>Underscore</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderscore <em>Underscore</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Underscore</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRunFormatEnableDisable
-	 * @see #getUnderscore()
+	 * @see #isUnderscore()
 	 * @generated
 	 */
-	void setUnderscore(DRunFormatEnableDisable value);
+	void setUnderscore(boolean value);
 
 } // DRun
