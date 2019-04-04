@@ -772,6 +772,15 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDReferenceableObject_Name() {
+		return (EAttribute)dReferenceableObjectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDListContent() {
 		return dListContentEClass;
 	}
@@ -931,6 +940,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		createEReference(dHyperlinkEClass, DHYPERLINK__REFERENCE);
 
 		dReferenceableObjectEClass = createEClass(DREFERENCEABLE_OBJECT);
+		createEAttribute(dReferenceableObjectEClass, DREFERENCEABLE_OBJECT__NAME);
 
 		dListContentEClass = createEClass(DLIST_CONTENT);
 		createEReference(dListContentEClass, DLIST_CONTENT__ITEMS);
@@ -1070,6 +1080,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		initEReference(getDHyperlink_Reference(), this.getDReferenceableObject(), null, "reference", null, 1, 1, DHyperlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dReferenceableObjectEClass, DReferenceableObject.class, "DReferenceableObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDReferenceableObject_Name(), ecorePackage.getEString(), "name", null, 1, 1, DReferenceableObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dListContentEClass, DListContent.class, "DListContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDListContent_Items(), this.getDListItem(), null, "items", null, 1, -1, DListContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

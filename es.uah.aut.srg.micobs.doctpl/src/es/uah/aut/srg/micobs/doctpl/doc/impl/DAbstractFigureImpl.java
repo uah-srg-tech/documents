@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
+import es.uah.aut.srg.micobs.doctpl.doc.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractFigureImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractFigureImpl#getReference <em>Reference</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractFigureImpl#getCaption <em>Caption</em>}</li>
  * </ul>
@@ -33,6 +35,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DAbstractFigure {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getReference() <em>Reference</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -97,6 +119,27 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DABSTRACT_FIGURE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getReference() {
 		return reference;
 	}
@@ -142,6 +185,8 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case docPackage.DABSTRACT_FIGURE__NAME:
+				return getName();
 			case docPackage.DABSTRACT_FIGURE__REFERENCE:
 				return getReference();
 			case docPackage.DABSTRACT_FIGURE__CAPTION:
@@ -158,6 +203,9 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case docPackage.DABSTRACT_FIGURE__NAME:
+				setName((String)newValue);
+				return;
 			case docPackage.DABSTRACT_FIGURE__REFERENCE:
 				setReference((String)newValue);
 				return;
@@ -176,6 +224,9 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case docPackage.DABSTRACT_FIGURE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case docPackage.DABSTRACT_FIGURE__REFERENCE:
 				setReference(REFERENCE_EDEFAULT);
 				return;
@@ -194,6 +245,8 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case docPackage.DABSTRACT_FIGURE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case docPackage.DABSTRACT_FIGURE__REFERENCE:
 				return REFERENCE_EDEFAULT == null ? reference != null : !REFERENCE_EDEFAULT.equals(reference);
 			case docPackage.DABSTRACT_FIGURE__CAPTION:
@@ -208,11 +261,45 @@ public abstract class DAbstractFigureImpl extends DBodyContentImpl implements DA
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == DReferenceableObject.class) {
+			switch (derivedFeatureID) {
+				case docPackage.DABSTRACT_FIGURE__NAME: return docPackage.DREFERENCEABLE_OBJECT__NAME;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == DReferenceableObject.class) {
+			switch (baseFeatureID) {
+				case docPackage.DREFERENCEABLE_OBJECT__NAME: return docPackage.DABSTRACT_FIGURE__NAME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (reference: ");
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", reference: ");
 		result.append(reference);
 		result.append(", caption: ");
 		result.append(caption);

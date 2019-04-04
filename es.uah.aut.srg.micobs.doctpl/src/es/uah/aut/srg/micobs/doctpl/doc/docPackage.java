@@ -148,13 +148,22 @@ public interface docPackage extends EPackage {
 	int DREFERENCEABLE_OBJECT = 22;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DREFERENCEABLE_OBJECT__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>DReferenceable Object</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DREFERENCEABLE_OBJECT_FEATURE_COUNT = 0;
+	int DREFERENCEABLE_OBJECT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>DReferenceable Object</em>' class.
@@ -174,6 +183,15 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 */
 	int DABSTRACT_RELATED_DOCUMENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_RELATED_DOCUMENT__NAME = DREFERENCEABLE_OBJECT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -240,6 +258,15 @@ public interface docPackage extends EPackage {
 	int DAPPLICABLE_DOCUMENT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAPPLICABLE_DOCUMENT__NAME = DABSTRACT_RELATED_DOCUMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -302,6 +329,15 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 */
 	int DREFERENCE_DOCUMENT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DREFERENCE_DOCUMENT__NAME = DABSTRACT_RELATED_DOCUMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -396,13 +432,22 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_FIGURE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_FIGURE__NAME = DBODY_CONTENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Reference</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_FIGURE__REFERENCE = DBODY_CONTENT_FEATURE_COUNT + 0;
+	int DABSTRACT_FIGURE__REFERENCE = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -411,7 +456,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_FIGURE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DABSTRACT_FIGURE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>DAbstract Figure</em>' class.
@@ -420,7 +465,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_FIGURE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
+	int DABSTRACT_FIGURE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Figure</em>' class.
@@ -440,6 +485,15 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 */
 	int DFIGURE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DFIGURE__NAME = DABSTRACT_FIGURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Reference</b></em>' attribute.
@@ -488,13 +542,22 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_TABLE = 6;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_TABLE__NAME = DBODY_CONTENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_TABLE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 0;
+	int DABSTRACT_TABLE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>DAbstract Table</em>' class.
@@ -503,7 +566,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_TABLE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DABSTRACT_TABLE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Table</em>' class.
@@ -523,6 +586,15 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 */
 	int DPICTURE_AS_TABLE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DPICTURE_AS_TABLE__NAME = DABSTRACT_TABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -569,6 +641,15 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 */
 	int DBASIC_TABLE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBASIC_TABLE__NAME = DABSTRACT_TABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -1809,6 +1890,17 @@ public interface docPackage extends EPackage {
 	EClass getDReferenceableObject();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DReferenceableObject#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DReferenceableObject#getName()
+	 * @see #getDReferenceableObject()
+	 * @generated
+	 */
+	EAttribute getDReferenceableObject_Name();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DListContent <em>DList Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2357,6 +2449,14 @@ public interface docPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DREFERENCEABLE_OBJECT = eINSTANCE.getDReferenceableObject();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DREFERENCEABLE_OBJECT__NAME = eINSTANCE.getDReferenceableObject_Name();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DListContentImpl <em>DList Content</em>}' class.
