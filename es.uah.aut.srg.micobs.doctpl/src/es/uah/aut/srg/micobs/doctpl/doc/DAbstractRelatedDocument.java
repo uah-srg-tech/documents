@@ -21,8 +21,10 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getTitle <em>Title</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getRevision <em>Revision</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getDate <em>Date</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getRefDocument <em>Ref Document</em>}</li>
  * </ul>
  *
@@ -31,6 +33,32 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  * @generated
  */
 public interface DAbstractRelatedDocument extends DReferenceableObject {
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractRelatedDocument_Id()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,7 +96,7 @@ public interface DAbstractRelatedDocument extends DReferenceableObject {
 	 * @return the value of the '<em>Issue</em>' attribute.
 	 * @see #setIssue(String)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractRelatedDocument_Issue()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getIssue();
@@ -94,7 +122,7 @@ public interface DAbstractRelatedDocument extends DReferenceableObject {
 	 * @return the value of the '<em>Revision</em>' attribute.
 	 * @see #setRevision(String)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractRelatedDocument_Revision()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getRevision();
@@ -108,6 +136,32 @@ public interface DAbstractRelatedDocument extends DReferenceableObject {
 	 * @generated
 	 */
 	void setRevision(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Date</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Date</em>' attribute.
+	 * @see #setDate(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractRelatedDocument_Date()
+	 * @model
+	 * @generated
+	 */
+	String getDate();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getDate <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Date</em>' attribute.
+	 * @see #getDate()
+	 * @generated
+	 */
+	void setDate(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Ref Document</b></em>' reference.

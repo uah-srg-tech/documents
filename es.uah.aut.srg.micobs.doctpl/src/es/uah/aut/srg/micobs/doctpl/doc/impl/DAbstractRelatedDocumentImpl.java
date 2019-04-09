@@ -30,8 +30,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getRevision <em>Revision</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getDate <em>Date</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getRefDocument <em>Ref Document</em>}</li>
  * </ul>
  *
@@ -57,6 +59,26 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	 * @ordered
 	 */
 	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getIssue() <em>Issue</em>}' attribute.
@@ -99,6 +121,26 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	protected String revision = REVISION_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String date = DATE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -115,6 +157,27 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	@Override
 	protected EClass eStaticClass() {
 		return docPackage.Literals.DABSTRACT_RELATED_DOCUMENT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DABSTRACT_RELATED_DOCUMENT__ID, oldId, id));
 	}
 
 	/**
@@ -185,6 +248,27 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDate() {
+		return date;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDate(String newDate) {
+		String oldDate = date;
+		date = newDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DABSTRACT_RELATED_DOCUMENT__DATE, oldDate, date));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DDocumentTemplate getRefDocument() {
 		DDocumentTemplate refDocument = basicGetRefDocument();
 		return refDocument != null && refDocument.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)refDocument) : refDocument;
@@ -223,10 +307,14 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 		switch (featureID) {
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__TITLE:
 				return getTitle();
+			case docPackage.DABSTRACT_RELATED_DOCUMENT__ID:
+				return getId();
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__ISSUE:
 				return getIssue();
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REVISION:
 				return getRevision();
+			case docPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
+				return getDate();
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
 				if (resolve) return getRefDocument();
 				return basicGetRefDocument();
@@ -245,11 +333,17 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__TITLE:
 				setTitle((String)newValue);
 				return;
+			case docPackage.DABSTRACT_RELATED_DOCUMENT__ID:
+				setId((String)newValue);
+				return;
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__ISSUE:
 				setIssue((String)newValue);
 				return;
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REVISION:
 				setRevision((String)newValue);
+				return;
+			case docPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
+				setDate((String)newValue);
 				return;
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
 				setRefDocument((DDocumentTemplate)newValue);
@@ -269,11 +363,17 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__TITLE:
 				setTitle(TITLE_EDEFAULT);
 				return;
+			case docPackage.DABSTRACT_RELATED_DOCUMENT__ID:
+				setId(ID_EDEFAULT);
+				return;
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__ISSUE:
 				setIssue(ISSUE_EDEFAULT);
 				return;
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REVISION:
 				setRevision(REVISION_EDEFAULT);
+				return;
+			case docPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
+				setDate(DATE_EDEFAULT);
 				return;
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
 				setRefDocument((DDocumentTemplate)null);
@@ -292,10 +392,14 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 		switch (featureID) {
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__TITLE:
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
+			case docPackage.DABSTRACT_RELATED_DOCUMENT__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__ISSUE:
 				return ISSUE_EDEFAULT == null ? issue != null : !ISSUE_EDEFAULT.equals(issue);
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REVISION:
 				return REVISION_EDEFAULT == null ? revision != null : !REVISION_EDEFAULT.equals(revision);
+			case docPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
+				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
 				return basicGetRefDocument() != null;
 		}
@@ -314,10 +418,14 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (title: ");
 		result.append(title);
+		result.append(", id: ");
+		result.append(id);
 		result.append(", issue: ");
 		result.append(issue);
 		result.append(", revision: ");
 		result.append(revision);
+		result.append(", date: ");
+		result.append(date);
 		result.append(')');
 		return result.toString();
 	}

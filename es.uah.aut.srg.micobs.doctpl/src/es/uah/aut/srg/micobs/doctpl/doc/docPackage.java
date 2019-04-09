@@ -203,13 +203,22 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_RELATED_DOCUMENT__TITLE = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_RELATED_DOCUMENT__ID = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Issue</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_RELATED_DOCUMENT__ISSUE = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 1;
+	int DABSTRACT_RELATED_DOCUMENT__ISSUE = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Revision</b></em>' attribute.
@@ -218,7 +227,16 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_RELATED_DOCUMENT__REVISION = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 2;
+	int DABSTRACT_RELATED_DOCUMENT__REVISION = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_RELATED_DOCUMENT__DATE = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Ref Document</b></em>' reference.
@@ -227,7 +245,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 3;
+	int DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>DAbstract Related Document</em>' class.
@@ -236,7 +254,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 4;
+	int DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Related Document</em>' class.
@@ -276,6 +294,15 @@ public interface docPackage extends EPackage {
 	int DAPPLICABLE_DOCUMENT__TITLE = DABSTRACT_RELATED_DOCUMENT__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAPPLICABLE_DOCUMENT__ID = DABSTRACT_RELATED_DOCUMENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Issue</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -292,6 +319,15 @@ public interface docPackage extends EPackage {
 	 * @ordered
 	 */
 	int DAPPLICABLE_DOCUMENT__REVISION = DABSTRACT_RELATED_DOCUMENT__REVISION;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAPPLICABLE_DOCUMENT__DATE = DABSTRACT_RELATED_DOCUMENT__DATE;
 
 	/**
 	 * The feature id for the '<em><b>Ref Document</b></em>' reference.
@@ -349,6 +385,15 @@ public interface docPackage extends EPackage {
 	int DREFERENCE_DOCUMENT__TITLE = DABSTRACT_RELATED_DOCUMENT__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DREFERENCE_DOCUMENT__ID = DABSTRACT_RELATED_DOCUMENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Issue</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -365,6 +410,15 @@ public interface docPackage extends EPackage {
 	 * @ordered
 	 */
 	int DREFERENCE_DOCUMENT__REVISION = DABSTRACT_RELATED_DOCUMENT__REVISION;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DREFERENCE_DOCUMENT__DATE = DABSTRACT_RELATED_DOCUMENT__DATE;
 
 	/**
 	 * The feature id for the '<em><b>Ref Document</b></em>' reference.
@@ -1427,6 +1481,17 @@ public interface docPackage extends EPackage {
 	EClass getDAbstractRelatedDocument();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getId()
+	 * @see #getDAbstractRelatedDocument()
+	 * @generated
+	 */
+	EAttribute getDAbstractRelatedDocument_Id();
+
+	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1458,6 +1523,17 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDAbstractRelatedDocument_Revision();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getDate <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getDate()
+	 * @see #getDAbstractRelatedDocument()
+	 * @generated
+	 */
+	EAttribute getDAbstractRelatedDocument_Date();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getRefDocument <em>Ref Document</em>}'.
@@ -2057,6 +2133,14 @@ public interface docPackage extends EPackage {
 		EClass DABSTRACT_RELATED_DOCUMENT = eINSTANCE.getDAbstractRelatedDocument();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DABSTRACT_RELATED_DOCUMENT__ID = eINSTANCE.getDAbstractRelatedDocument_Id();
+
+		/**
 		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2079,6 +2163,14 @@ public interface docPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DABSTRACT_RELATED_DOCUMENT__REVISION = eINSTANCE.getDAbstractRelatedDocument_Revision();
+
+		/**
+		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DABSTRACT_RELATED_DOCUMENT__DATE = eINSTANCE.getDAbstractRelatedDocument_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Ref Document</b></em>' reference feature.
