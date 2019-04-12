@@ -97,16 +97,16 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 				return createDAbstractFigureAdapter();
 			}
 			@Override
-			public Adapter caseDFigure(DFigure object) {
-				return createDFigureAdapter();
+			public Adapter caseDFigureFromFile(DFigureFromFile object) {
+				return createDFigureFromFileAdapter();
 			}
 			@Override
 			public Adapter caseDAbstractTable(DAbstractTable object) {
 				return createDAbstractTableAdapter();
 			}
 			@Override
-			public Adapter caseDPictureAsTable(DPictureAsTable object) {
-				return createDPictureAsTableAdapter();
+			public Adapter caseDTableFromFile(DTableFromFile object) {
+				return createDTableFromFileAdapter();
 			}
 			@Override
 			public Adapter caseDBasicTable(DBasicTable object) {
@@ -279,16 +279,16 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DFigure <em>DFigure</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile <em>DFigure From File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DFigure
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile
 	 * @generated
 	 */
-	public Adapter createDFigureAdapter() {
+	public Adapter createDFigureFromFileAdapter() {
 		return null;
 	}
 
@@ -307,16 +307,16 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable <em>DPicture As Table</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile <em>DTable From File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile
 	 * @generated
 	 */
-	public Adapter createDPictureAsTableAdapter() {
+	public Adapter createDTableFromFileAdapter() {
 		return null;
 	}
 

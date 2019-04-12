@@ -48,22 +48,22 @@ public interface docFactory extends EFactory {
 	DReferenceDocument createDReferenceDocument();
 
 	/**
-	 * Returns a new object of class '<em>DFigure</em>'.
+	 * Returns a new object of class '<em>DFigure From File</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DFigure</em>'.
+	 * @return a new object of class '<em>DFigure From File</em>'.
 	 * @generated
 	 */
-	DFigure createDFigure();
+	DFigureFromFile createDFigureFromFile();
 
 	/**
-	 * Returns a new object of class '<em>DPicture As Table</em>'.
+	 * Returns a new object of class '<em>DTable From File</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DPicture As Table</em>'.
+	 * @return a new object of class '<em>DTable From File</em>'.
 	 * @generated
 	 */
-	DPictureAsTable createDPictureAsTable();
+	DTableFromFile createDTableFromFile();
 
 	/**
 	 * Returns a new object of class '<em>DBasic Table</em>'.

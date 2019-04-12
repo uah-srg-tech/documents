@@ -112,12 +112,12 @@ public class docSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case docPackage.DFIGURE: {
-				DFigure dFigure = (DFigure)theEObject;
-				T result = caseDFigure(dFigure);
-				if (result == null) result = caseDAbstractFigure(dFigure);
-				if (result == null) result = caseDBodyContent(dFigure);
-				if (result == null) result = caseDReferenceableObject(dFigure);
+			case docPackage.DFIGURE_FROM_FILE: {
+				DFigureFromFile dFigureFromFile = (DFigureFromFile)theEObject;
+				T result = caseDFigureFromFile(dFigureFromFile);
+				if (result == null) result = caseDAbstractFigure(dFigureFromFile);
+				if (result == null) result = caseDBodyContent(dFigureFromFile);
+				if (result == null) result = caseDReferenceableObject(dFigureFromFile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -129,12 +129,12 @@ public class docSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case docPackage.DPICTURE_AS_TABLE: {
-				DPictureAsTable dPictureAsTable = (DPictureAsTable)theEObject;
-				T result = caseDPictureAsTable(dPictureAsTable);
-				if (result == null) result = caseDAbstractTable(dPictureAsTable);
-				if (result == null) result = caseDBodyContent(dPictureAsTable);
-				if (result == null) result = caseDReferenceableObject(dPictureAsTable);
+			case docPackage.DTABLE_FROM_FILE: {
+				DTableFromFile dTableFromFile = (DTableFromFile)theEObject;
+				T result = caseDTableFromFile(dTableFromFile);
+				if (result == null) result = caseDAbstractTable(dTableFromFile);
+				if (result == null) result = caseDBodyContent(dTableFromFile);
+				if (result == null) result = caseDReferenceableObject(dTableFromFile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -347,17 +347,17 @@ public class docSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>DFigure</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>DFigure From File</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>DFigure</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>DFigure From File</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDFigure(DFigure object) {
+	public T caseDFigureFromFile(DFigureFromFile object) {
 		return null;
 	}
 
@@ -377,17 +377,17 @@ public class docSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>DPicture As Table</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>DTable From File</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>DPicture As Table</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>DTable From File</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDPictureAsTable(DPictureAsTable object) {
+	public T caseDTableFromFile(DTableFromFile object) {
 		return null;
 	}
 

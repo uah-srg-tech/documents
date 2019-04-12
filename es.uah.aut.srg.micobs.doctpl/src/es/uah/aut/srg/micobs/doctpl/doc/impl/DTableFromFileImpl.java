@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable;
+import es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,44 +21,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>DPicture As Table</b></em>'.
+ * An implementation of the model object '<em><b>DTable From File</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DPictureAsTableImpl#getReference <em>Reference</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DTableFromFileImpl#getReferenceFile <em>Reference File</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureAsTable {
+public class DTableFromFileImpl extends DAbstractTableImpl implements DTableFromFile {
 	/**
-	 * The default value of the '{@link #getReference() <em>Reference</em>}' attribute.
+	 * The default value of the '{@link #getReferenceFile() <em>Reference File</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReference()
+	 * @see #getReferenceFile()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REFERENCE_EDEFAULT = null;
+	protected static final String REFERENCE_FILE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getReference() <em>Reference</em>}' attribute.
+	 * The cached value of the '{@link #getReferenceFile() <em>Reference File</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReference()
+	 * @see #getReferenceFile()
 	 * @generated
 	 * @ordered
 	 */
-	protected String reference = REFERENCE_EDEFAULT;
+	protected String referenceFile = REFERENCE_FILE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DPictureAsTableImpl() {
+	protected DTableFromFileImpl() {
 		super();
 	}
 
@@ -69,7 +69,7 @@ public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureA
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return docPackage.Literals.DPICTURE_AS_TABLE;
+		return docPackage.Literals.DTABLE_FROM_FILE;
 	}
 
 	/**
@@ -77,8 +77,8 @@ public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getReference() {
-		return reference;
+	public String getReferenceFile() {
+		return referenceFile;
 	}
 
 	/**
@@ -86,11 +86,11 @@ public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReference(String newReference) {
-		String oldReference = reference;
-		reference = newReference;
+	public void setReferenceFile(String newReferenceFile) {
+		String oldReferenceFile = referenceFile;
+		referenceFile = newReferenceFile;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DPICTURE_AS_TABLE__REFERENCE, oldReference, reference));
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DTABLE_FROM_FILE__REFERENCE_FILE, oldReferenceFile, referenceFile));
 	}
 
 	/**
@@ -101,8 +101,8 @@ public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureA
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DPICTURE_AS_TABLE__REFERENCE:
-				return getReference();
+			case docPackage.DTABLE_FROM_FILE__REFERENCE_FILE:
+				return getReferenceFile();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -115,8 +115,8 @@ public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureA
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DPICTURE_AS_TABLE__REFERENCE:
-				setReference((String)newValue);
+			case docPackage.DTABLE_FROM_FILE__REFERENCE_FILE:
+				setReferenceFile((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -130,8 +130,8 @@ public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureA
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DPICTURE_AS_TABLE__REFERENCE:
-				setReference(REFERENCE_EDEFAULT);
+			case docPackage.DTABLE_FROM_FILE__REFERENCE_FILE:
+				setReferenceFile(REFERENCE_FILE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -145,8 +145,8 @@ public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureA
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DPICTURE_AS_TABLE__REFERENCE:
-				return REFERENCE_EDEFAULT == null ? reference != null : !REFERENCE_EDEFAULT.equals(reference);
+			case docPackage.DTABLE_FROM_FILE__REFERENCE_FILE:
+				return REFERENCE_FILE_EDEFAULT == null ? referenceFile != null : !REFERENCE_FILE_EDEFAULT.equals(referenceFile);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -161,10 +161,10 @@ public class DPictureAsTableImpl extends DAbstractTableImpl implements DPictureA
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (reference: ");
-		result.append(reference);
+		result.append(" (referenceFile: ");
+		result.append(referenceFile);
 		result.append(')');
 		return result.toString();
 	}
 
-} //DPictureAsTableImpl
+} //DTableFromFileImpl

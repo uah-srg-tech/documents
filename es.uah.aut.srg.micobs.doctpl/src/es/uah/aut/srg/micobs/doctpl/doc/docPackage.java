@@ -495,22 +495,13 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_FIGURE__NAME = DBODY_CONTENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Reference</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DABSTRACT_FIGURE__REFERENCE = DBODY_CONTENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_FIGURE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 2;
+	int DABSTRACT_FIGURE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>DAbstract Figure</em>' class.
@@ -519,7 +510,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_FIGURE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 3;
+	int DABSTRACT_FIGURE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Figure</em>' class.
@@ -531,14 +522,14 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_FIGURE_OPERATION_COUNT = DBODY_CONTENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DFigureImpl <em>DFigure</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DFigureFromFileImpl <em>DFigure From File</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DFigureImpl
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDFigure()
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DFigureFromFileImpl
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDFigureFromFile()
 	 * @generated
 	 */
-	int DFIGURE = 5;
+	int DFIGURE_FROM_FILE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -547,16 +538,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DFIGURE__NAME = DABSTRACT_FIGURE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Reference</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DFIGURE__REFERENCE = DABSTRACT_FIGURE__REFERENCE;
+	int DFIGURE_FROM_FILE__NAME = DABSTRACT_FIGURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -565,25 +547,34 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DFIGURE__CAPTION = DABSTRACT_FIGURE__CAPTION;
+	int DFIGURE_FROM_FILE__CAPTION = DABSTRACT_FIGURE__CAPTION;
 
 	/**
-	 * The number of structural features of the '<em>DFigure</em>' class.
+	 * The feature id for the '<em><b>Reference File</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DFIGURE_FEATURE_COUNT = DABSTRACT_FIGURE_FEATURE_COUNT + 0;
+	int DFIGURE_FROM_FILE__REFERENCE_FILE = DABSTRACT_FIGURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>DFigure</em>' class.
+	 * The number of structural features of the '<em>DFigure From File</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DFIGURE_OPERATION_COUNT = DABSTRACT_FIGURE_OPERATION_COUNT + 0;
+	int DFIGURE_FROM_FILE_FEATURE_COUNT = DABSTRACT_FIGURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>DFigure From File</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DFIGURE_FROM_FILE_OPERATION_COUNT = DABSTRACT_FIGURE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractTableImpl <em>DAbstract Table</em>}' class.
@@ -632,14 +623,14 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_TABLE_OPERATION_COUNT = DBODY_CONTENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DPictureAsTableImpl <em>DPicture As Table</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DTableFromFileImpl <em>DTable From File</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DPictureAsTableImpl
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDPictureAsTable()
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DTableFromFileImpl
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDTableFromFile()
 	 * @generated
 	 */
-	int DPICTURE_AS_TABLE = 7;
+	int DTABLE_FROM_FILE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -648,7 +639,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DPICTURE_AS_TABLE__NAME = DABSTRACT_TABLE__NAME;
+	int DTABLE_FROM_FILE__NAME = DABSTRACT_TABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -657,34 +648,34 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DPICTURE_AS_TABLE__CAPTION = DABSTRACT_TABLE__CAPTION;
+	int DTABLE_FROM_FILE__CAPTION = DABSTRACT_TABLE__CAPTION;
 
 	/**
-	 * The feature id for the '<em><b>Reference</b></em>' attribute.
+	 * The feature id for the '<em><b>Reference File</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DPICTURE_AS_TABLE__REFERENCE = DABSTRACT_TABLE_FEATURE_COUNT + 0;
+	int DTABLE_FROM_FILE__REFERENCE_FILE = DABSTRACT_TABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>DPicture As Table</em>' class.
+	 * The number of structural features of the '<em>DTable From File</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DPICTURE_AS_TABLE_FEATURE_COUNT = DABSTRACT_TABLE_FEATURE_COUNT + 1;
+	int DTABLE_FROM_FILE_FEATURE_COUNT = DABSTRACT_TABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>DPicture As Table</em>' class.
+	 * The number of operations of the '<em>DTable From File</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DPICTURE_AS_TABLE_OPERATION_COUNT = DABSTRACT_TABLE_OPERATION_COUNT + 0;
+	int DTABLE_FROM_FILE_OPERATION_COUNT = DABSTRACT_TABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DBasicTableImpl <em>DBasic Table</em>}' class.
@@ -1577,17 +1568,6 @@ public interface docPackage extends EPackage {
 	EClass getDAbstractFigure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getReference <em>Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reference</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getReference()
-	 * @see #getDAbstractFigure()
-	 * @generated
-	 */
-	EAttribute getDAbstractFigure_Reference();
-
-	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure#getCaption <em>Caption</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1599,14 +1579,25 @@ public interface docPackage extends EPackage {
 	EAttribute getDAbstractFigure_Caption();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DFigure <em>DFigure</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile <em>DFigure From File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>DFigure</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DFigure
+	 * @return the meta object for class '<em>DFigure From File</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile
 	 * @generated
 	 */
-	EClass getDFigure();
+	EClass getDFigureFromFile();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile#getReferenceFile <em>Reference File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reference File</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile#getReferenceFile()
+	 * @see #getDFigureFromFile()
+	 * @generated
+	 */
+	EAttribute getDFigureFromFile_ReferenceFile();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable <em>DAbstract Table</em>}'.
@@ -1630,25 +1621,25 @@ public interface docPackage extends EPackage {
 	EAttribute getDAbstractTable_Caption();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable <em>DPicture As Table</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile <em>DTable From File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>DPicture As Table</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable
+	 * @return the meta object for class '<em>DTable From File</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile
 	 * @generated
 	 */
-	EClass getDPictureAsTable();
+	EClass getDTableFromFile();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable#getReference <em>Reference</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile#getReferenceFile <em>Reference File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reference</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable#getReference()
-	 * @see #getDPictureAsTable()
+	 * @return the meta object for the attribute '<em>Reference File</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile#getReferenceFile()
+	 * @see #getDTableFromFile()
 	 * @generated
 	 */
-	EAttribute getDPictureAsTable_Reference();
+	EAttribute getDTableFromFile_ReferenceFile();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DBasicTable <em>DBasic Table</em>}'.
@@ -2211,14 +2202,6 @@ public interface docPackage extends EPackage {
 		EClass DABSTRACT_FIGURE = eINSTANCE.getDAbstractFigure();
 
 		/**
-		 * The meta object literal for the '<em><b>Reference</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DABSTRACT_FIGURE__REFERENCE = eINSTANCE.getDAbstractFigure_Reference();
-
-		/**
 		 * The meta object literal for the '<em><b>Caption</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2227,14 +2210,22 @@ public interface docPackage extends EPackage {
 		EAttribute DABSTRACT_FIGURE__CAPTION = eINSTANCE.getDAbstractFigure_Caption();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DFigureImpl <em>DFigure</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DFigureFromFileImpl <em>DFigure From File</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DFigureImpl
-		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDFigure()
+		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DFigureFromFileImpl
+		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDFigureFromFile()
 		 * @generated
 		 */
-		EClass DFIGURE = eINSTANCE.getDFigure();
+		EClass DFIGURE_FROM_FILE = eINSTANCE.getDFigureFromFile();
+
+		/**
+		 * The meta object literal for the '<em><b>Reference File</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DFIGURE_FROM_FILE__REFERENCE_FILE = eINSTANCE.getDFigureFromFile_ReferenceFile();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractTableImpl <em>DAbstract Table</em>}' class.
@@ -2255,22 +2246,22 @@ public interface docPackage extends EPackage {
 		EAttribute DABSTRACT_TABLE__CAPTION = eINSTANCE.getDAbstractTable_Caption();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DPictureAsTableImpl <em>DPicture As Table</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DTableFromFileImpl <em>DTable From File</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DPictureAsTableImpl
-		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDPictureAsTable()
+		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DTableFromFileImpl
+		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDTableFromFile()
 		 * @generated
 		 */
-		EClass DPICTURE_AS_TABLE = eINSTANCE.getDPictureAsTable();
+		EClass DTABLE_FROM_FILE = eINSTANCE.getDTableFromFile();
 
 		/**
-		 * The meta object literal for the '<em><b>Reference</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Reference File</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DPICTURE_AS_TABLE__REFERENCE = eINSTANCE.getDPictureAsTable_Reference();
+		EAttribute DTABLE_FROM_FILE__REFERENCE_FILE = eINSTANCE.getDTableFromFile_ReferenceFile();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DBasicTableImpl <em>DBasic Table</em>}' class.

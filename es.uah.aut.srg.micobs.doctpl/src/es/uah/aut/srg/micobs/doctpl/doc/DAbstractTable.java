@@ -39,7 +39,7 @@ public interface DAbstractTable extends DBodyContent, DReferenceableObject {
 	 * @return the value of the '<em>Caption</em>' attribute.
 	 * @see #setCaption(String)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractTable_Caption()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getCaption();

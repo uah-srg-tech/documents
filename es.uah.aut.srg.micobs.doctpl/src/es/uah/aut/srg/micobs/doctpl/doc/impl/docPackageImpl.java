@@ -23,7 +23,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DCell;
 import es.uah.aut.srg.micobs.doctpl.doc.DColumn;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.DEnumerate;
-import es.uah.aut.srg.micobs.doctpl.doc.DFigure;
+import es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DHyperlink;
 import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
@@ -32,11 +32,11 @@ import es.uah.aut.srg.micobs.doctpl.doc.DListContent;
 import es.uah.aut.srg.micobs.doctpl.doc.DListItem;
 import es.uah.aut.srg.micobs.doctpl.doc.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doc.DParagraphContent;
-import es.uah.aut.srg.micobs.doctpl.doc.DPictureAsTable;
 import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doc.DRow;
 import es.uah.aut.srg.micobs.doctpl.doc.DRun;
+import es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doc.DText;
 import es.uah.aut.srg.micobs.doctpl.doc.docFactory;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
@@ -95,7 +95,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dFigureEClass = null;
+	private EClass dFigureFromFileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,7 +109,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dPictureAsTableEClass = null;
+	private EClass dTableFromFileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -457,7 +457,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDAbstractFigure_Reference() {
+	public EAttribute getDAbstractFigure_Caption() {
 		return (EAttribute)dAbstractFigureEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -466,8 +466,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDAbstractFigure_Caption() {
-		return (EAttribute)dAbstractFigureEClass.getEStructuralFeatures().get(1);
+	public EClass getDFigureFromFile() {
+		return dFigureFromFileEClass;
 	}
 
 	/**
@@ -475,8 +475,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDFigure() {
-		return dFigureEClass;
+	public EAttribute getDFigureFromFile_ReferenceFile() {
+		return (EAttribute)dFigureFromFileEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -502,8 +502,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDPictureAsTable() {
-		return dPictureAsTableEClass;
+	public EClass getDTableFromFile() {
+		return dTableFromFileEClass;
 	}
 
 	/**
@@ -511,8 +511,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDPictureAsTable_Reference() {
-		return (EAttribute)dPictureAsTableEClass.getEStructuralFeatures().get(0);
+	public EAttribute getDTableFromFile_ReferenceFile() {
+		return (EAttribute)dTableFromFileEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -905,16 +905,16 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		dReferenceDocumentEClass = createEClass(DREFERENCE_DOCUMENT);
 
 		dAbstractFigureEClass = createEClass(DABSTRACT_FIGURE);
-		createEAttribute(dAbstractFigureEClass, DABSTRACT_FIGURE__REFERENCE);
 		createEAttribute(dAbstractFigureEClass, DABSTRACT_FIGURE__CAPTION);
 
-		dFigureEClass = createEClass(DFIGURE);
+		dFigureFromFileEClass = createEClass(DFIGURE_FROM_FILE);
+		createEAttribute(dFigureFromFileEClass, DFIGURE_FROM_FILE__REFERENCE_FILE);
 
 		dAbstractTableEClass = createEClass(DABSTRACT_TABLE);
 		createEAttribute(dAbstractTableEClass, DABSTRACT_TABLE__CAPTION);
 
-		dPictureAsTableEClass = createEClass(DPICTURE_AS_TABLE);
-		createEAttribute(dPictureAsTableEClass, DPICTURE_AS_TABLE__REFERENCE);
+		dTableFromFileEClass = createEClass(DTABLE_FROM_FILE);
+		createEAttribute(dTableFromFileEClass, DTABLE_FROM_FILE__REFERENCE_FILE);
 
 		dBasicTableEClass = createEClass(DBASIC_TABLE);
 		createEReference(dBasicTableEClass, DBASIC_TABLE__ROWS);
@@ -1010,10 +1010,10 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		dReferenceDocumentEClass.getESuperTypes().add(this.getDAbstractRelatedDocument());
 		dAbstractFigureEClass.getESuperTypes().add(this.getDBodyContent());
 		dAbstractFigureEClass.getESuperTypes().add(this.getDReferenceableObject());
-		dFigureEClass.getESuperTypes().add(this.getDAbstractFigure());
+		dFigureFromFileEClass.getESuperTypes().add(this.getDAbstractFigure());
 		dAbstractTableEClass.getESuperTypes().add(this.getDBodyContent());
 		dAbstractTableEClass.getESuperTypes().add(this.getDReferenceableObject());
-		dPictureAsTableEClass.getESuperTypes().add(this.getDAbstractTable());
+		dTableFromFileEClass.getESuperTypes().add(this.getDAbstractTable());
 		dBasicTableEClass.getESuperTypes().add(this.getDAbstractTable());
 		dCellEClass.getESuperTypes().add(this.getDBody());
 		dFixedSectionEClass.getESuperTypes().add(this.getDAbstractSection());
@@ -1047,16 +1047,16 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		initEClass(dReferenceDocumentEClass, DReferenceDocument.class, "DReferenceDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dAbstractFigureEClass, DAbstractFigure.class, "DAbstractFigure", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDAbstractFigure_Reference(), ecorePackage.getEString(), "reference", null, 1, 1, DAbstractFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDAbstractFigure_Caption(), ecorePackage.getEString(), "caption", null, 1, 1, DAbstractFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDAbstractFigure_Caption(), ecorePackage.getEString(), "caption", null, 0, 1, DAbstractFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(dFigureEClass, DFigure.class, "DFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(dFigureFromFileEClass, DFigureFromFile.class, "DFigureFromFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDFigureFromFile_ReferenceFile(), ecorePackage.getEString(), "referenceFile", null, 1, 1, DFigureFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dAbstractTableEClass, DAbstractTable.class, "DAbstractTable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDAbstractTable_Caption(), ecorePackage.getEString(), "caption", null, 1, 1, DAbstractTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDAbstractTable_Caption(), ecorePackage.getEString(), "caption", null, 0, 1, DAbstractTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(dPictureAsTableEClass, DPictureAsTable.class, "DPictureAsTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDPictureAsTable_Reference(), ecorePackage.getEString(), "reference", null, 1, 1, DPictureAsTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dTableFromFileEClass, DTableFromFile.class, "DTableFromFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDTableFromFile_ReferenceFile(), ecorePackage.getEString(), "referenceFile", null, 1, 1, DTableFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dBasicTableEClass, DBasicTable.class, "DBasicTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDBasicTable_Rows(), this.getDRow(), null, "rows", null, 1, -1, DBasicTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
