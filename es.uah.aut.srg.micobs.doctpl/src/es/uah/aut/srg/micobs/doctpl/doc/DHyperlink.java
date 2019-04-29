@@ -40,7 +40,7 @@ public interface DHyperlink extends DParagraphContent {
 	 * @return the value of the '<em>Run</em>' containment reference.
 	 * @see #setRun(DRun)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDHyperlink_Run()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	DRun getRun();
@@ -66,7 +66,7 @@ public interface DHyperlink extends DParagraphContent {
 	 * @return the value of the '<em>Reference</em>' reference.
 	 * @see #setReference(DReferenceableObject)
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDHyperlink_Reference()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	DReferenceableObject getReference();
