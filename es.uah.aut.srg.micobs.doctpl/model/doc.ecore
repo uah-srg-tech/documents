@@ -82,9 +82,9 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DHyperlink" eSuperTypes="#//DParagraphContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="run" lowerBound="1" eType="#//DRun"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//DReferenceableObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="run" eType="#//DRun" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
+        eType="#//DReferenceableObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DReferenceableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
