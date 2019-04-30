@@ -25,7 +25,6 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getRevision <em>Revision</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getDate <em>Date</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getRefDocument <em>Ref Document</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractRelatedDocument()
@@ -162,31 +161,5 @@ public interface DAbstractRelatedDocument extends DReferenceableObject {
 	 * @generated
 	 */
 	void setDate(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Ref Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ref Document</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ref Document</em>' reference.
-	 * @see #setRefDocument(DDocumentTemplate)
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDAbstractRelatedDocument_RefDocument()
-	 * @model required="true" transient="true" volatile="true" derived="true"
-	 * @generated
-	 */
-	DDocumentTemplate getRefDocument();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getRefDocument <em>Ref Document</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ref Document</em>' reference.
-	 * @see #getRefDocument()
-	 * @generated
-	 */
-	void setRefDocument(DDocumentTemplate value);
 
 } // DAbstractRelatedDocument

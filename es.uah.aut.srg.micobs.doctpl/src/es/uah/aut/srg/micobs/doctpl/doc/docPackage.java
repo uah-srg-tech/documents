@@ -239,22 +239,13 @@ public interface docPackage extends EPackage {
 	int DABSTRACT_RELATED_DOCUMENT__DATE = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Ref Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 5;
-
-	/**
 	 * The number of structural features of the '<em>DAbstract Related Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 6;
+	int DABSTRACT_RELATED_DOCUMENT_FEATURE_COUNT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Related Document</em>' class.
@@ -328,15 +319,6 @@ public interface docPackage extends EPackage {
 	 * @ordered
 	 */
 	int DAPPLICABLE_DOCUMENT__DATE = DABSTRACT_RELATED_DOCUMENT__DATE;
-
-	/**
-	 * The feature id for the '<em><b>Ref Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DAPPLICABLE_DOCUMENT__REF_DOCUMENT = DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT;
 
 	/**
 	 * The number of structural features of the '<em>DApplicable Document</em>' class.
@@ -419,15 +401,6 @@ public interface docPackage extends EPackage {
 	 * @ordered
 	 */
 	int DREFERENCE_DOCUMENT__DATE = DABSTRACT_RELATED_DOCUMENT__DATE;
-
-	/**
-	 * The feature id for the '<em><b>Ref Document</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DREFERENCE_DOCUMENT__REF_DOCUMENT = DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT;
 
 	/**
 	 * The number of structural features of the '<em>DReference Document</em>' class.
@@ -1527,17 +1500,6 @@ public interface docPackage extends EPackage {
 	EAttribute getDAbstractRelatedDocument_Date();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getRefDocument <em>Ref Document</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ref Document</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument#getRefDocument()
-	 * @see #getDAbstractRelatedDocument()
-	 * @generated
-	 */
-	EReference getDAbstractRelatedDocument_RefDocument();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument <em>DApplicable Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2162,14 +2124,6 @@ public interface docPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DABSTRACT_RELATED_DOCUMENT__DATE = eINSTANCE.getDAbstractRelatedDocument_Date();
-
-		/**
-		 * The meta object literal for the '<em><b>Ref Document</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT = eINSTANCE.getDAbstractRelatedDocument_RefDocument();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DApplicableDocumentImpl <em>DApplicable Document</em>}' class.

@@ -11,14 +11,11 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractRelatedDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -34,7 +31,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getRevision <em>Revision</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getDate <em>Date</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractRelatedDocumentImpl#getRefDocument <em>Ref Document</em>}</li>
  * </ul>
  *
  * @generated
@@ -269,39 +265,6 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DDocumentTemplate getRefDocument() {
-		DDocumentTemplate refDocument = basicGetRefDocument();
-		return refDocument != null && refDocument.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)refDocument) : refDocument;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DDocumentTemplate basicGetRefDocument() {
-		// TODO: implement this method to return the 'Ref Document' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefDocument(DDocumentTemplate newRefDocument) {
-		// TODO: implement this method to set the 'Ref Document' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -315,9 +278,6 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 				return getRevision();
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
 				return getDate();
-			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
-				if (resolve) return getRefDocument();
-				return basicGetRefDocument();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -344,9 +304,6 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 				return;
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
 				setDate((String)newValue);
-				return;
-			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
-				setRefDocument((DDocumentTemplate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -375,9 +332,6 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
-			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
-				setRefDocument((DDocumentTemplate)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -400,8 +354,6 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 				return REVISION_EDEFAULT == null ? revision != null : !REVISION_EDEFAULT.equals(revision);
 			case docPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
-			case docPackage.DABSTRACT_RELATED_DOCUMENT__REF_DOCUMENT:
-				return basicGetRefDocument() != null;
 		}
 		return super.eIsSet(featureID);
 	}
