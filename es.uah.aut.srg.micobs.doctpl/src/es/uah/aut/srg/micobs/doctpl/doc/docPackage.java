@@ -1094,22 +1094,22 @@ public interface docPackage extends EPackage {
 	int DRUN__BOLD = DPARAGRAPH_CONTENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Italic</b></em>' attribute.
+	 * The feature id for the '<em><b>Italics</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN__ITALIC = DPARAGRAPH_CONTENT_FEATURE_COUNT + 2;
+	int DRUN__ITALICS = DPARAGRAPH_CONTENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Underscore</b></em>' attribute.
+	 * The feature id for the '<em><b>Underline</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN__UNDERSCORE = DPARAGRAPH_CONTENT_FEATURE_COUNT + 3;
+	int DRUN__UNDERLINE = DPARAGRAPH_CONTENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>DRun</em>' class.
@@ -1834,26 +1834,26 @@ public interface docPackage extends EPackage {
 	EAttribute getDRun_Bold();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalic <em>Italic</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalics <em>Italics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Italic</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalic()
+	 * @return the meta object for the attribute '<em>Italics</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalics()
 	 * @see #getDRun()
 	 * @generated
 	 */
-	EAttribute getDRun_Italic();
+	EAttribute getDRun_Italics();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderscore <em>Underscore</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderline <em>Underline</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Underscore</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderscore()
+	 * @return the meta object for the attribute '<em>Underline</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderline()
 	 * @see #getDRun()
 	 * @generated
 	 */
-	EAttribute getDRun_Underscore();
+	EAttribute getDRun_Underline();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DText <em>DText</em>}'.
@@ -2418,20 +2418,20 @@ public interface docPackage extends EPackage {
 		EAttribute DRUN__BOLD = eINSTANCE.getDRun_Bold();
 
 		/**
-		 * The meta object literal for the '<em><b>Italic</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Italics</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DRUN__ITALIC = eINSTANCE.getDRun_Italic();
+		EAttribute DRUN__ITALICS = eINSTANCE.getDRun_Italics();
 
 		/**
-		 * The meta object literal for the '<em><b>Underscore</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Underline</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DRUN__UNDERSCORE = eINSTANCE.getDRun_Underscore();
+		EAttribute DRUN__UNDERLINE = eINSTANCE.getDRun_Underline();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DTextImpl <em>DText</em>}' class.

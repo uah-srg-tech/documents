@@ -709,7 +709,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDRun_Italic() {
+	public EAttribute getDRun_Italics() {
 		return (EAttribute)dRunEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -718,7 +718,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDRun_Underscore() {
+	public EAttribute getDRun_Underline() {
 		return (EAttribute)dRunEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -939,8 +939,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		dRunEClass = createEClass(DRUN);
 		createEReference(dRunEClass, DRUN__TEXT);
 		createEAttribute(dRunEClass, DRUN__BOLD);
-		createEAttribute(dRunEClass, DRUN__ITALIC);
-		createEAttribute(dRunEClass, DRUN__UNDERSCORE);
+		createEAttribute(dRunEClass, DRUN__ITALICS);
+		createEAttribute(dRunEClass, DRUN__UNDERLINE);
 
 		dTextEClass = createEClass(DTEXT);
 		createEAttribute(dTextEClass, DTEXT__CONTENT);
@@ -1080,8 +1080,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		initEClass(dRunEClass, DRun.class, "DRun", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDRun_Text(), this.getDText(), null, "text", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDRun_Bold(), ecorePackage.getEBoolean(), "bold", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDRun_Italic(), ecorePackage.getEBoolean(), "italic", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDRun_Underscore(), ecorePackage.getEBoolean(), "underscore", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Italics(), ecorePackage.getEBoolean(), "italics", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Underline(), ecorePackage.getEBoolean(), "underline", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dTextEClass, DText.class, "DText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDText_Content(), ecorePackage.getEString(), "content", null, 1, 1, DText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

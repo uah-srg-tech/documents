@@ -22,8 +22,8 @@ package es.uah.aut.srg.micobs.doctpl.doc;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#getText <em>Text</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isBold <em>Bold</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalic <em>Italic</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderscore <em>Underscore</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalics <em>Italics</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderline <em>Underline</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun()
@@ -84,55 +84,55 @@ public interface DRun extends DParagraphContent {
 	void setBold(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Italic</b></em>' attribute.
+	 * Returns the value of the '<em><b>Italics</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Italic</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Italics</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Italic</em>' attribute.
-	 * @see #setItalic(boolean)
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun_Italic()
+	 * @return the value of the '<em>Italics</em>' attribute.
+	 * @see #setItalics(boolean)
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun_Italics()
 	 * @model
 	 * @generated
 	 */
-	boolean isItalic();
+	boolean isItalics();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalic <em>Italic</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isItalics <em>Italics</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Italic</em>' attribute.
-	 * @see #isItalic()
+	 * @param value the new value of the '<em>Italics</em>' attribute.
+	 * @see #isItalics()
 	 * @generated
 	 */
-	void setItalic(boolean value);
+	void setItalics(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Underscore</b></em>' attribute.
+	 * Returns the value of the '<em><b>Underline</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Underscore</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Underline</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Underscore</em>' attribute.
-	 * @see #setUnderscore(boolean)
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun_Underscore()
+	 * @return the value of the '<em>Underline</em>' attribute.
+	 * @see #setUnderline(boolean)
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.docPackage#getDRun_Underline()
 	 * @model
 	 * @generated
 	 */
-	boolean isUnderscore();
+	boolean isUnderline();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderscore <em>Underscore</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doc.DRun#isUnderline <em>Underline</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Underscore</em>' attribute.
-	 * @see #isUnderscore()
+	 * @param value the new value of the '<em>Underline</em>' attribute.
+	 * @see #isUnderline()
 	 * @generated
 	 */
-	void setUnderscore(boolean value);
+	void setUnderline(boolean value);
 
 } // DRun
