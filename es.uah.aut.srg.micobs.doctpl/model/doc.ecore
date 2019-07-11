@@ -51,7 +51,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cells" lowerBound="1" upperBound="-1"
         eType="#//DCell" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DCell" eSuperTypes="#//DBody"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DCell" eSuperTypes="#//DBody">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="span" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DAbstractSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subsections" upperBound="-1"
         eType="#//DAbstractSection" volatile="true" transient="true" derived="true"/>

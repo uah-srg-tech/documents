@@ -854,13 +854,22 @@ public interface docPackage extends EPackage {
 	int DCELL__BODY_CONTENT = DBODY__BODY_CONTENT;
 
 	/**
+	 * The feature id for the '<em><b>Span</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DCELL__SPAN = DBODY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>DCell</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DCELL_FEATURE_COUNT = DBODY_FEATURE_COUNT + 0;
+	int DCELL_FEATURE_COUNT = DBODY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>DCell</em>' class.
@@ -1699,6 +1708,17 @@ public interface docPackage extends EPackage {
 	EClass getDCell();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DCell#getSpan <em>Span</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Span</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DCell#getSpan()
+	 * @see #getDCell()
+	 * @generated
+	 */
+	EAttribute getDCell_Span();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection <em>DAbstract Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2296,6 +2316,14 @@ public interface docPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DCELL = eINSTANCE.getDCell();
+
+		/**
+		 * The meta object literal for the '<em><b>Span</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DCELL__SPAN = eINSTANCE.getDCell_Span();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractSectionImpl <em>DAbstract Section</em>}' class.

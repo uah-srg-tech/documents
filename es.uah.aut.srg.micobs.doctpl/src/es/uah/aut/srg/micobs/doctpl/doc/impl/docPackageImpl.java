@@ -592,6 +592,15 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDCell_Span() {
+		return (EAttribute)dCellEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDAbstractSection() {
 		return dAbstractSectionEClass;
 	}
@@ -918,6 +927,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		createEReference(dColumnEClass, DCOLUMN__CELLS);
 
 		dCellEClass = createEClass(DCELL);
+		createEAttribute(dCellEClass, DCELL__SPAN);
 
 		dAbstractSectionEClass = createEClass(DABSTRACT_SECTION);
 		createEReference(dAbstractSectionEClass, DABSTRACT_SECTION__SUBSECTIONS);
@@ -1059,6 +1069,7 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		initEReference(getDColumn_Cells(), this.getDCell(), null, "cells", null, 1, -1, DColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dCellEClass, DCell.class, "DCell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDCell_Span(), ecorePackage.getEString(), "span", null, 1, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dAbstractSectionEClass, DAbstractSection.class, "DAbstractSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDAbstractSection_Subsections(), this.getDAbstractSection(), null, "subsections", null, 0, -1, DAbstractSection.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
