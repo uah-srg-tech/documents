@@ -117,10 +117,6 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 				return createDRowAdapter();
 			}
 			@Override
-			public Adapter caseDColumn(DColumn object) {
-				return createDColumnAdapter();
-			}
-			@Override
 			public Adapter caseDCell(DCell object) {
 				return createDCellAdapter();
 			}
@@ -345,20 +341,6 @@ public class docAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDRowAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DColumn <em>DColumn</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DColumn
-	 * @generated
-	 */
-	public Adapter createDColumnAdapter() {
 		return null;
 	}
 

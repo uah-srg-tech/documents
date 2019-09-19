@@ -84,15 +84,6 @@ public interface docFactory extends EFactory {
 	DRow createDRow();
 
 	/**
-	 * Returns a new object of class '<em>DColumn</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DColumn</em>'.
-	 * @generated
-	 */
-	DColumn createDColumn();
-
-	/**
 	 * Returns a new object of class '<em>DCell</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

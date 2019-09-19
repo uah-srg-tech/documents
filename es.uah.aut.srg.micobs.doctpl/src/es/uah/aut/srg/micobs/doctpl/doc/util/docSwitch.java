@@ -153,12 +153,6 @@ public class docSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case docPackage.DCOLUMN: {
-				DColumn dColumn = (DColumn)theEObject;
-				T result = caseDColumn(dColumn);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case docPackage.DCELL: {
 				DCell dCell = (DCell)theEObject;
 				T result = caseDCell(dCell);
@@ -418,21 +412,6 @@ public class docSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDRow(DRow object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>DColumn</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>DColumn</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDColumn(DColumn object) {
 		return null;
 	}
 

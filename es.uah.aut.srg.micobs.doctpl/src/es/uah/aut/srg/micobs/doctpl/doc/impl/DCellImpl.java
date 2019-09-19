@@ -11,8 +11,8 @@
 package es.uah.aut.srg.micobs.doctpl.doc.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DCell;
+import es.uah.aut.srg.micobs.doctpl.doc.DMergeType;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -25,31 +25,57 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DCellImpl#getSpan <em>Span</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DCellImpl#getGridSpan <em>Grid Span</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DCellImpl#getVMerge <em>VMerge</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DCellImpl extends DBodyImpl implements DCell {
 	/**
-	 * The default value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * The default value of the '{@link #getGridSpan() <em>Grid Span</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpan()
+	 * @see #getGridSpan()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SPAN_EDEFAULT = null;
+	protected static final String GRID_SPAN_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * The cached value of the '{@link #getGridSpan() <em>Grid Span</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpan()
+	 * @see #getGridSpan()
 	 * @generated
 	 * @ordered
 	 */
-	protected String span = SPAN_EDEFAULT;
-
+	protected String gridSpan = GRID_SPAN_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getVMerge() <em>VMerge</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVMerge()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final DMergeType VMERGE_EDEFAULT = DMergeType.RESTART;
+	/**
+	 * The cached value of the '{@link #getVMerge() <em>VMerge</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVMerge()
+	 * @generated
+	 * @ordered
+	 */
+	protected DMergeType vMerge = VMERGE_EDEFAULT;
+	/**
+	 * This is true if the VMerge attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean vMergeESet;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,8 +100,8 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSpan() {
-		return span;
+	public String getGridSpan() {
+		return gridSpan;
 	}
 
 	/**
@@ -83,11 +109,57 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSpan(String newSpan) {
-		String oldSpan = span;
-		span = newSpan;
+	public void setGridSpan(String newGridSpan) {
+		String oldGridSpan = gridSpan;
+		gridSpan = newGridSpan;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DCELL__SPAN, oldSpan, span));
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DCELL__GRID_SPAN, oldGridSpan, gridSpan));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DMergeType getVMerge() {
+		return vMerge;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVMerge(DMergeType newVMerge) {
+		DMergeType oldVMerge = vMerge;
+		vMerge = newVMerge == null ? VMERGE_EDEFAULT : newVMerge;
+		boolean oldVMergeESet = vMergeESet;
+		vMergeESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, docPackage.DCELL__VMERGE, oldVMerge, vMerge, !oldVMergeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetVMerge() {
+		DMergeType oldVMerge = vMerge;
+		boolean oldVMergeESet = vMergeESet;
+		vMerge = VMERGE_EDEFAULT;
+		vMergeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, docPackage.DCELL__VMERGE, oldVMerge, VMERGE_EDEFAULT, oldVMergeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetVMerge() {
+		return vMergeESet;
 	}
 
 	/**
@@ -98,8 +170,10 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case docPackage.DCELL__SPAN:
-				return getSpan();
+			case docPackage.DCELL__GRID_SPAN:
+				return getGridSpan();
+			case docPackage.DCELL__VMERGE:
+				return getVMerge();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,8 +186,11 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case docPackage.DCELL__SPAN:
-				setSpan((String)newValue);
+			case docPackage.DCELL__GRID_SPAN:
+				setGridSpan((String)newValue);
+				return;
+			case docPackage.DCELL__VMERGE:
+				setVMerge((DMergeType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +204,11 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case docPackage.DCELL__SPAN:
-				setSpan(SPAN_EDEFAULT);
+			case docPackage.DCELL__GRID_SPAN:
+				setGridSpan(GRID_SPAN_EDEFAULT);
+				return;
+			case docPackage.DCELL__VMERGE:
+				unsetVMerge();
 				return;
 		}
 		super.eUnset(featureID);
@@ -142,8 +222,10 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case docPackage.DCELL__SPAN:
-				return SPAN_EDEFAULT == null ? span != null : !SPAN_EDEFAULT.equals(span);
+			case docPackage.DCELL__GRID_SPAN:
+				return GRID_SPAN_EDEFAULT == null ? gridSpan != null : !GRID_SPAN_EDEFAULT.equals(gridSpan);
+			case docPackage.DCELL__VMERGE:
+				return isSetVMerge();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -158,8 +240,10 @@ public class DCellImpl extends DBodyImpl implements DCell {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (span: ");
-		result.append(span);
+		result.append(" (gridSpan: ");
+		result.append(gridSpan);
+		result.append(", vMerge: ");
+		if (vMergeESet) result.append(vMerge); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

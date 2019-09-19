@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.doctpl.doc;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -145,7 +146,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDReferenceableObject()
 	 * @generated
 	 */
-	int DREFERENCEABLE_OBJECT = 22;
+	int DREFERENCEABLE_OBJECT = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -428,7 +429,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDBodyContent()
 	 * @generated
 	 */
-	int DBODY_CONTENT = 16;
+	int DBODY_CONTENT = 15;
 
 	/**
 	 * The number of structural features of the '<em>DBody Content</em>' class.
@@ -716,22 +717,13 @@ public interface docPackage extends EPackage {
 	int DROW = 9;
 
 	/**
-	 * The feature id for the '<em><b>Span</b></em>' attribute.
+	 * The feature id for the '<em><b>Cells</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DROW__SPAN = 0;
-
-	/**
-	 * The feature id for the '<em><b>Columns</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DROW__COLUMNS = 1;
+	int DROW__CELLS = 0;
 
 	/**
 	 * The number of structural features of the '<em>DRow</em>' class.
@@ -740,7 +732,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DROW_FEATURE_COUNT = 2;
+	int DROW_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>DRow</em>' class.
@@ -752,52 +744,6 @@ public interface docPackage extends EPackage {
 	int DROW_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DColumnImpl <em>DColumn</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DColumnImpl
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDColumn()
-	 * @generated
-	 */
-	int DCOLUMN = 10;
-
-	/**
-	 * The feature id for the '<em><b>Span</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DCOLUMN__SPAN = 0;
-
-	/**
-	 * The feature id for the '<em><b>Cells</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DCOLUMN__CELLS = 1;
-
-	/**
-	 * The number of structural features of the '<em>DColumn</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DCOLUMN_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>DColumn</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DCOLUMN_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DBodyImpl <em>DBody</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -805,7 +751,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDBody()
 	 * @generated
 	 */
-	int DBODY = 15;
+	int DBODY = 14;
 
 	/**
 	 * The feature id for the '<em><b>Body Content</b></em>' containment reference list.
@@ -842,7 +788,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDCell()
 	 * @generated
 	 */
-	int DCELL = 11;
+	int DCELL = 10;
 
 	/**
 	 * The feature id for the '<em><b>Body Content</b></em>' containment reference list.
@@ -854,13 +800,22 @@ public interface docPackage extends EPackage {
 	int DCELL__BODY_CONTENT = DBODY__BODY_CONTENT;
 
 	/**
-	 * The feature id for the '<em><b>Span</b></em>' attribute.
+	 * The feature id for the '<em><b>Grid Span</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DCELL__SPAN = DBODY_FEATURE_COUNT + 0;
+	int DCELL__GRID_SPAN = DBODY_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>VMerge</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DCELL__VMERGE = DBODY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>DCell</em>' class.
@@ -869,7 +824,7 @@ public interface docPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DCELL_FEATURE_COUNT = DBODY_FEATURE_COUNT + 1;
+	int DCELL_FEATURE_COUNT = DBODY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>DCell</em>' class.
@@ -888,7 +843,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDAbstractSection()
 	 * @generated
 	 */
-	int DABSTRACT_SECTION = 12;
+	int DABSTRACT_SECTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -925,7 +880,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDFixedSection()
 	 * @generated
 	 */
-	int DFIXED_SECTION = 13;
+	int DFIXED_SECTION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -962,7 +917,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDInstantiableSection()
 	 * @generated
 	 */
-	int DINSTANTIABLE_SECTION = 14;
+	int DINSTANTIABLE_SECTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1017,7 +972,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDParagraph()
 	 * @generated
 	 */
-	int DPARAGRAPH = 17;
+	int DPARAGRAPH = 16;
 
 	/**
 	 * The feature id for the '<em><b>Paragraph Content</b></em>' containment reference list.
@@ -1054,7 +1009,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDParagraphContent()
 	 * @generated
 	 */
-	int DPARAGRAPH_CONTENT = 18;
+	int DPARAGRAPH_CONTENT = 17;
 
 	/**
 	 * The number of structural features of the '<em>DParagraph Content</em>' class.
@@ -1082,7 +1037,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDRun()
 	 * @generated
 	 */
-	int DRUN = 19;
+	int DRUN = 18;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' containment reference.
@@ -1146,7 +1101,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDText()
 	 * @generated
 	 */
-	int DTEXT = 20;
+	int DTEXT = 19;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1183,7 +1138,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDHyperlink()
 	 * @generated
 	 */
-	int DHYPERLINK = 21;
+	int DHYPERLINK = 20;
 
 	/**
 	 * The feature id for the '<em><b>Run</b></em>' containment reference.
@@ -1229,7 +1184,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDListContent()
 	 * @generated
 	 */
-	int DLIST_CONTENT = 23;
+	int DLIST_CONTENT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -1266,7 +1221,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDListItem()
 	 * @generated
 	 */
-	int DLIST_ITEM = 24;
+	int DLIST_ITEM = 23;
 
 	/**
 	 * The feature id for the '<em><b>Paragraph</b></em>' containment reference list.
@@ -1312,7 +1267,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDItemize()
 	 * @generated
 	 */
-	int DITEMIZE = 25;
+	int DITEMIZE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -1349,7 +1304,7 @@ public interface docPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDEnumerate()
 	 * @generated
 	 */
-	int DENUMERATE = 26;
+	int DENUMERATE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -1377,6 +1332,16 @@ public interface docPackage extends EPackage {
 	 * @ordered
 	 */
 	int DENUMERATE_OPERATION_COUNT = DLIST_CONTENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doc.DMergeType <em>DMerge Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DMergeType
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDMergeType()
+	 * @generated
+	 */
+	int DMERGE_TYPE = 26;
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate <em>DDocument Template</em>}'.
@@ -1644,58 +1609,15 @@ public interface docPackage extends EPackage {
 	EClass getDRow();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DRow#getSpan <em>Span</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Span</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRow#getSpan()
-	 * @see #getDRow()
-	 * @generated
-	 */
-	EAttribute getDRow_Span();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doc.DRow#getColumns <em>Columns</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Columns</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRow#getColumns()
-	 * @see #getDRow()
-	 * @generated
-	 */
-	EReference getDRow_Columns();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DColumn <em>DColumn</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>DColumn</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DColumn
-	 * @generated
-	 */
-	EClass getDColumn();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DColumn#getSpan <em>Span</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Span</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DColumn#getSpan()
-	 * @see #getDColumn()
-	 * @generated
-	 */
-	EAttribute getDColumn_Span();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doc.DColumn#getCells <em>Cells</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doc.DRow#getCells <em>Cells</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Cells</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DColumn#getCells()
-	 * @see #getDColumn()
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DRow#getCells()
+	 * @see #getDRow()
 	 * @generated
 	 */
-	EReference getDColumn_Cells();
+	EReference getDRow_Cells();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DCell <em>DCell</em>}'.
@@ -1708,15 +1630,26 @@ public interface docPackage extends EPackage {
 	EClass getDCell();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DCell#getSpan <em>Span</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DCell#getGridSpan <em>Grid Span</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Span</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DCell#getSpan()
+	 * @return the meta object for the attribute '<em>Grid Span</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DCell#getGridSpan()
 	 * @see #getDCell()
 	 * @generated
 	 */
-	EAttribute getDCell_Span();
+	EAttribute getDCell_GridSpan();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doc.DCell#getVMerge <em>VMerge</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>VMerge</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DCell#getVMerge()
+	 * @see #getDCell()
+	 * @generated
+	 */
+	EAttribute getDCell_VMerge();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection <em>DAbstract Section</em>}'.
@@ -2023,6 +1956,16 @@ public interface docPackage extends EPackage {
 	EClass getDEnumerate();
 
 	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.doctpl.doc.DMergeType <em>DMerge Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>DMerge Type</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DMergeType
+	 * @generated
+	 */
+	EEnum getDMergeType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2266,46 +2209,12 @@ public interface docPackage extends EPackage {
 		EClass DROW = eINSTANCE.getDRow();
 
 		/**
-		 * The meta object literal for the '<em><b>Span</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DROW__SPAN = eINSTANCE.getDRow_Span();
-
-		/**
-		 * The meta object literal for the '<em><b>Columns</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DROW__COLUMNS = eINSTANCE.getDRow_Columns();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DColumnImpl <em>DColumn</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.DColumnImpl
-		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDColumn()
-		 * @generated
-		 */
-		EClass DCOLUMN = eINSTANCE.getDColumn();
-
-		/**
-		 * The meta object literal for the '<em><b>Span</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DCOLUMN__SPAN = eINSTANCE.getDColumn_Span();
-
-		/**
 		 * The meta object literal for the '<em><b>Cells</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DCOLUMN__CELLS = eINSTANCE.getDColumn_Cells();
+		EReference DROW__CELLS = eINSTANCE.getDRow_Cells();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DCellImpl <em>DCell</em>}' class.
@@ -2318,12 +2227,20 @@ public interface docPackage extends EPackage {
 		EClass DCELL = eINSTANCE.getDCell();
 
 		/**
-		 * The meta object literal for the '<em><b>Span</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Grid Span</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DCELL__SPAN = eINSTANCE.getDCell_Span();
+		EAttribute DCELL__GRID_SPAN = eINSTANCE.getDCell_GridSpan();
+
+		/**
+		 * The meta object literal for the '<em><b>VMerge</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DCELL__VMERGE = eINSTANCE.getDCell_VMerge();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.impl.DAbstractSectionImpl <em>DAbstract Section</em>}' class.
@@ -2586,6 +2503,16 @@ public interface docPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DENUMERATE = eINSTANCE.getDEnumerate();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doc.DMergeType <em>DMerge Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.doctpl.doc.DMergeType
+		 * @see es.uah.aut.srg.micobs.doctpl.doc.impl.docPackageImpl#getDMergeType()
+		 * @generated
+		 */
+		EEnum DMERGE_TYPE = eINSTANCE.getDMergeType();
 
 	}
 

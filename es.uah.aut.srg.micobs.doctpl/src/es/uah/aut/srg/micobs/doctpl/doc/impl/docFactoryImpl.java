@@ -13,6 +13,7 @@ package es.uah.aut.srg.micobs.doctpl.doc.impl;
 import es.uah.aut.srg.micobs.doctpl.doc.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -70,7 +71,6 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 			case docPackage.DTABLE_FROM_FILE: return createDTableFromFile();
 			case docPackage.DBASIC_TABLE: return createDBasicTable();
 			case docPackage.DROW: return createDRow();
-			case docPackage.DCOLUMN: return createDColumn();
 			case docPackage.DCELL: return createDCell();
 			case docPackage.DABSTRACT_SECTION: return createDAbstractSection();
 			case docPackage.DFIXED_SECTION: return createDFixedSection();
@@ -86,6 +86,36 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 			case docPackage.DENUMERATE: return createDEnumerate();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case docPackage.DMERGE_TYPE:
+				return createDMergeTypeFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case docPackage.DMERGE_TYPE:
+				return convertDMergeTypeToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -147,16 +177,6 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	public DRow createDRow() {
 		DRowImpl dRow = new DRowImpl();
 		return dRow;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DColumn createDColumn() {
-		DColumnImpl dColumn = new DColumnImpl();
-		return dColumn;
 	}
 
 	/**
@@ -287,6 +307,26 @@ public class docFactoryImpl extends EFactoryImpl implements docFactory {
 	public DEnumerate createDEnumerate() {
 		DEnumerateImpl dEnumerate = new DEnumerateImpl();
 		return dEnumerate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DMergeType createDMergeTypeFromString(EDataType eDataType, String initialValue) {
+		DMergeType result = DMergeType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDMergeTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

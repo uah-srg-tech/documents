@@ -20,7 +20,6 @@ import es.uah.aut.srg.micobs.doctpl.doc.DBasicTable;
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DBodyContent;
 import es.uah.aut.srg.micobs.doctpl.doc.DCell;
-import es.uah.aut.srg.micobs.doctpl.doc.DColumn;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.DEnumerate;
 import es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile;
@@ -30,6 +29,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DItemize;
 import es.uah.aut.srg.micobs.doctpl.doc.DListContent;
 import es.uah.aut.srg.micobs.doctpl.doc.DListItem;
+import es.uah.aut.srg.micobs.doctpl.doc.DMergeType;
 import es.uah.aut.srg.micobs.doctpl.doc.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doc.DParagraphContent;
 import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
@@ -40,9 +40,9 @@ import es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doc.DText;
 import es.uah.aut.srg.micobs.doctpl.doc.docFactory;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -124,13 +124,6 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * @generated
 	 */
 	private EClass dRowEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dColumnEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -243,6 +236,13 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * @generated
 	 */
 	private EClass dEnumerateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum dMergeTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -538,44 +538,8 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDRow_Span() {
-		return (EAttribute)dRowEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDRow_Columns() {
-		return (EReference)dRowEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDColumn() {
-		return dColumnEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDColumn_Span() {
-		return (EAttribute)dColumnEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDColumn_Cells() {
-		return (EReference)dColumnEClass.getEStructuralFeatures().get(1);
+	public EReference getDRow_Cells() {
+		return (EReference)dRowEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -592,8 +556,17 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDCell_Span() {
+	public EAttribute getDCell_GridSpan() {
 		return (EAttribute)dCellEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDCell_VMerge() {
+		return (EAttribute)dCellEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -862,6 +835,15 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getDMergeType() {
+		return dMergeTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public docFactory getdocFactory() {
 		return (docFactory)getEFactoryInstance();
 	}
@@ -919,15 +901,11 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		createEReference(dBasicTableEClass, DBASIC_TABLE__ROWS);
 
 		dRowEClass = createEClass(DROW);
-		createEAttribute(dRowEClass, DROW__SPAN);
-		createEReference(dRowEClass, DROW__COLUMNS);
-
-		dColumnEClass = createEClass(DCOLUMN);
-		createEAttribute(dColumnEClass, DCOLUMN__SPAN);
-		createEReference(dColumnEClass, DCOLUMN__CELLS);
+		createEReference(dRowEClass, DROW__CELLS);
 
 		dCellEClass = createEClass(DCELL);
-		createEAttribute(dCellEClass, DCELL__SPAN);
+		createEAttribute(dCellEClass, DCELL__GRID_SPAN);
+		createEAttribute(dCellEClass, DCELL__VMERGE);
 
 		dAbstractSectionEClass = createEClass(DABSTRACT_SECTION);
 		createEReference(dAbstractSectionEClass, DABSTRACT_SECTION__SUBSECTIONS);
@@ -972,6 +950,9 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		dItemizeEClass = createEClass(DITEMIZE);
 
 		dEnumerateEClass = createEClass(DENUMERATE);
+
+		// Create enums
+		dMergeTypeEEnum = createEEnum(DMERGE_TYPE);
 	}
 
 	/**
@@ -1061,15 +1042,11 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		initEReference(getDBasicTable_Rows(), this.getDRow(), null, "rows", null, 1, -1, DBasicTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dRowEClass, DRow.class, "DRow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDRow_Span(), ecorePackage.getEString(), "span", null, 1, 1, DRow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDRow_Columns(), this.getDColumn(), null, "columns", null, 1, -1, DRow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(dColumnEClass, DColumn.class, "DColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDColumn_Span(), ecorePackage.getEString(), "span", null, 1, 1, DColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDColumn_Cells(), this.getDCell(), null, "cells", null, 1, -1, DColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDRow_Cells(), this.getDCell(), null, "cells", null, 1, -1, DRow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dCellEClass, DCell.class, "DCell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDCell_Span(), ecorePackage.getEString(), "span", null, 1, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDCell_GridSpan(), ecorePackage.getEString(), "gridSpan", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDCell_VMerge(), this.getDMergeType(), "vMerge", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dAbstractSectionEClass, DAbstractSection.class, "DAbstractSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDAbstractSection_Subsections(), this.getDAbstractSection(), null, "subsections", null, 0, -1, DAbstractSection.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -1114,6 +1091,11 @@ public class docPackageImpl extends EPackageImpl implements docPackage {
 		initEClass(dItemizeEClass, DItemize.class, "DItemize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dEnumerateEClass, DEnumerate.class, "DEnumerate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(dMergeTypeEEnum, DMergeType.class, "DMergeType");
+		addEEnumLiteral(dMergeTypeEEnum, DMergeType.RESTART);
+		addEEnumLiteral(dMergeTypeEEnum, DMergeType.CONTINUE);
 
 		// Create resource
 		createResource(eNS_URI);
