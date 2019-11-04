@@ -432,13 +432,22 @@ public interface doctplPackage extends EPackage {
 	int DBODY_CONTENT = 15;
 
 	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBODY_CONTENT__ALIGNMENT = 0;
+
+	/**
 	 * The number of structural features of the '<em>DBody Content</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DBODY_CONTENT_FEATURE_COUNT = 0;
+	int DBODY_CONTENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>DBody Content</em>' class.
@@ -458,6 +467,15 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	int DABSTRACT_FIGURE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_FIGURE__ALIGNMENT = DBODY_CONTENT__ALIGNMENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -504,6 +522,15 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	int DFIGURE_FROM_FILE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DFIGURE_FROM_FILE__ALIGNMENT = DABSTRACT_FIGURE__ALIGNMENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -579,6 +606,15 @@ public interface doctplPackage extends EPackage {
 	int DABSTRACT_TABLE = 6;
 
 	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_TABLE__ALIGNMENT = DBODY_CONTENT__ALIGNMENT;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -623,6 +659,15 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	int DTABLE_FROM_FILE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTABLE_FROM_FILE__ALIGNMENT = DABSTRACT_TABLE__ALIGNMENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -696,6 +741,15 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	int DBASIC_TABLE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBASIC_TABLE__ALIGNMENT = DABSTRACT_TABLE__ALIGNMENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1011,6 +1065,15 @@ public interface doctplPackage extends EPackage {
 	int DPARAGRAPH = 16;
 
 	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DPARAGRAPH__ALIGNMENT = DBODY_CONTENT__ALIGNMENT;
+
+	/**
 	 * The feature id for the '<em><b>Paragraph Content</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1020,22 +1083,13 @@ public interface doctplPackage extends EPackage {
 	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DPARAGRAPH__ALIGNMENT = DBODY_CONTENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>DParagraph</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
+	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>DParagraph</em>' class.
@@ -1232,6 +1286,15 @@ public interface doctplPackage extends EPackage {
 	int DLIST_CONTENT = 22;
 
 	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DLIST_CONTENT__ALIGNMENT = DBODY_CONTENT__ALIGNMENT;
+
+	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1315,6 +1378,15 @@ public interface doctplPackage extends EPackage {
 	int DITEMIZE = 24;
 
 	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DITEMIZE__ALIGNMENT = DLIST_CONTENT__ALIGNMENT;
+
+	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1350,6 +1422,15 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	int DENUMERATE = 25;
+
+	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUMERATE__ALIGNMENT = DLIST_CONTENT__ALIGNMENT;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -1825,6 +1906,17 @@ public interface doctplPackage extends EPackage {
 	EClass getDBodyContent();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getAlignment <em>Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alignment</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getAlignment()
+	 * @see #getDBodyContent()
+	 * @generated
+	 */
+	EAttribute getDBodyContent_Alignment();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph <em>DParagraph</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1844,17 +1936,6 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDParagraph_ParagraphContent();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getAlignment <em>Alignment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Alignment</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getAlignment()
-	 * @see #getDParagraph()
-	 * @generated
-	 */
-	EAttribute getDParagraph_Alignment();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraphContent <em>DParagraph Content</em>}'.
@@ -2463,6 +2544,14 @@ public interface doctplPackage extends EPackage {
 		EClass DBODY_CONTENT = eINSTANCE.getDBodyContent();
 
 		/**
+		 * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DBODY_CONTENT__ALIGNMENT = eINSTANCE.getDBodyContent_Alignment();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DParagraphImpl <em>DParagraph</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2479,14 +2568,6 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DPARAGRAPH__PARAGRAPH_CONTENT = eINSTANCE.getDParagraph_ParagraphContent();
-
-		/**
-		 * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DPARAGRAPH__ALIGNMENT = eINSTANCE.getDParagraph_Alignment();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DParagraphContentImpl <em>DParagraph Content</em>}' class.

@@ -683,6 +683,15 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDBodyContent_Alignment() {
+		return (EAttribute)dBodyContentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDParagraph() {
 		return dParagraphEClass;
 	}
@@ -694,15 +703,6 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 */
 	public EReference getDParagraph_ParagraphContent() {
 		return (EReference)dParagraphEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDParagraph_Alignment() {
-		return (EAttribute)dParagraphEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -986,10 +986,10 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		createEReference(dBodyEClass, DBODY__BODY_CONTENT);
 
 		dBodyContentEClass = createEClass(DBODY_CONTENT);
+		createEAttribute(dBodyContentEClass, DBODY_CONTENT__ALIGNMENT);
 
 		dParagraphEClass = createEClass(DPARAGRAPH);
 		createEReference(dParagraphEClass, DPARAGRAPH__PARAGRAPH_CONTENT);
-		createEAttribute(dParagraphEClass, DPARAGRAPH__ALIGNMENT);
 
 		dParagraphContentEClass = createEClass(DPARAGRAPH_CONTENT);
 
@@ -1133,10 +1133,10 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEReference(getDBody_BodyContent(), this.getDBodyContent(), null, "bodyContent", null, 1, -1, DBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dBodyContentEClass, DBodyContent.class, "DBodyContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDBodyContent_Alignment(), this.getDAlignment(), "alignment", null, 0, 1, DBodyContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dParagraphEClass, DParagraph.class, "DParagraph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDParagraph_ParagraphContent(), this.getDParagraphContent(), null, "paragraphContent", null, 1, -1, DParagraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDParagraph_Alignment(), this.getDAlignment(), "alignment", null, 0, 1, DParagraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dParagraphContentEClass, DParagraphContent.class, "DParagraphContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
