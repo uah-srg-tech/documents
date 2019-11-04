@@ -17,9 +17,10 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated doc -->
       <package
-            uri="http://srg.aut.uah.es/micobs/doctpl/doc"
-            class="es.uah.aut.srg.micobs.doctpl.doc.docPackage"
-            genModel="model/doc.genmodel"/>
+            uri="http://srg.aut.uah.es/micobs/doctpl/doctpl"
+            class="es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage"
+            genModel="model/doctpl.genmodel"/>
    </extension>
 
+null
 </plugin>

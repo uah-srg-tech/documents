@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.micobs.doctpl/src" modelPluginID="es.uah.aut.srg.micobs.doctpl"
+    modelName="Doctpl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>doctpl.ecore</foreignModel>
+  <genPackages prefix="doctpl" basePackage="es.uah.aut.srg.micobs.doctpl" disposableProviderFactory="true"
+      ecorePackage="doctpl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="doctpl.ecore#//DMergeType">
+      <genEnumLiterals ecoreEnumLiteral="doctpl.ecore#//DMergeType/restart"/>
+      <genEnumLiterals ecoreEnumLiteral="doctpl.ecore#//DMergeType/continue"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="doctpl.ecore#//DDocumentTemplate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference doctpl.ecore#//DDocumentTemplate/applicableDocuments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference doctpl.ecore#//DDocumentTemplate/referenceDocuments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference doctpl.ecore#//DDocumentTemplate/figures"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference doctpl.ecore#//DDocumentTemplate/tables"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference doctpl.ecore#//DDocumentTemplate/sections"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="doctpl.ecore#//DAbstractRelatedDocument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DAbstractRelatedDocument/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DAbstractRelatedDocument/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DAbstractRelatedDocument/issue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DAbstractRelatedDocument/revision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DAbstractRelatedDocument/date"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DApplicableDocument"/>
+    <genClasses ecoreClass="doctpl.ecore#//DReferenceDocument"/>
+    <genClasses image="false" ecoreClass="doctpl.ecore#//DAbstractFigure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DAbstractFigure/caption"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DFigureFromFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DFigureFromFile/referenceFile"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="doctpl.ecore#//DAbstractTable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DAbstractTable/caption"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DTableFromFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DTableFromFile/referenceFile"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="doctpl.ecore#//DBasicTable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doctpl.ecore#//DBasicTable/rows"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DRow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doctpl.ecore#//DRow/cells"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DCell">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DCell/gridSpan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DCell/vMerge"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DAbstractSection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference doctpl.ecore#//DAbstractSection/subsections"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DFixedSection"/>
+    <genClasses ecoreClass="doctpl.ecore#//DInstantiableSection"/>
+    <genClasses ecoreClass="doctpl.ecore#//DBody">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doctpl.ecore#//DBody/bodyContent"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="doctpl.ecore#//DBodyContent"/>
+    <genClasses ecoreClass="doctpl.ecore#//DParagraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doctpl.ecore#//DParagraph/paragraphContent"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="doctpl.ecore#//DParagraphContent"/>
+    <genClasses ecoreClass="doctpl.ecore#//DRun">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doctpl.ecore#//DRun/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DRun/bold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DRun/italics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DRun/underline"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DText/content"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DHyperlink">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doctpl.ecore#//DHyperlink/run"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference doctpl.ecore#//DHyperlink/reference"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DReferenceableObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute doctpl.ecore#//DReferenceableObject/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="doctpl.ecore#//DListContent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doctpl.ecore#//DListContent/items"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DListItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doctpl.ecore#//DListItem/paragraph"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doctpl.ecore#//DListItem/sublist"/>
+    </genClasses>
+    <genClasses ecoreClass="doctpl.ecore#//DItemize"/>
+    <genClasses ecoreClass="doctpl.ecore#//DEnumerate"/>
+  </genPackages>
+</genmodel:GenModel>
