@@ -770,13 +770,22 @@ public interface doctplPackage extends EPackage {
 	int DBASIC_TABLE__CAPTION = DABSTRACT_TABLE__CAPTION;
 
 	/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBASIC_TABLE__WIDTH = DABSTRACT_TABLE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DBASIC_TABLE__ROWS = DABSTRACT_TABLE_FEATURE_COUNT + 0;
+	int DBASIC_TABLE__ROWS = DABSTRACT_TABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>DBasic Table</em>' class.
@@ -785,7 +794,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DBASIC_TABLE_FEATURE_COUNT = DABSTRACT_TABLE_FEATURE_COUNT + 1;
+	int DBASIC_TABLE_FEATURE_COUNT = DABSTRACT_TABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>DBasic Table</em>' class.
@@ -908,13 +917,31 @@ public interface doctplPackage extends EPackage {
 	int DCELL__VMERGE = DBODY_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DCELL__WIDTH = DBODY_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Shadow</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DCELL__SHADOW = DBODY_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>DCell</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DCELL_FEATURE_COUNT = DBODY_FEATURE_COUNT + 2;
+	int DCELL_FEATURE_COUNT = DBODY_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>DCell</em>' class.
@@ -1770,6 +1797,17 @@ public interface doctplPackage extends EPackage {
 	EClass getDBasicTable();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBasicTable#getWidth <em>Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Width</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DBasicTable#getWidth()
+	 * @see #getDBasicTable()
+	 * @generated
+	 */
+	EAttribute getDBasicTable_Width();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBasicTable#getRows <em>Rows</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1832,6 +1870,28 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDCell_VMerge();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getWidth <em>Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Width</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getWidth()
+	 * @see #getDCell()
+	 * @generated
+	 */
+	EAttribute getDCell_Width();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getShadow <em>Shadow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Shadow</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getShadow()
+	 * @see #getDCell()
+	 * @generated
+	 */
+	EAttribute getDCell_Shadow();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection <em>DAbstract Section</em>}'.
@@ -2426,6 +2486,14 @@ public interface doctplPackage extends EPackage {
 		EClass DBASIC_TABLE = eINSTANCE.getDBasicTable();
 
 		/**
+		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DBASIC_TABLE__WIDTH = eINSTANCE.getDBasicTable_Width();
+
+		/**
 		 * The meta object literal for the '<em><b>Rows</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2476,6 +2544,22 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DCELL__VMERGE = eINSTANCE.getDCell_VMerge();
+
+		/**
+		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DCELL__WIDTH = eINSTANCE.getDCell_Width();
+
+		/**
+		 * The meta object literal for the '<em><b>Shadow</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DCELL__SHADOW = eINSTANCE.getDCell_Shadow();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractSectionImpl <em>DAbstract Section</em>}' class.

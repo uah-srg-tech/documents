@@ -566,8 +566,17 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDBasicTable_Width() {
+		return (EAttribute)dBasicTableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getDBasicTable_Rows() {
-		return (EReference)dBasicTableEClass.getEStructuralFeatures().get(0);
+		return (EReference)dBasicTableEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -613,6 +622,24 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 */
 	public EAttribute getDCell_VMerge() {
 		return (EAttribute)dCellEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDCell_Width() {
+		return (EAttribute)dCellEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDCell_Shadow() {
+		return (EAttribute)dCellEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -966,6 +993,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		createEAttribute(dTableFromFileEClass, DTABLE_FROM_FILE__HEIGHT);
 
 		dBasicTableEClass = createEClass(DBASIC_TABLE);
+		createEAttribute(dBasicTableEClass, DBASIC_TABLE__WIDTH);
 		createEReference(dBasicTableEClass, DBASIC_TABLE__ROWS);
 
 		dRowEClass = createEClass(DROW);
@@ -974,6 +1002,8 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		dCellEClass = createEClass(DCELL);
 		createEAttribute(dCellEClass, DCELL__GRID_SPAN);
 		createEAttribute(dCellEClass, DCELL__VMERGE);
+		createEAttribute(dCellEClass, DCELL__WIDTH);
+		createEAttribute(dCellEClass, DCELL__SHADOW);
 
 		dAbstractSectionEClass = createEClass(DABSTRACT_SECTION);
 		createEReference(dAbstractSectionEClass, DABSTRACT_SECTION__SUBSECTIONS);
@@ -1113,6 +1143,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEAttribute(getDTableFromFile_Height(), ecorePackage.getEString(), "height", null, 1, 1, DTableFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dBasicTableEClass, DBasicTable.class, "DBasicTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDBasicTable_Width(), ecorePackage.getEString(), "width", null, 0, 1, DBasicTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDBasicTable_Rows(), this.getDRow(), null, "rows", null, 1, -1, DBasicTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dRowEClass, DRow.class, "DRow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1121,6 +1152,8 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEClass(dCellEClass, DCell.class, "DCell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDCell_GridSpan(), ecorePackage.getEString(), "gridSpan", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDCell_VMerge(), this.getDMergeType(), "vMerge", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDCell_Width(), ecorePackage.getEString(), "width", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDCell_Shadow(), ecorePackage.getEString(), "shadow", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dAbstractSectionEClass, DAbstractSection.class, "DAbstractSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDAbstractSection_Subsections(), this.getDAbstractSection(), null, "subsections", null, 0, -1, DAbstractSection.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);

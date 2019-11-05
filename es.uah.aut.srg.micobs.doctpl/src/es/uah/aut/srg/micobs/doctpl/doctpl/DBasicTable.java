@@ -21,6 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBasicTable#getWidth <em>Width</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBasicTable#getRows <em>Rows</em>}</li>
  * </ul>
  *
@@ -29,6 +30,32 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface DBasicTable extends DAbstractTable {
+	/**
+	 * Returns the value of the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Width</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Width</em>' attribute.
+	 * @see #setWidth(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDBasicTable_Width()
+	 * @model
+	 * @generated
+	 */
+	String getWidth();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBasicTable#getWidth <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Width</em>' attribute.
+	 * @see #getWidth()
+	 * @generated
+	 */
+	void setWidth(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Rows</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DRow}.

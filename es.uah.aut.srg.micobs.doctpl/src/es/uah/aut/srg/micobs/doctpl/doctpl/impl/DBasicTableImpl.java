@@ -16,6 +16,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -23,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -34,12 +36,31 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DBasicTableImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DBasicTableImpl#getRows <em>Rows</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DBasicTableImpl extends DAbstractTableImpl implements DBasicTable {
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String WIDTH_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected String width = WIDTH_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getRows() <em>Rows</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -67,6 +88,27 @@ public class DBasicTableImpl extends DAbstractTableImpl implements DBasicTable {
 	@Override
 	protected EClass eStaticClass() {
 		return doctplPackage.Literals.DBASIC_TABLE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getWidth() {
+		return width;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWidth(String newWidth) {
+		String oldWidth = width;
+		width = newWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DBASIC_TABLE__WIDTH, oldWidth, width));
 	}
 
 	/**
@@ -103,6 +145,8 @@ public class DBasicTableImpl extends DAbstractTableImpl implements DBasicTable {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case doctplPackage.DBASIC_TABLE__WIDTH:
+				return getWidth();
 			case doctplPackage.DBASIC_TABLE__ROWS:
 				return getRows();
 		}
@@ -118,6 +162,9 @@ public class DBasicTableImpl extends DAbstractTableImpl implements DBasicTable {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case doctplPackage.DBASIC_TABLE__WIDTH:
+				setWidth((String)newValue);
+				return;
 			case doctplPackage.DBASIC_TABLE__ROWS:
 				getRows().clear();
 				getRows().addAll((Collection<? extends DRow>)newValue);
@@ -134,6 +181,9 @@ public class DBasicTableImpl extends DAbstractTableImpl implements DBasicTable {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case doctplPackage.DBASIC_TABLE__WIDTH:
+				setWidth(WIDTH_EDEFAULT);
+				return;
 			case doctplPackage.DBASIC_TABLE__ROWS:
 				getRows().clear();
 				return;
@@ -149,10 +199,28 @@ public class DBasicTableImpl extends DAbstractTableImpl implements DBasicTable {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case doctplPackage.DBASIC_TABLE__WIDTH:
+				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
 			case doctplPackage.DBASIC_TABLE__ROWS:
 				return rows != null && !rows.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (width: ");
+		result.append(width);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DBasicTableImpl

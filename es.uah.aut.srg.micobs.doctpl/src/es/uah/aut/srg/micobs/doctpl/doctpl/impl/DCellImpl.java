@@ -30,6 +30,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getGridSpan <em>Grid Span</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getVMerge <em>VMerge</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getWidth <em>Width</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getShadow <em>Shadow</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,6 +85,46 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * @ordered
 	 */
 	protected boolean vMergeESet;
+
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String WIDTH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected String width = WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getShadow() <em>Shadow</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getShadow()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SHADOW_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getShadow() <em>Shadow</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getShadow()
+	 * @generated
+	 * @ordered
+	 */
+	protected String shadow = SHADOW_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +217,48 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getWidth() {
+		return width;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWidth(String newWidth) {
+		String oldWidth = width;
+		width = newWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DCELL__WIDTH, oldWidth, width));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getShadow() {
+		return shadow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setShadow(String newShadow) {
+		String oldShadow = shadow;
+		shadow = newShadow;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DCELL__SHADOW, oldShadow, shadow));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -182,6 +266,10 @@ public class DCellImpl extends DBodyImpl implements DCell {
 				return getGridSpan();
 			case doctplPackage.DCELL__VMERGE:
 				return getVMerge();
+			case doctplPackage.DCELL__WIDTH:
+				return getWidth();
+			case doctplPackage.DCELL__SHADOW:
+				return getShadow();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -199,6 +287,12 @@ public class DCellImpl extends DBodyImpl implements DCell {
 				return;
 			case doctplPackage.DCELL__VMERGE:
 				setVMerge((DMergeType)newValue);
+				return;
+			case doctplPackage.DCELL__WIDTH:
+				setWidth((String)newValue);
+				return;
+			case doctplPackage.DCELL__SHADOW:
+				setShadow((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -218,6 +312,12 @@ public class DCellImpl extends DBodyImpl implements DCell {
 			case doctplPackage.DCELL__VMERGE:
 				unsetVMerge();
 				return;
+			case doctplPackage.DCELL__WIDTH:
+				setWidth(WIDTH_EDEFAULT);
+				return;
+			case doctplPackage.DCELL__SHADOW:
+				setShadow(SHADOW_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -234,6 +334,10 @@ public class DCellImpl extends DBodyImpl implements DCell {
 				return GRID_SPAN_EDEFAULT == null ? gridSpan != null : !GRID_SPAN_EDEFAULT.equals(gridSpan);
 			case doctplPackage.DCELL__VMERGE:
 				return isSetVMerge();
+			case doctplPackage.DCELL__WIDTH:
+				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
+			case doctplPackage.DCELL__SHADOW:
+				return SHADOW_EDEFAULT == null ? shadow != null : !SHADOW_EDEFAULT.equals(shadow);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -252,6 +356,10 @@ public class DCellImpl extends DBodyImpl implements DCell {
 		result.append(gridSpan);
 		result.append(", vMerge: ");
 		if (vMergeESet) result.append(vMerge); else result.append("<unset>");
+		result.append(", width: ");
+		result.append(width);
+		result.append(", shadow: ");
+		result.append(shadow);
 		result.append(')');
 		return result.toString();
 	}

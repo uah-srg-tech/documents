@@ -22,6 +22,8 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getGridSpan <em>Grid Span</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getVMerge <em>VMerge</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getWidth <em>Width</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getShadow <em>Shadow</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDCell()
@@ -110,5 +112,57 @@ public interface DCell extends DBody {
 	 * @generated
 	 */
 	boolean isSetVMerge();
+
+	/**
+	 * Returns the value of the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Width</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Width</em>' attribute.
+	 * @see #setWidth(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDCell_Width()
+	 * @model
+	 * @generated
+	 */
+	String getWidth();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getWidth <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Width</em>' attribute.
+	 * @see #getWidth()
+	 * @generated
+	 */
+	void setWidth(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Shadow</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Shadow</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Shadow</em>' attribute.
+	 * @see #setShadow(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDCell_Shadow()
+	 * @model
+	 * @generated
+	 */
+	String getShadow();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getShadow <em>Shadow</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Shadow</em>' attribute.
+	 * @see #getShadow()
+	 * @generated
+	 */
+	void setShadow(String value);
 
 } // DCell
