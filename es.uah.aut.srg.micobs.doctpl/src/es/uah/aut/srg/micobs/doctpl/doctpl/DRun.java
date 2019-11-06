@@ -20,6 +20,7 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getTab <em>Tab</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getText <em>Text</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isBold <em>Bold</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isItalics <em>Italics</em>}</li>
@@ -31,6 +32,32 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  * @generated
  */
 public interface DRun extends DParagraphContent {
+	/**
+	 * Returns the value of the '<em><b>Tab</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tab</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tab</em>' containment reference.
+	 * @see #setTab(DTab)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDRun_Tab()
+	 * @model containment="true"
+	 * @generated
+	 */
+	DTab getTab();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getTab <em>Tab</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tab</em>' containment reference.
+	 * @see #getTab()
+	 * @generated
+	 */
+	void setTab(DTab value);
+
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

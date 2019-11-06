@@ -147,6 +147,15 @@ public interface doctplFactory extends EFactory {
 	DRun createDRun();
 
 	/**
+	 * Returns a new object of class '<em>DTab</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DTab</em>'.
+	 * @generated
+	 */
+	DTab createDTab();
+
+	/**
 	 * Returns a new object of class '<em>DText</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

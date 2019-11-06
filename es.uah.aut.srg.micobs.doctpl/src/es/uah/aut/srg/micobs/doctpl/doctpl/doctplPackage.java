@@ -146,7 +146,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDReferenceableObject()
 	 * @generated
 	 */
-	int DREFERENCEABLE_OBJECT = 21;
+	int DREFERENCEABLE_OBJECT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1101,13 +1101,22 @@ public interface doctplPackage extends EPackage {
 	int DPARAGRAPH__ALIGNMENT = DBODY_CONTENT__ALIGNMENT;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DPARAGRAPH__STYLE = DBODY_CONTENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Paragraph Content</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 0;
+	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>DParagraph</em>' class.
@@ -1116,7 +1125,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>DParagraph</em>' class.
@@ -1166,13 +1175,22 @@ public interface doctplPackage extends EPackage {
 	int DRUN = 18;
 
 	/**
+	 * The feature id for the '<em><b>Tab</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRUN__TAB = DPARAGRAPH_CONTENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Text</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN__TEXT = DPARAGRAPH_CONTENT_FEATURE_COUNT + 0;
+	int DRUN__TEXT = DPARAGRAPH_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Bold</b></em>' attribute.
@@ -1181,7 +1199,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN__BOLD = DPARAGRAPH_CONTENT_FEATURE_COUNT + 1;
+	int DRUN__BOLD = DPARAGRAPH_CONTENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Italics</b></em>' attribute.
@@ -1190,7 +1208,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN__ITALICS = DPARAGRAPH_CONTENT_FEATURE_COUNT + 2;
+	int DRUN__ITALICS = DPARAGRAPH_CONTENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Underline</b></em>' attribute.
@@ -1199,7 +1217,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN__UNDERLINE = DPARAGRAPH_CONTENT_FEATURE_COUNT + 3;
+	int DRUN__UNDERLINE = DPARAGRAPH_CONTENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>DRun</em>' class.
@@ -1208,7 +1226,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN_FEATURE_COUNT = DPARAGRAPH_CONTENT_FEATURE_COUNT + 4;
+	int DRUN_FEATURE_COUNT = DPARAGRAPH_CONTENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>DRun</em>' class.
@@ -1220,6 +1238,34 @@ public interface doctplPackage extends EPackage {
 	int DRUN_OPERATION_COUNT = DPARAGRAPH_CONTENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTabImpl <em>DTab</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTabImpl
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDTab()
+	 * @generated
+	 */
+	int DTAB = 19;
+
+	/**
+	 * The number of structural features of the '<em>DTab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTAB_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>DTab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTAB_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTextImpl <em>DText</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1227,7 +1273,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDText()
 	 * @generated
 	 */
-	int DTEXT = 19;
+	int DTEXT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1264,7 +1310,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDHyperlink()
 	 * @generated
 	 */
-	int DHYPERLINK = 20;
+	int DHYPERLINK = 21;
 
 	/**
 	 * The feature id for the '<em><b>Run</b></em>' containment reference.
@@ -1310,7 +1356,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDListContent()
 	 * @generated
 	 */
-	int DLIST_CONTENT = 22;
+	int DLIST_CONTENT = 23;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1356,7 +1402,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDListItem()
 	 * @generated
 	 */
-	int DLIST_ITEM = 23;
+	int DLIST_ITEM = 24;
 
 	/**
 	 * The feature id for the '<em><b>Paragraph</b></em>' containment reference list.
@@ -1402,7 +1448,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDItemize()
 	 * @generated
 	 */
-	int DITEMIZE = 24;
+	int DITEMIZE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1448,7 +1494,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDEnumerate()
 	 * @generated
 	 */
-	int DENUMERATE = 25;
+	int DENUMERATE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1494,7 +1540,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDMergeType()
 	 * @generated
 	 */
-	int DMERGE_TYPE = 26;
+	int DMERGE_TYPE = 27;
 
 
 	/**
@@ -1505,7 +1551,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDAlignment()
 	 * @generated
 	 */
-	int DALIGNMENT = 27;
+	int DALIGNMENT = 28;
 
 
 	/**
@@ -1987,6 +2033,17 @@ public interface doctplPackage extends EPackage {
 	EClass getDParagraph();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getStyle <em>Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Style</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getStyle()
+	 * @see #getDParagraph()
+	 * @generated
+	 */
+	EAttribute getDParagraph_Style();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getParagraphContent <em>Paragraph Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2016,6 +2073,17 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDRun();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getTab <em>Tab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tab</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getTab()
+	 * @see #getDRun()
+	 * @generated
+	 */
+	EReference getDRun_Tab();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getText <em>Text</em>}'.
@@ -2060,6 +2128,16 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDRun_Underline();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DTab <em>DTab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>DTab</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DTab
+	 * @generated
+	 */
+	EClass getDTab();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DText <em>DText</em>}'.
@@ -2646,6 +2724,14 @@ public interface doctplPackage extends EPackage {
 		EClass DPARAGRAPH = eINSTANCE.getDParagraph();
 
 		/**
+		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DPARAGRAPH__STYLE = eINSTANCE.getDParagraph_Style();
+
+		/**
 		 * The meta object literal for the '<em><b>Paragraph Content</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2672,6 +2758,14 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DRUN = eINSTANCE.getDRun();
+
+		/**
+		 * The meta object literal for the '<em><b>Tab</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DRUN__TAB = eINSTANCE.getDRun_Tab();
 
 		/**
 		 * The meta object literal for the '<em><b>Text</b></em>' containment reference feature.
@@ -2704,6 +2798,16 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DRUN__UNDERLINE = eINSTANCE.getDRun_Underline();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTabImpl <em>DTab</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTabImpl
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDTab()
+		 * @generated
+		 */
+		EClass DTAB = eINSTANCE.getDTab();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTextImpl <em>DText</em>}' class.

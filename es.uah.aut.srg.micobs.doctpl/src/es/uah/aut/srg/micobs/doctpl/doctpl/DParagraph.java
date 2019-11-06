@@ -21,6 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getStyle <em>Style</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getParagraphContent <em>Paragraph Content</em>}</li>
  * </ul>
  *
@@ -29,6 +30,32 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface DParagraph extends DBodyContent {
+	/**
+	 * Returns the value of the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Style</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Style</em>' attribute.
+	 * @see #setStyle(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDParagraph_Style()
+	 * @model
+	 * @generated
+	 */
+	String getStyle();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getStyle <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Style</em>' attribute.
+	 * @see #getStyle()
+	 * @generated
+	 */
+	void setStyle(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Paragraph Content</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraphContent}.

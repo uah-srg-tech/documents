@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.doctpl.doctpl.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTab;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
@@ -30,6 +31,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getTab <em>Tab</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getText <em>Text</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#isBold <em>Bold</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#isItalics <em>Italics</em>}</li>
@@ -39,6 +41,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class DRunImpl extends DParagraphContentImpl implements DRun {
+	/**
+	 * The cached value of the '{@link #getTab() <em>Tab</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTab()
+	 * @generated
+	 * @ordered
+	 */
+	protected DTab tab;
+
 	/**
 	 * The cached value of the '{@link #getText() <em>Text</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -126,6 +138,49 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	protected EClass eStaticClass() {
 		return doctplPackage.Literals.DRUN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DTab getTab() {
+		return tab;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTab(DTab newTab, NotificationChain msgs) {
+		DTab oldTab = tab;
+		tab = newTab;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, doctplPackage.DRUN__TAB, oldTab, newTab);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTab(DTab newTab) {
+		if (newTab != tab) {
+			NotificationChain msgs = null;
+			if (tab != null)
+				msgs = ((InternalEObject)tab).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - doctplPackage.DRUN__TAB, null, msgs);
+			if (newTab != null)
+				msgs = ((InternalEObject)newTab).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - doctplPackage.DRUN__TAB, null, msgs);
+			msgs = basicSetTab(newTab, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DRUN__TAB, newTab, newTab));
 	}
 
 	/**
@@ -242,6 +297,8 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case doctplPackage.DRUN__TAB:
+				return basicSetTab(null, msgs);
 			case doctplPackage.DRUN__TEXT:
 				return basicSetText(null, msgs);
 		}
@@ -256,6 +313,8 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case doctplPackage.DRUN__TAB:
+				return getTab();
 			case doctplPackage.DRUN__TEXT:
 				return getText();
 			case doctplPackage.DRUN__BOLD:
@@ -276,6 +335,9 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case doctplPackage.DRUN__TAB:
+				setTab((DTab)newValue);
+				return;
 			case doctplPackage.DRUN__TEXT:
 				setText((DText)newValue);
 				return;
@@ -300,6 +362,9 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case doctplPackage.DRUN__TAB:
+				setTab((DTab)null);
+				return;
 			case doctplPackage.DRUN__TEXT:
 				setText((DText)null);
 				return;
@@ -324,6 +389,8 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case doctplPackage.DRUN__TAB:
+				return tab != null;
 			case doctplPackage.DRUN__TEXT:
 				return text != null;
 			case doctplPackage.DRUN__BOLD:

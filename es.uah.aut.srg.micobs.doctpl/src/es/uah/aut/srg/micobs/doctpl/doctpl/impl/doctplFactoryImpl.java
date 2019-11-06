@@ -78,6 +78,7 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 			case doctplPackage.DBODY: return createDBody();
 			case doctplPackage.DPARAGRAPH: return createDParagraph();
 			case doctplPackage.DRUN: return createDRun();
+			case doctplPackage.DTAB: return createDTab();
 			case doctplPackage.DTEXT: return createDText();
 			case doctplPackage.DHYPERLINK: return createDHyperlink();
 			case doctplPackage.DREFERENCEABLE_OBJECT: return createDReferenceableObject();
@@ -251,6 +252,16 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 	public DRun createDRun() {
 		DRunImpl dRun = new DRunImpl();
 		return dRun;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DTab createDTab() {
+		DTabImpl dTab = new DTabImpl();
+		return dTab;
 	}
 
 	/**

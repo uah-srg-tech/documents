@@ -38,6 +38,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTab;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplFactory;
@@ -190,6 +191,13 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	private EClass dRunEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dTabEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -728,8 +736,17 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDParagraph_Style() {
+		return (EAttribute)dParagraphEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getDParagraph_ParagraphContent() {
-		return (EReference)dParagraphEClass.getEStructuralFeatures().get(0);
+		return (EReference)dParagraphEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -755,7 +772,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDRun_Text() {
+	public EReference getDRun_Tab() {
 		return (EReference)dRunEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -764,8 +781,8 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDRun_Bold() {
-		return (EAttribute)dRunEClass.getEStructuralFeatures().get(1);
+	public EReference getDRun_Text() {
+		return (EReference)dRunEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -773,7 +790,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDRun_Italics() {
+	public EAttribute getDRun_Bold() {
 		return (EAttribute)dRunEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -782,8 +799,26 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDRun_Underline() {
+	public EAttribute getDRun_Italics() {
 		return (EAttribute)dRunEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDRun_Underline() {
+		return (EAttribute)dRunEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDTab() {
+		return dTabEClass;
 	}
 
 	/**
@@ -1019,15 +1054,19 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		createEAttribute(dBodyContentEClass, DBODY_CONTENT__ALIGNMENT);
 
 		dParagraphEClass = createEClass(DPARAGRAPH);
+		createEAttribute(dParagraphEClass, DPARAGRAPH__STYLE);
 		createEReference(dParagraphEClass, DPARAGRAPH__PARAGRAPH_CONTENT);
 
 		dParagraphContentEClass = createEClass(DPARAGRAPH_CONTENT);
 
 		dRunEClass = createEClass(DRUN);
+		createEReference(dRunEClass, DRUN__TAB);
 		createEReference(dRunEClass, DRUN__TEXT);
 		createEAttribute(dRunEClass, DRUN__BOLD);
 		createEAttribute(dRunEClass, DRUN__ITALICS);
 		createEAttribute(dRunEClass, DRUN__UNDERLINE);
+
+		dTabEClass = createEClass(DTAB);
 
 		dTextEClass = createEClass(DTEXT);
 		createEAttribute(dTextEClass, DTEXT__CONTENT);
@@ -1169,15 +1208,19 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEAttribute(getDBodyContent_Alignment(), this.getDAlignment(), "alignment", null, 0, 1, DBodyContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dParagraphEClass, DParagraph.class, "DParagraph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDParagraph_Style(), ecorePackage.getEString(), "style", null, 0, 1, DParagraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDParagraph_ParagraphContent(), this.getDParagraphContent(), null, "paragraphContent", null, 1, -1, DParagraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dParagraphContentEClass, DParagraphContent.class, "DParagraphContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dRunEClass, DRun.class, "DRun", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDRun_Tab(), this.getDTab(), null, "tab", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDRun_Text(), this.getDText(), null, "text", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDRun_Bold(), ecorePackage.getEBoolean(), "bold", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDRun_Italics(), ecorePackage.getEBoolean(), "italics", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDRun_Underline(), ecorePackage.getEBoolean(), "underline", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dTabEClass, DTab.class, "DTab", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dTextEClass, DText.class, "DText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDText_Content(), ecorePackage.getEString(), "content", null, 1, 1, DText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

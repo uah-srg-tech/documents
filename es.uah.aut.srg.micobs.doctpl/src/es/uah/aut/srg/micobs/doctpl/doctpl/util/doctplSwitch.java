@@ -214,6 +214,12 @@ public class doctplSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case doctplPackage.DTAB: {
+				DTab dTab = (DTab)theEObject;
+				T result = caseDTab(dTab);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case doctplPackage.DTEXT: {
 				DText dText = (DText)theEObject;
 				T result = caseDText(dText);
@@ -548,6 +554,21 @@ public class doctplSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDRun(DRun object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DTab</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DTab</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDTab(DTab object) {
 		return null;
 	}
 

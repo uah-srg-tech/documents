@@ -154,6 +154,10 @@ public class doctplAdapterFactory extends AdapterFactoryImpl {
 				return createDRunAdapter();
 			}
 			@Override
+			public Adapter caseDTab(DTab object) {
+				return createDTabAdapter();
+			}
+			@Override
 			public Adapter caseDText(DText object) {
 				return createDTextAdapter();
 			}
@@ -468,6 +472,20 @@ public class doctplAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDRunAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DTab <em>DTab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DTab
+	 * @generated
+	 */
+	public Adapter createDTabAdapter() {
 		return null;
 	}
 
