@@ -20,8 +20,8 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getGridSpan <em>Grid Span</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getVMerge <em>VMerge</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getColSpan <em>Col Span</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getRowSpan <em>Row Span</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getWidth <em>Width</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getShadow <em>Shadow</em>}</li>
  * </ul>
@@ -32,86 +32,83 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  */
 public interface DCell extends DBody {
 	/**
-	 * Returns the value of the '<em><b>Grid Span</b></em>' attribute.
+	 * Returns the value of the '<em><b>Col Span</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Grid Span</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Col Span</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Grid Span</em>' attribute.
-	 * @see #setGridSpan(String)
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDCell_GridSpan()
+	 * @return the value of the '<em>Col Span</em>' attribute.
+	 * @see #setColSpan(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDCell_ColSpan()
 	 * @model
 	 * @generated
 	 */
-	String getGridSpan();
+	String getColSpan();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getGridSpan <em>Grid Span</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getColSpan <em>Col Span</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Grid Span</em>' attribute.
-	 * @see #getGridSpan()
+	 * @param value the new value of the '<em>Col Span</em>' attribute.
+	 * @see #getColSpan()
 	 * @generated
 	 */
-	void setGridSpan(String value);
+	void setColSpan(String value);
 
 	/**
-	 * Returns the value of the '<em><b>VMerge</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType}.
+	 * Returns the value of the '<em><b>Row Span</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>VMerge</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Row Span</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VMerge</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType
-	 * @see #isSetVMerge()
-	 * @see #unsetVMerge()
-	 * @see #setVMerge(DMergeType)
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDCell_VMerge()
+	 * @return the value of the '<em>Row Span</em>' attribute.
+	 * @see #isSetRowSpan()
+	 * @see #unsetRowSpan()
+	 * @see #setRowSpan(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDCell_RowSpan()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	DMergeType getVMerge();
+	String getRowSpan();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getVMerge <em>VMerge</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getRowSpan <em>Row Span</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>VMerge</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType
-	 * @see #isSetVMerge()
-	 * @see #unsetVMerge()
-	 * @see #getVMerge()
+	 * @param value the new value of the '<em>Row Span</em>' attribute.
+	 * @see #isSetRowSpan()
+	 * @see #unsetRowSpan()
+	 * @see #getRowSpan()
 	 * @generated
 	 */
-	void setVMerge(DMergeType value);
+	void setRowSpan(String value);
 
 	/**
-	 * Unsets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getVMerge <em>VMerge</em>}' attribute.
+	 * Unsets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getRowSpan <em>Row Span</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isSetVMerge()
-	 * @see #getVMerge()
-	 * @see #setVMerge(DMergeType)
+	 * @see #isSetRowSpan()
+	 * @see #getRowSpan()
+	 * @see #setRowSpan(String)
 	 * @generated
 	 */
-	void unsetVMerge();
+	void unsetRowSpan();
 
 	/**
-	 * Returns whether the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getVMerge <em>VMerge</em>}' attribute is set.
+	 * Returns whether the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getRowSpan <em>Row Span</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>VMerge</em>' attribute is set.
-	 * @see #unsetVMerge()
-	 * @see #getVMerge()
-	 * @see #setVMerge(DMergeType)
+	 * @return whether the value of the '<em>Row Span</em>' attribute is set.
+	 * @see #unsetRowSpan()
+	 * @see #getRowSpan()
+	 * @see #setRowSpan(String)
 	 * @generated
 	 */
-	boolean isSetVMerge();
+	boolean isSetRowSpan();
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.

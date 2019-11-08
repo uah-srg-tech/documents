@@ -441,13 +441,22 @@ public interface doctplPackage extends EPackage {
 	int DBODY_CONTENT__ALIGNMENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBODY_CONTENT__STYLE = 1;
+
+	/**
 	 * The number of structural features of the '<em>DBody Content</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DBODY_CONTENT_FEATURE_COUNT = 1;
+	int DBODY_CONTENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>DBody Content</em>' class.
@@ -476,6 +485,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DABSTRACT_FIGURE__ALIGNMENT = DBODY_CONTENT__ALIGNMENT;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_FIGURE__STYLE = DBODY_CONTENT__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -531,6 +549,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DFIGURE_FROM_FILE__ALIGNMENT = DABSTRACT_FIGURE__ALIGNMENT;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DFIGURE_FROM_FILE__STYLE = DABSTRACT_FIGURE__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -615,6 +642,15 @@ public interface doctplPackage extends EPackage {
 	int DABSTRACT_TABLE__ALIGNMENT = DBODY_CONTENT__ALIGNMENT;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_TABLE__STYLE = DBODY_CONTENT__STYLE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -668,6 +704,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DTABLE_FROM_FILE__ALIGNMENT = DABSTRACT_TABLE__ALIGNMENT;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTABLE_FROM_FILE__STYLE = DABSTRACT_TABLE__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -750,6 +795,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DBASIC_TABLE__ALIGNMENT = DABSTRACT_TABLE__ALIGNMENT;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBASIC_TABLE__STYLE = DABSTRACT_TABLE__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -899,22 +953,22 @@ public interface doctplPackage extends EPackage {
 	int DCELL__BODY_CONTENT = DBODY__BODY_CONTENT;
 
 	/**
-	 * The feature id for the '<em><b>Grid Span</b></em>' attribute.
+	 * The feature id for the '<em><b>Col Span</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DCELL__GRID_SPAN = DBODY_FEATURE_COUNT + 0;
+	int DCELL__COL_SPAN = DBODY_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>VMerge</b></em>' attribute.
+	 * The feature id for the '<em><b>Row Span</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DCELL__VMERGE = DBODY_FEATURE_COUNT + 1;
+	int DCELL__ROW_SPAN = DBODY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -1107,7 +1161,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH__STYLE = DBODY_CONTENT_FEATURE_COUNT + 0;
+	int DPARAGRAPH__STYLE = DBODY_CONTENT__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Paragraph Content</b></em>' containment reference list.
@@ -1116,7 +1170,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>DParagraph</em>' class.
@@ -1125,7 +1179,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
+	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>DParagraph</em>' class.
@@ -1368,6 +1422,15 @@ public interface doctplPackage extends EPackage {
 	int DLIST_CONTENT__ALIGNMENT = DBODY_CONTENT__ALIGNMENT;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DLIST_CONTENT__STYLE = DBODY_CONTENT__STYLE;
+
+	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1460,6 +1523,15 @@ public interface doctplPackage extends EPackage {
 	int DITEMIZE__ALIGNMENT = DLIST_CONTENT__ALIGNMENT;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DITEMIZE__STYLE = DLIST_CONTENT__STYLE;
+
+	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1506,6 +1578,15 @@ public interface doctplPackage extends EPackage {
 	int DENUMERATE__ALIGNMENT = DLIST_CONTENT__ALIGNMENT;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUMERATE__STYLE = DLIST_CONTENT__STYLE;
+
+	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1533,17 +1614,6 @@ public interface doctplPackage extends EPackage {
 	int DENUMERATE_OPERATION_COUNT = DLIST_CONTENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType <em>DMerge Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDMergeType()
-	 * @generated
-	 */
-	int DMERGE_TYPE = 27;
-
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAlignment <em>DAlignment</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1551,7 +1621,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDAlignment()
 	 * @generated
 	 */
-	int DALIGNMENT = 28;
+	int DALIGNMENT = 27;
 
 
 	/**
@@ -1896,26 +1966,26 @@ public interface doctplPackage extends EPackage {
 	EClass getDCell();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getGridSpan <em>Grid Span</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getColSpan <em>Col Span</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Grid Span</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getGridSpan()
+	 * @return the meta object for the attribute '<em>Col Span</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getColSpan()
 	 * @see #getDCell()
 	 * @generated
 	 */
-	EAttribute getDCell_GridSpan();
+	EAttribute getDCell_ColSpan();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getVMerge <em>VMerge</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getRowSpan <em>Row Span</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>VMerge</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getVMerge()
+	 * @return the meta object for the attribute '<em>Row Span</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getRowSpan()
 	 * @see #getDCell()
 	 * @generated
 	 */
-	EAttribute getDCell_VMerge();
+	EAttribute getDCell_RowSpan();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DCell#getWidth <em>Width</em>}'.
@@ -2023,6 +2093,17 @@ public interface doctplPackage extends EPackage {
 	EAttribute getDBodyContent_Alignment();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getStyle <em>Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Style</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getStyle()
+	 * @see #getDBodyContent()
+	 * @generated
+	 */
+	EAttribute getDBodyContent_Style();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph <em>DParagraph</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2031,17 +2112,6 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDParagraph();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getStyle <em>Style</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getStyle()
-	 * @see #getDParagraph()
-	 * @generated
-	 */
-	EAttribute getDParagraph_Style();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph#getParagraphContent <em>Paragraph Content</em>}'.
@@ -2285,16 +2355,6 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDEnumerate();
-
-	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType <em>DMerge Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>DMerge Type</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType
-	 * @generated
-	 */
-	EEnum getDMergeType();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAlignment <em>DAlignment</em>}'.
@@ -2608,20 +2668,20 @@ public interface doctplPackage extends EPackage {
 		EClass DCELL = eINSTANCE.getDCell();
 
 		/**
-		 * The meta object literal for the '<em><b>Grid Span</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Col Span</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DCELL__GRID_SPAN = eINSTANCE.getDCell_GridSpan();
+		EAttribute DCELL__COL_SPAN = eINSTANCE.getDCell_ColSpan();
 
 		/**
-		 * The meta object literal for the '<em><b>VMerge</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Row Span</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DCELL__VMERGE = eINSTANCE.getDCell_VMerge();
+		EAttribute DCELL__ROW_SPAN = eINSTANCE.getDCell_RowSpan();
 
 		/**
 		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
@@ -2714,6 +2774,14 @@ public interface doctplPackage extends EPackage {
 		EAttribute DBODY_CONTENT__ALIGNMENT = eINSTANCE.getDBodyContent_Alignment();
 
 		/**
+		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DBODY_CONTENT__STYLE = eINSTANCE.getDBodyContent_Style();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DParagraphImpl <em>DParagraph</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2722,14 +2790,6 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DPARAGRAPH = eINSTANCE.getDParagraph();
-
-		/**
-		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DPARAGRAPH__STYLE = eINSTANCE.getDParagraph_Style();
 
 		/**
 		 * The meta object literal for the '<em><b>Paragraph Content</b></em>' containment reference list feature.
@@ -2934,16 +2994,6 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DENUMERATE = eINSTANCE.getDEnumerate();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType <em>DMerge Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType
-		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDMergeType()
-		 * @generated
-		 */
-		EEnum DMERGE_TYPE = eINSTANCE.getDMergeType();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAlignment <em>DAlignment</em>}' enum.

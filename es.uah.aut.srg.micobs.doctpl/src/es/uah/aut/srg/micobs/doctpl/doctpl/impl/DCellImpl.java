@@ -11,7 +11,6 @@
 package es.uah.aut.srg.micobs.doctpl.doctpl.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DCell;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -28,8 +27,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getGridSpan <em>Grid Span</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getVMerge <em>VMerge</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getColSpan <em>Col Span</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getRowSpan <em>Row Span</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DCellImpl#getShadow <em>Shadow</em>}</li>
  * </ul>
@@ -38,53 +37,53 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class DCellImpl extends DBodyImpl implements DCell {
 	/**
-	 * The default value of the '{@link #getGridSpan() <em>Grid Span</em>}' attribute.
+	 * The default value of the '{@link #getColSpan() <em>Col Span</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGridSpan()
+	 * @see #getColSpan()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String GRID_SPAN_EDEFAULT = null;
+	protected static final String COL_SPAN_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getGridSpan() <em>Grid Span</em>}' attribute.
+	 * The cached value of the '{@link #getColSpan() <em>Col Span</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGridSpan()
+	 * @see #getColSpan()
 	 * @generated
 	 * @ordered
 	 */
-	protected String gridSpan = GRID_SPAN_EDEFAULT;
+	protected String colSpan = COL_SPAN_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getVMerge() <em>VMerge</em>}' attribute.
+	 * The default value of the '{@link #getRowSpan() <em>Row Span</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVMerge()
+	 * @see #getRowSpan()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final DMergeType VMERGE_EDEFAULT = DMergeType.RESTART;
+	protected static final String ROW_SPAN_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getVMerge() <em>VMerge</em>}' attribute.
+	 * The cached value of the '{@link #getRowSpan() <em>Row Span</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVMerge()
+	 * @see #getRowSpan()
 	 * @generated
 	 * @ordered
 	 */
-	protected DMergeType vMerge = VMERGE_EDEFAULT;
+	protected String rowSpan = ROW_SPAN_EDEFAULT;
 
 	/**
-	 * This is true if the VMerge attribute has been set.
+	 * This is true if the Row Span attribute has been set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean vMergeESet;
+	protected boolean rowSpanESet;
 
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -150,8 +149,8 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getGridSpan() {
-		return gridSpan;
+	public String getColSpan() {
+		return colSpan;
 	}
 
 	/**
@@ -159,11 +158,11 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGridSpan(String newGridSpan) {
-		String oldGridSpan = gridSpan;
-		gridSpan = newGridSpan;
+	public void setColSpan(String newColSpan) {
+		String oldColSpan = colSpan;
+		colSpan = newColSpan;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DCELL__GRID_SPAN, oldGridSpan, gridSpan));
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DCELL__COL_SPAN, oldColSpan, colSpan));
 	}
 
 	/**
@@ -171,8 +170,8 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DMergeType getVMerge() {
-		return vMerge;
+	public String getRowSpan() {
+		return rowSpan;
 	}
 
 	/**
@@ -180,13 +179,13 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVMerge(DMergeType newVMerge) {
-		DMergeType oldVMerge = vMerge;
-		vMerge = newVMerge == null ? VMERGE_EDEFAULT : newVMerge;
-		boolean oldVMergeESet = vMergeESet;
-		vMergeESet = true;
+	public void setRowSpan(String newRowSpan) {
+		String oldRowSpan = rowSpan;
+		rowSpan = newRowSpan;
+		boolean oldRowSpanESet = rowSpanESet;
+		rowSpanESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DCELL__VMERGE, oldVMerge, vMerge, !oldVMergeESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DCELL__ROW_SPAN, oldRowSpan, rowSpan, !oldRowSpanESet));
 	}
 
 	/**
@@ -194,13 +193,13 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void unsetVMerge() {
-		DMergeType oldVMerge = vMerge;
-		boolean oldVMergeESet = vMergeESet;
-		vMerge = VMERGE_EDEFAULT;
-		vMergeESet = false;
+	public void unsetRowSpan() {
+		String oldRowSpan = rowSpan;
+		boolean oldRowSpanESet = rowSpanESet;
+		rowSpan = ROW_SPAN_EDEFAULT;
+		rowSpanESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, doctplPackage.DCELL__VMERGE, oldVMerge, VMERGE_EDEFAULT, oldVMergeESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, doctplPackage.DCELL__ROW_SPAN, oldRowSpan, ROW_SPAN_EDEFAULT, oldRowSpanESet));
 	}
 
 	/**
@@ -208,8 +207,8 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isSetVMerge() {
-		return vMergeESet;
+	public boolean isSetRowSpan() {
+		return rowSpanESet;
 	}
 
 	/**
@@ -262,10 +261,10 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case doctplPackage.DCELL__GRID_SPAN:
-				return getGridSpan();
-			case doctplPackage.DCELL__VMERGE:
-				return getVMerge();
+			case doctplPackage.DCELL__COL_SPAN:
+				return getColSpan();
+			case doctplPackage.DCELL__ROW_SPAN:
+				return getRowSpan();
 			case doctplPackage.DCELL__WIDTH:
 				return getWidth();
 			case doctplPackage.DCELL__SHADOW:
@@ -282,11 +281,11 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case doctplPackage.DCELL__GRID_SPAN:
-				setGridSpan((String)newValue);
+			case doctplPackage.DCELL__COL_SPAN:
+				setColSpan((String)newValue);
 				return;
-			case doctplPackage.DCELL__VMERGE:
-				setVMerge((DMergeType)newValue);
+			case doctplPackage.DCELL__ROW_SPAN:
+				setRowSpan((String)newValue);
 				return;
 			case doctplPackage.DCELL__WIDTH:
 				setWidth((String)newValue);
@@ -306,11 +305,11 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case doctplPackage.DCELL__GRID_SPAN:
-				setGridSpan(GRID_SPAN_EDEFAULT);
+			case doctplPackage.DCELL__COL_SPAN:
+				setColSpan(COL_SPAN_EDEFAULT);
 				return;
-			case doctplPackage.DCELL__VMERGE:
-				unsetVMerge();
+			case doctplPackage.DCELL__ROW_SPAN:
+				unsetRowSpan();
 				return;
 			case doctplPackage.DCELL__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
@@ -330,10 +329,10 @@ public class DCellImpl extends DBodyImpl implements DCell {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case doctplPackage.DCELL__GRID_SPAN:
-				return GRID_SPAN_EDEFAULT == null ? gridSpan != null : !GRID_SPAN_EDEFAULT.equals(gridSpan);
-			case doctplPackage.DCELL__VMERGE:
-				return isSetVMerge();
+			case doctplPackage.DCELL__COL_SPAN:
+				return COL_SPAN_EDEFAULT == null ? colSpan != null : !COL_SPAN_EDEFAULT.equals(colSpan);
+			case doctplPackage.DCELL__ROW_SPAN:
+				return isSetRowSpan();
 			case doctplPackage.DCELL__WIDTH:
 				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
 			case doctplPackage.DCELL__SHADOW:
@@ -352,10 +351,10 @@ public class DCellImpl extends DBodyImpl implements DCell {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (gridSpan: ");
-		result.append(gridSpan);
-		result.append(", vMerge: ");
-		if (vMergeESet) result.append(vMerge); else result.append("<unset>");
+		result.append(" (colSpan: ");
+		result.append(colSpan);
+		result.append(", rowSpan: ");
+		if (rowSpanESet) result.append(rowSpan); else result.append("<unset>");
 		result.append(", width: ");
 		result.append(width);
 		result.append(", shadow: ");

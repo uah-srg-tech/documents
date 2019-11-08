@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DBodyContentImpl#getAlignment <em>Alignment</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DBodyContentImpl#getStyle <em>Style</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,6 +61,25 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected boolean alignmentESet;
+
+	/**
+	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STYLE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String style = STYLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,11 +151,34 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getStyle() {
+		return style;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStyle(String newStyle) {
+		String oldStyle = style;
+		style = newStyle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DBODY_CONTENT__STYLE, oldStyle, style));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case doctplPackage.DBODY_CONTENT__ALIGNMENT:
 				return getAlignment();
+			case doctplPackage.DBODY_CONTENT__STYLE:
+				return getStyle();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -150,6 +193,9 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 			case doctplPackage.DBODY_CONTENT__ALIGNMENT:
 				setAlignment((DAlignment)newValue);
+				return;
+			case doctplPackage.DBODY_CONTENT__STYLE:
+				setStyle((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -166,6 +212,9 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 			case doctplPackage.DBODY_CONTENT__ALIGNMENT:
 				unsetAlignment();
 				return;
+			case doctplPackage.DBODY_CONTENT__STYLE:
+				setStyle(STYLE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -180,6 +229,8 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 			case doctplPackage.DBODY_CONTENT__ALIGNMENT:
 				return isSetAlignment();
+			case doctplPackage.DBODY_CONTENT__STYLE:
+				return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -196,6 +247,8 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (alignment: ");
 		if (alignmentESet) result.append(alignment); else result.append("<unset>");
+		result.append(", style: ");
+		result.append(style);
 		result.append(')');
 		return result.toString();
 	}

@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getAlignment <em>Alignment</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getStyle <em>Style</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDBodyContent()
@@ -85,4 +86,30 @@ public interface DBodyContent extends EObject {
 	 * @generated
 	 */
 	boolean isSetAlignment();
+
+	/**
+	 * Returns the value of the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Style</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Style</em>' attribute.
+	 * @see #setStyle(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDBodyContent_Style()
+	 * @model
+	 * @generated
+	 */
+	String getStyle();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getStyle <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Style</em>' attribute.
+	 * @see #getStyle()
+	 * @generated
+	 */
+	void setStyle(String value);
 } // DBodyContent

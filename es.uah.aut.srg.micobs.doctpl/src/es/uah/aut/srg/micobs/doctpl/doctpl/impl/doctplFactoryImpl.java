@@ -98,8 +98,6 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case doctplPackage.DMERGE_TYPE:
-				return createDMergeTypeFromString(eDataType, initialValue);
 			case doctplPackage.DALIGNMENT:
 				return createDAlignmentFromString(eDataType, initialValue);
 			default:
@@ -115,8 +113,6 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case doctplPackage.DMERGE_TYPE:
-				return convertDMergeTypeToString(eDataType, instanceValue);
 			case doctplPackage.DALIGNMENT:
 				return convertDAlignmentToString(eDataType, instanceValue);
 			default:
@@ -322,26 +318,6 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 	public DEnumerate createDEnumerate() {
 		DEnumerateImpl dEnumerate = new DEnumerateImpl();
 		return dEnumerate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DMergeType createDMergeTypeFromString(EDataType eDataType, String initialValue) {
-		DMergeType result = DMergeType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertDMergeTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

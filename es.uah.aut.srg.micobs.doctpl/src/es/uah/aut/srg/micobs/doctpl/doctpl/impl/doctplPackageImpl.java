@@ -31,7 +31,6 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DItemize;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DListContent;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DListItem;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DMergeType;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraphContent;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
@@ -247,13 +246,6 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	private EClass dEnumerateEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum dMergeTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -619,7 +611,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDCell_GridSpan() {
+	public EAttribute getDCell_ColSpan() {
 		return (EAttribute)dCellEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -628,7 +620,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDCell_VMerge() {
+	public EAttribute getDCell_RowSpan() {
 		return (EAttribute)dCellEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -727,6 +719,15 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDBodyContent_Style() {
+		return (EAttribute)dBodyContentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDParagraph() {
 		return dParagraphEClass;
 	}
@@ -736,17 +737,8 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDParagraph_Style() {
-		return (EAttribute)dParagraphEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDParagraph_ParagraphContent() {
-		return (EReference)dParagraphEClass.getEStructuralFeatures().get(1);
+		return (EReference)dParagraphEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -952,15 +944,6 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getDMergeType() {
-		return dMergeTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getDAlignment() {
 		return dAlignmentEEnum;
 	}
@@ -1035,8 +1018,8 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		createEReference(dRowEClass, DROW__CELLS);
 
 		dCellEClass = createEClass(DCELL);
-		createEAttribute(dCellEClass, DCELL__GRID_SPAN);
-		createEAttribute(dCellEClass, DCELL__VMERGE);
+		createEAttribute(dCellEClass, DCELL__COL_SPAN);
+		createEAttribute(dCellEClass, DCELL__ROW_SPAN);
 		createEAttribute(dCellEClass, DCELL__WIDTH);
 		createEAttribute(dCellEClass, DCELL__SHADOW);
 
@@ -1052,9 +1035,9 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 
 		dBodyContentEClass = createEClass(DBODY_CONTENT);
 		createEAttribute(dBodyContentEClass, DBODY_CONTENT__ALIGNMENT);
+		createEAttribute(dBodyContentEClass, DBODY_CONTENT__STYLE);
 
 		dParagraphEClass = createEClass(DPARAGRAPH);
-		createEAttribute(dParagraphEClass, DPARAGRAPH__STYLE);
 		createEReference(dParagraphEClass, DPARAGRAPH__PARAGRAPH_CONTENT);
 
 		dParagraphContentEClass = createEClass(DPARAGRAPH_CONTENT);
@@ -1090,7 +1073,6 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		dEnumerateEClass = createEClass(DENUMERATE);
 
 		// Create enums
-		dMergeTypeEEnum = createEEnum(DMERGE_TYPE);
 		dAlignmentEEnum = createEEnum(DALIGNMENT);
 	}
 
@@ -1189,8 +1171,8 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEReference(getDRow_Cells(), this.getDCell(), null, "cells", null, 1, -1, DRow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dCellEClass, DCell.class, "DCell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDCell_GridSpan(), ecorePackage.getEString(), "gridSpan", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDCell_VMerge(), this.getDMergeType(), "vMerge", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDCell_ColSpan(), ecorePackage.getEString(), "colSpan", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDCell_RowSpan(), ecorePackage.getEString(), "rowSpan", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDCell_Width(), ecorePackage.getEString(), "width", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDCell_Shadow(), ecorePackage.getEString(), "shadow", null, 0, 1, DCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1206,9 +1188,9 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 
 		initEClass(dBodyContentEClass, DBodyContent.class, "DBodyContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDBodyContent_Alignment(), this.getDAlignment(), "alignment", null, 0, 1, DBodyContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDBodyContent_Style(), ecorePackage.getEString(), "style", null, 0, 1, DBodyContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dParagraphEClass, DParagraph.class, "DParagraph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDParagraph_Style(), ecorePackage.getEString(), "style", null, 0, 1, DParagraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDParagraph_ParagraphContent(), this.getDParagraphContent(), null, "paragraphContent", null, 1, -1, DParagraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dParagraphContentEClass, DParagraphContent.class, "DParagraphContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1244,10 +1226,6 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEClass(dEnumerateEClass, DEnumerate.class, "DEnumerate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
-		initEEnum(dMergeTypeEEnum, DMergeType.class, "DMergeType");
-		addEEnumLiteral(dMergeTypeEEnum, DMergeType.RESTART);
-		addEEnumLiteral(dMergeTypeEEnum, DMergeType.CONTINUE);
-
 		initEEnum(dAlignmentEEnum, DAlignment.class, "DAlignment");
 		addEEnumLiteral(dAlignmentEEnum, DAlignment.LEFT);
 		addEEnumLiteral(dAlignmentEEnum, DAlignment.CENTER);
