@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.micobs.doc/src" modelPluginID="es.uah.aut.srg.micobs.doc"
+    modelName="Doc" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.genmodel#//doctpl"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>doc.ecore</foreignModel>
+  <genPackages prefix="doc" basePackage="es.uah.aut.srg.micobs.doc" disposableProviderFactory="true"
+      ecorePackage="doc.ecore#/">
+    <genClasses ecoreClass="doc.ecore#//DDocument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doc.ecore#//DDocument/sections"/>
+    </genClasses>
+    <genClasses ecoreClass="doc.ecore#//DSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference doc.ecore#//DSection/sectionContent"/>
+    </genClasses>
+    <genClasses ecoreClass="doc.ecore#//DSectionContent"/>
+    <genClasses ecoreClass="doc.ecore#//DBody"/>
+  </genPackages>
+</genmodel:GenModel>
