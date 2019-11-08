@@ -1229,31 +1229,13 @@ public interface doctplPackage extends EPackage {
 	int DRUN = 18;
 
 	/**
-	 * The feature id for the '<em><b>Tab</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DRUN__TAB = DPARAGRAPH_CONTENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Text</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DRUN__TEXT = DPARAGRAPH_CONTENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Bold</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN__BOLD = DPARAGRAPH_CONTENT_FEATURE_COUNT + 2;
+	int DRUN__BOLD = DPARAGRAPH_CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Italics</b></em>' attribute.
@@ -1262,7 +1244,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN__ITALICS = DPARAGRAPH_CONTENT_FEATURE_COUNT + 3;
+	int DRUN__ITALICS = DPARAGRAPH_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Underline</b></em>' attribute.
@@ -1271,7 +1253,34 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN__UNDERLINE = DPARAGRAPH_CONTENT_FEATURE_COUNT + 4;
+	int DRUN__UNDERLINE = DPARAGRAPH_CONTENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRUN__COLOR = DPARAGRAPH_CONTENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Tab</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRUN__TAB = DPARAGRAPH_CONTENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRUN__TEXT = DPARAGRAPH_CONTENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>DRun</em>' class.
@@ -1280,7 +1289,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRUN_FEATURE_COUNT = DPARAGRAPH_CONTENT_FEATURE_COUNT + 5;
+	int DRUN_FEATURE_COUNT = DPARAGRAPH_CONTENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>DRun</em>' class.
@@ -2200,6 +2209,17 @@ public interface doctplPackage extends EPackage {
 	EAttribute getDRun_Underline();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getColor()
+	 * @see #getDRun()
+	 * @generated
+	 */
+	EAttribute getDRun_Color();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DTab <em>DTab</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2858,6 +2878,14 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DRUN__UNDERLINE = eINSTANCE.getDRun_Underline();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DRUN__COLOR = eINSTANCE.getDRun_Color();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTabImpl <em>DTab</em>}' class.

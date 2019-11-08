@@ -765,7 +765,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EReference getDRun_Tab() {
-		return (EReference)dRunEClass.getEStructuralFeatures().get(0);
+		return (EReference)dRunEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -774,7 +774,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EReference getDRun_Text() {
-		return (EReference)dRunEClass.getEStructuralFeatures().get(1);
+		return (EReference)dRunEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -783,7 +783,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EAttribute getDRun_Bold() {
-		return (EAttribute)dRunEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)dRunEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -792,7 +792,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EAttribute getDRun_Italics() {
-		return (EAttribute)dRunEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)dRunEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -801,7 +801,16 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EAttribute getDRun_Underline() {
-		return (EAttribute)dRunEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)dRunEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDRun_Color() {
+		return (EAttribute)dRunEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1043,11 +1052,12 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		dParagraphContentEClass = createEClass(DPARAGRAPH_CONTENT);
 
 		dRunEClass = createEClass(DRUN);
-		createEReference(dRunEClass, DRUN__TAB);
-		createEReference(dRunEClass, DRUN__TEXT);
 		createEAttribute(dRunEClass, DRUN__BOLD);
 		createEAttribute(dRunEClass, DRUN__ITALICS);
 		createEAttribute(dRunEClass, DRUN__UNDERLINE);
+		createEAttribute(dRunEClass, DRUN__COLOR);
+		createEReference(dRunEClass, DRUN__TAB);
+		createEReference(dRunEClass, DRUN__TEXT);
 
 		dTabEClass = createEClass(DTAB);
 
@@ -1196,11 +1206,12 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEClass(dParagraphContentEClass, DParagraphContent.class, "DParagraphContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dRunEClass, DRun.class, "DRun", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDRun_Tab(), this.getDTab(), null, "tab", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDRun_Text(), this.getDText(), null, "text", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDRun_Bold(), ecorePackage.getEBoolean(), "bold", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDRun_Italics(), ecorePackage.getEBoolean(), "italics", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDRun_Underline(), ecorePackage.getEBoolean(), "underline", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Color(), ecorePackage.getEString(), "color", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDRun_Tab(), this.getDTab(), null, "tab", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDRun_Text(), this.getDText(), null, "text", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dTabEClass, DTab.class, "DTab", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

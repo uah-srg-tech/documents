@@ -31,36 +31,17 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getTab <em>Tab</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getText <em>Text</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#isBold <em>Bold</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#isItalics <em>Italics</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#isUnderline <em>Underline</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getColor <em>Color</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getTab <em>Tab</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getText <em>Text</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DRunImpl extends DParagraphContentImpl implements DRun {
-	/**
-	 * The cached value of the '{@link #getTab() <em>Tab</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTab()
-	 * @generated
-	 * @ordered
-	 */
-	protected DTab tab;
-
-	/**
-	 * The cached value of the '{@link #getText() <em>Text</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getText()
-	 * @generated
-	 * @ordered
-	 */
-	protected DText text;
-
 	/**
 	 * The default value of the '{@link #isBold() <em>Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -120,6 +101,46 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * @ordered
 	 */
 	protected boolean underline = UNDERLINE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COLOR_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected String color = COLOR_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTab() <em>Tab</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTab()
+	 * @generated
+	 * @ordered
+	 */
+	protected DTab tab;
+
+	/**
+	 * The cached value of the '{@link #getText() <em>Text</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getText()
+	 * @generated
+	 * @ordered
+	 */
+	protected DText text;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -294,6 +315,27 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getColor() {
+		return color;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setColor(String newColor) {
+		String oldColor = color;
+		color = newColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DRUN__COLOR, oldColor, color));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -313,16 +355,18 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case doctplPackage.DRUN__TAB:
-				return getTab();
-			case doctplPackage.DRUN__TEXT:
-				return getText();
 			case doctplPackage.DRUN__BOLD:
 				return isBold();
 			case doctplPackage.DRUN__ITALICS:
 				return isItalics();
 			case doctplPackage.DRUN__UNDERLINE:
 				return isUnderline();
+			case doctplPackage.DRUN__COLOR:
+				return getColor();
+			case doctplPackage.DRUN__TAB:
+				return getTab();
+			case doctplPackage.DRUN__TEXT:
+				return getText();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -335,12 +379,6 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case doctplPackage.DRUN__TAB:
-				setTab((DTab)newValue);
-				return;
-			case doctplPackage.DRUN__TEXT:
-				setText((DText)newValue);
-				return;
 			case doctplPackage.DRUN__BOLD:
 				setBold((Boolean)newValue);
 				return;
@@ -349,6 +387,15 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 				return;
 			case doctplPackage.DRUN__UNDERLINE:
 				setUnderline((Boolean)newValue);
+				return;
+			case doctplPackage.DRUN__COLOR:
+				setColor((String)newValue);
+				return;
+			case doctplPackage.DRUN__TAB:
+				setTab((DTab)newValue);
+				return;
+			case doctplPackage.DRUN__TEXT:
+				setText((DText)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -362,12 +409,6 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case doctplPackage.DRUN__TAB:
-				setTab((DTab)null);
-				return;
-			case doctplPackage.DRUN__TEXT:
-				setText((DText)null);
-				return;
 			case doctplPackage.DRUN__BOLD:
 				setBold(BOLD_EDEFAULT);
 				return;
@@ -376,6 +417,15 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 				return;
 			case doctplPackage.DRUN__UNDERLINE:
 				setUnderline(UNDERLINE_EDEFAULT);
+				return;
+			case doctplPackage.DRUN__COLOR:
+				setColor(COLOR_EDEFAULT);
+				return;
+			case doctplPackage.DRUN__TAB:
+				setTab((DTab)null);
+				return;
+			case doctplPackage.DRUN__TEXT:
+				setText((DText)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -389,16 +439,18 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case doctplPackage.DRUN__TAB:
-				return tab != null;
-			case doctplPackage.DRUN__TEXT:
-				return text != null;
 			case doctplPackage.DRUN__BOLD:
 				return bold != BOLD_EDEFAULT;
 			case doctplPackage.DRUN__ITALICS:
 				return italics != ITALICS_EDEFAULT;
 			case doctplPackage.DRUN__UNDERLINE:
 				return underline != UNDERLINE_EDEFAULT;
+			case doctplPackage.DRUN__COLOR:
+				return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
+			case doctplPackage.DRUN__TAB:
+				return tab != null;
+			case doctplPackage.DRUN__TEXT:
+				return text != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -419,6 +471,8 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 		result.append(italics);
 		result.append(", underline: ");
 		result.append(underline);
+		result.append(", color: ");
+		result.append(color);
 		result.append(')');
 		return result.toString();
 	}

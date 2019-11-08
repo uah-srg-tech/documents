@@ -86,12 +86,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DParagraphContent" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="DRun" eSuperTypes="#//DParagraphContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tab" eType="#//DTab" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="text" lowerBound="1" eType="#//DText"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="italics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="underline" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tab" eType="#//DTab" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="text" lowerBound="1" eType="#//DText"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DTab"/>
   <eClassifiers xsi:type="ecore:EClass" name="DText">

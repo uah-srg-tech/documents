@@ -20,11 +20,12 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getTab <em>Tab</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getText <em>Text</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isBold <em>Bold</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isItalics <em>Italics</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isUnderline <em>Underline</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getColor <em>Color</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getTab <em>Tab</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getText <em>Text</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDRun()
@@ -161,5 +162,31 @@ public interface DRun extends DParagraphContent {
 	 * @generated
 	 */
 	void setUnderline(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Color</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Color</em>' attribute.
+	 * @see #setColor(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDRun_Color()
+	 * @model
+	 * @generated
+	 */
+	String getColor();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getColor <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Color</em>' attribute.
+	 * @see #getColor()
+	 * @generated
+	 */
+	void setColor(String value);
 
 } // DRun
