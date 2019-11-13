@@ -1634,6 +1634,17 @@ public interface doctplPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes <em>DRun Attributes</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDRunAttributes()
+	 * @generated
+	 */
+	int DRUN_ATTRIBUTES = 28;
+
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate <em>DDocument Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2176,33 +2187,33 @@ public interface doctplPackage extends EPackage {
 	EReference getDRun_Text();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isBold <em>Bold</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getBold <em>Bold</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Bold</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isBold()
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getBold()
 	 * @see #getDRun()
 	 * @generated
 	 */
 	EAttribute getDRun_Bold();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isItalics <em>Italics</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getItalics <em>Italics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Italics</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isItalics()
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getItalics()
 	 * @see #getDRun()
 	 * @generated
 	 */
 	EAttribute getDRun_Italics();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isUnderline <em>Underline</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getUnderline <em>Underline</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Underline</em>'.
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isUnderline()
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getUnderline()
 	 * @see #getDRun()
 	 * @generated
 	 */
@@ -2385,6 +2396,16 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getDAlignment();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes <em>DRun Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>DRun Attributes</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes
+	 * @generated
+	 */
+	EEnum getDRunAttributes();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3032,6 +3053,16 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DALIGNMENT = eINSTANCE.getDAlignment();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes <em>DRun Attributes</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDRunAttributes()
+		 * @generated
+		 */
+		EEnum DRUN_ATTRIBUTES = eINSTANCE.getDRunAttributes();
 
 	}
 

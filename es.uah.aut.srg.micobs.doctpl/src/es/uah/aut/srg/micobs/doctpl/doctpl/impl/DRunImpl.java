@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.doctpl.doctpl.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTab;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
@@ -31,9 +32,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#isBold <em>Bold</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#isItalics <em>Italics</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#isUnderline <em>Underline</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getBold <em>Bold</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getItalics <em>Italics</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getUnderline <em>Underline</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getColor <em>Color</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getTab <em>Tab</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl#getText <em>Text</em>}</li>
@@ -43,64 +44,64 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class DRunImpl extends DParagraphContentImpl implements DRun {
 	/**
-	 * The default value of the '{@link #isBold() <em>Bold</em>}' attribute.
+	 * The default value of the '{@link #getBold() <em>Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isBold()
+	 * @see #getBold()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean BOLD_EDEFAULT = false;
+	protected static final DRunAttributes BOLD_EDEFAULT = DRunAttributes.FALSE;
 
 	/**
-	 * The cached value of the '{@link #isBold() <em>Bold</em>}' attribute.
+	 * The cached value of the '{@link #getBold() <em>Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isBold()
+	 * @see #getBold()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean bold = BOLD_EDEFAULT;
+	protected DRunAttributes bold = BOLD_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isItalics() <em>Italics</em>}' attribute.
+	 * The default value of the '{@link #getItalics() <em>Italics</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isItalics()
+	 * @see #getItalics()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ITALICS_EDEFAULT = false;
+	protected static final DRunAttributes ITALICS_EDEFAULT = DRunAttributes.FALSE;
 
 	/**
-	 * The cached value of the '{@link #isItalics() <em>Italics</em>}' attribute.
+	 * The cached value of the '{@link #getItalics() <em>Italics</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isItalics()
+	 * @see #getItalics()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean italics = ITALICS_EDEFAULT;
+	protected DRunAttributes italics = ITALICS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isUnderline() <em>Underline</em>}' attribute.
+	 * The default value of the '{@link #getUnderline() <em>Underline</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isUnderline()
+	 * @see #getUnderline()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean UNDERLINE_EDEFAULT = false;
+	protected static final DRunAttributes UNDERLINE_EDEFAULT = DRunAttributes.FALSE;
 
 	/**
-	 * The cached value of the '{@link #isUnderline() <em>Underline</em>}' attribute.
+	 * The cached value of the '{@link #getUnderline() <em>Underline</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isUnderline()
+	 * @see #getUnderline()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean underline = UNDERLINE_EDEFAULT;
+	protected DRunAttributes underline = UNDERLINE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
@@ -159,6 +160,69 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	@Override
 	protected EClass eStaticClass() {
 		return doctplPackage.Literals.DRUN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DRunAttributes getBold() {
+		return bold;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBold(DRunAttributes newBold) {
+		DRunAttributes oldBold = bold;
+		bold = newBold == null ? BOLD_EDEFAULT : newBold;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DRUN__BOLD, oldBold, bold));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DRunAttributes getItalics() {
+		return italics;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setItalics(DRunAttributes newItalics) {
+		DRunAttributes oldItalics = italics;
+		italics = newItalics == null ? ITALICS_EDEFAULT : newItalics;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DRUN__ITALICS, oldItalics, italics));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DRunAttributes getUnderline() {
+		return underline;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnderline(DRunAttributes newUnderline) {
+		DRunAttributes oldUnderline = underline;
+		underline = newUnderline == null ? UNDERLINE_EDEFAULT : newUnderline;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DRUN__UNDERLINE, oldUnderline, underline));
 	}
 
 	/**
@@ -252,69 +316,6 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isBold() {
-		return bold;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBold(boolean newBold) {
-		boolean oldBold = bold;
-		bold = newBold;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DRUN__BOLD, oldBold, bold));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isItalics() {
-		return italics;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setItalics(boolean newItalics) {
-		boolean oldItalics = italics;
-		italics = newItalics;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DRUN__ITALICS, oldItalics, italics));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isUnderline() {
-		return underline;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUnderline(boolean newUnderline) {
-		boolean oldUnderline = underline;
-		underline = newUnderline;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DRUN__UNDERLINE, oldUnderline, underline));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getColor() {
 		return color;
 	}
@@ -356,11 +357,11 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case doctplPackage.DRUN__BOLD:
-				return isBold();
+				return getBold();
 			case doctplPackage.DRUN__ITALICS:
-				return isItalics();
+				return getItalics();
 			case doctplPackage.DRUN__UNDERLINE:
-				return isUnderline();
+				return getUnderline();
 			case doctplPackage.DRUN__COLOR:
 				return getColor();
 			case doctplPackage.DRUN__TAB:
@@ -380,13 +381,13 @@ public class DRunImpl extends DParagraphContentImpl implements DRun {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case doctplPackage.DRUN__BOLD:
-				setBold((Boolean)newValue);
+				setBold((DRunAttributes)newValue);
 				return;
 			case doctplPackage.DRUN__ITALICS:
-				setItalics((Boolean)newValue);
+				setItalics((DRunAttributes)newValue);
 				return;
 			case doctplPackage.DRUN__UNDERLINE:
-				setUnderline((Boolean)newValue);
+				setUnderline((DRunAttributes)newValue);
 				return;
 			case doctplPackage.DRUN__COLOR:
 				setColor((String)newValue);

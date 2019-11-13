@@ -100,6 +100,8 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 		switch (eDataType.getClassifierID()) {
 			case doctplPackage.DALIGNMENT:
 				return createDAlignmentFromString(eDataType, initialValue);
+			case doctplPackage.DRUN_ATTRIBUTES:
+				return createDRunAttributesFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -115,6 +117,8 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 		switch (eDataType.getClassifierID()) {
 			case doctplPackage.DALIGNMENT:
 				return convertDAlignmentToString(eDataType, instanceValue);
+			case doctplPackage.DRUN_ATTRIBUTES:
+				return convertDRunAttributesToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -337,6 +341,26 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 	 * @generated
 	 */
 	public String convertDAlignmentToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DRunAttributes createDRunAttributesFromString(EDataType eDataType, String initialValue) {
+		DRunAttributes result = DRunAttributes.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDRunAttributesToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

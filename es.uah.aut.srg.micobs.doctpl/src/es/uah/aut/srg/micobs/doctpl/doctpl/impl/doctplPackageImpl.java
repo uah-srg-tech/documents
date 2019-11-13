@@ -37,6 +37,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTab;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
@@ -253,6 +254,13 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	private EEnum dAlignmentEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum dRunAttributesEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -962,6 +970,15 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getDRunAttributes() {
+		return dRunAttributesEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public doctplFactory getdoctplFactory() {
 		return (doctplFactory)getEFactoryInstance();
 	}
@@ -1084,6 +1101,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 
 		// Create enums
 		dAlignmentEEnum = createEEnum(DALIGNMENT);
+		dRunAttributesEEnum = createEEnum(DRUN_ATTRIBUTES);
 	}
 
 	/**
@@ -1206,9 +1224,9 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEClass(dParagraphContentEClass, DParagraphContent.class, "DParagraphContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dRunEClass, DRun.class, "DRun", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDRun_Bold(), ecorePackage.getEBoolean(), "bold", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDRun_Italics(), ecorePackage.getEBoolean(), "italics", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDRun_Underline(), ecorePackage.getEBoolean(), "underline", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Bold(), this.getDRunAttributes(), "bold", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Italics(), this.getDRunAttributes(), "italics", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDRun_Underline(), this.getDRunAttributes(), "underline", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDRun_Color(), ecorePackage.getEString(), "color", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDRun_Tab(), this.getDTab(), null, "tab", null, 0, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDRun_Text(), this.getDText(), null, "text", null, 1, 1, DRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1242,6 +1260,10 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		addEEnumLiteral(dAlignmentEEnum, DAlignment.CENTER);
 		addEEnumLiteral(dAlignmentEEnum, DAlignment.RIGHT);
 		addEEnumLiteral(dAlignmentEEnum, DAlignment.JUSTIFIED);
+
+		initEEnum(dRunAttributesEEnum, DRunAttributes.class, "DRunAttributes");
+		addEEnumLiteral(dRunAttributesEEnum, DRunAttributes.FALSE);
+		addEEnumLiteral(dRunAttributesEEnum, DRunAttributes.TRUE);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -20,9 +20,9 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isBold <em>Bold</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isItalics <em>Italics</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isUnderline <em>Underline</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getBold <em>Bold</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getItalics <em>Italics</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getUnderline <em>Underline</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getColor <em>Color</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getTab <em>Tab</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getText <em>Text</em>}</li>
@@ -33,6 +33,93 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  * @generated
  */
 public interface DRun extends DParagraphContent {
+	/**
+	 * Returns the value of the '<em><b>Bold</b></em>' attribute.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bold</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bold</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes
+	 * @see #setBold(DRunAttributes)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDRun_Bold()
+	 * @model
+	 * @generated
+	 */
+	DRunAttributes getBold();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getBold <em>Bold</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bold</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes
+	 * @see #getBold()
+	 * @generated
+	 */
+	void setBold(DRunAttributes value);
+
+	/**
+	 * Returns the value of the '<em><b>Italics</b></em>' attribute.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Italics</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Italics</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes
+	 * @see #setItalics(DRunAttributes)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDRun_Italics()
+	 * @model
+	 * @generated
+	 */
+	DRunAttributes getItalics();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getItalics <em>Italics</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Italics</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes
+	 * @see #getItalics()
+	 * @generated
+	 */
+	void setItalics(DRunAttributes value);
+
+	/**
+	 * Returns the value of the '<em><b>Underline</b></em>' attribute.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Underline</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Underline</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes
+	 * @see #setUnderline(DRunAttributes)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDRun_Underline()
+	 * @model
+	 * @generated
+	 */
+	DRunAttributes getUnderline();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#getUnderline <em>Underline</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Underline</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DRunAttributes
+	 * @see #getUnderline()
+	 * @generated
+	 */
+	void setUnderline(DRunAttributes value);
+
 	/**
 	 * Returns the value of the '<em><b>Tab</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -84,84 +171,6 @@ public interface DRun extends DParagraphContent {
 	 * @generated
 	 */
 	void setText(DText value);
-
-	/**
-	 * Returns the value of the '<em><b>Bold</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bold</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bold</em>' attribute.
-	 * @see #setBold(boolean)
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDRun_Bold()
-	 * @model
-	 * @generated
-	 */
-	boolean isBold();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isBold <em>Bold</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bold</em>' attribute.
-	 * @see #isBold()
-	 * @generated
-	 */
-	void setBold(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Italics</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Italics</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Italics</em>' attribute.
-	 * @see #setItalics(boolean)
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDRun_Italics()
-	 * @model
-	 * @generated
-	 */
-	boolean isItalics();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isItalics <em>Italics</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Italics</em>' attribute.
-	 * @see #isItalics()
-	 * @generated
-	 */
-	void setItalics(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Underline</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Underline</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Underline</em>' attribute.
-	 * @see #setUnderline(boolean)
-	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDRun_Underline()
-	 * @model
-	 * @generated
-	 */
-	boolean isUnderline();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DRun#isUnderline <em>Underline</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Underline</em>' attribute.
-	 * @see #isUnderline()
-	 * @generated
-	 */
-	void setUnderline(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Color</b></em>' attribute.
