@@ -86,7 +86,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DParagraphContent" abstract="true"/>
   <eClassifiers xsi:type="ecore:EEnum" name="DRunAttributes">
-    <eLiterals name="FALSE" literal="cat"/>
+    <eLiterals name="FALSE" literal="false"/>
     <eLiterals name="TRUE" value="1" literal="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DRun" eSuperTypes="#//DParagraphContent">

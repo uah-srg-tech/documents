@@ -34,7 +34,7 @@ public enum DRunAttributes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FALSE(0, "FALSE", "cat"), /**
+	FALSE(0, "FALSE", "false"), /**
 	 * The '<em><b>TRUE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -53,7 +53,7 @@ public enum DRunAttributes implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #FALSE
-	 * @model literal="cat"
+	 * @model literal="false"
 	 * @generated
 	 * @ordered
 	 */
