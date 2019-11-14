@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DParagraph extends DBodyContent {
+public interface DParagraph extends DBodyContent, DReferenceableObject {
 	/**
 	 * Returns the value of the '<em><b>Paragraph Content</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraphContent}.

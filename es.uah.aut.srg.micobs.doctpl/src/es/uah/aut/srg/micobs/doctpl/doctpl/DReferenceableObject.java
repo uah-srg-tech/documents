@@ -40,7 +40,7 @@ public interface DReferenceableObject extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDReferenceableObject_Name()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getName();

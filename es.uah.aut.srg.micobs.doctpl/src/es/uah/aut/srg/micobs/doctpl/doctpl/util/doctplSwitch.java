@@ -198,6 +198,7 @@ public class doctplSwitch<T> extends Switch<T> {
 				DParagraph dParagraph = (DParagraph)theEObject;
 				T result = caseDParagraph(dParagraph);
 				if (result == null) result = caseDBodyContent(dParagraph);
+				if (result == null) result = caseDReferenceableObject(dParagraph);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -243,6 +244,7 @@ public class doctplSwitch<T> extends Switch<T> {
 				DListContent dListContent = (DListContent)theEObject;
 				T result = caseDListContent(dListContent);
 				if (result == null) result = caseDBodyContent(dListContent);
+				if (result == null) result = caseDReferenceableObject(dListContent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -257,6 +259,7 @@ public class doctplSwitch<T> extends Switch<T> {
 				T result = caseDItemize(dItemize);
 				if (result == null) result = caseDListContent(dItemize);
 				if (result == null) result = caseDBodyContent(dItemize);
+				if (result == null) result = caseDReferenceableObject(dItemize);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -265,6 +268,7 @@ public class doctplSwitch<T> extends Switch<T> {
 				T result = caseDEnumerate(dEnumerate);
 				if (result == null) result = caseDListContent(dEnumerate);
 				if (result == null) result = caseDBodyContent(dEnumerate);
+				if (result == null) result = caseDReferenceableObject(dEnumerate);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

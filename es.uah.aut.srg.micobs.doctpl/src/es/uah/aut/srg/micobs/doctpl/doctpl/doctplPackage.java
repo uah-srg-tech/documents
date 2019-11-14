@@ -1164,13 +1164,22 @@ public interface doctplPackage extends EPackage {
 	int DPARAGRAPH__STYLE = DBODY_CONTENT__STYLE;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DPARAGRAPH__NAME = DBODY_CONTENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Paragraph Content</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 0;
+	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>DParagraph</em>' class.
@@ -1179,7 +1188,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>DParagraph</em>' class.
@@ -1440,13 +1449,22 @@ public interface doctplPackage extends EPackage {
 	int DLIST_CONTENT__STYLE = DBODY_CONTENT__STYLE;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DLIST_CONTENT__NAME = DBODY_CONTENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DLIST_CONTENT__ITEMS = DBODY_CONTENT_FEATURE_COUNT + 0;
+	int DLIST_CONTENT__ITEMS = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>DList Content</em>' class.
@@ -1455,7 +1473,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DLIST_CONTENT_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DLIST_CONTENT_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>DList Content</em>' class.
@@ -1541,6 +1559,15 @@ public interface doctplPackage extends EPackage {
 	int DITEMIZE__STYLE = DLIST_CONTENT__STYLE;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DITEMIZE__NAME = DLIST_CONTENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1594,6 +1621,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DENUMERATE__STYLE = DLIST_CONTENT__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUMERATE__NAME = DLIST_CONTENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.

@@ -1150,9 +1150,11 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		dInstantiableSectionEClass.getESuperTypes().add(this.getDAbstractSection());
 		dInstantiableSectionEClass.getESuperTypes().add(thecommonPackage.getMCommonReferenceableObj());
 		dParagraphEClass.getESuperTypes().add(this.getDBodyContent());
+		dParagraphEClass.getESuperTypes().add(this.getDReferenceableObject());
 		dRunEClass.getESuperTypes().add(this.getDParagraphContent());
 		dHyperlinkEClass.getESuperTypes().add(this.getDParagraphContent());
 		dListContentEClass.getESuperTypes().add(this.getDBodyContent());
+		dListContentEClass.getESuperTypes().add(this.getDReferenceableObject());
 		dItemizeEClass.getESuperTypes().add(this.getDListContent());
 		dEnumerateEClass.getESuperTypes().add(this.getDListContent());
 
@@ -1241,7 +1243,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEReference(getDHyperlink_Reference(), this.getDReferenceableObject(), null, "reference", null, 1, 1, DHyperlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dReferenceableObjectEClass, DReferenceableObject.class, "DReferenceableObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDReferenceableObject_Name(), ecorePackage.getEString(), "name", null, 1, 1, DReferenceableObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDReferenceableObject_Name(), ecorePackage.getEString(), "name", null, 0, 1, DReferenceableObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dListContentEClass, DListContent.class, "DListContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDListContent_Items(), this.getDListItem(), null, "items", null, 1, -1, DListContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

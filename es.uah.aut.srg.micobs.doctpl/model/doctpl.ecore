@@ -80,7 +80,7 @@
     <eLiterals name="right" value="2" literal="right"/>
     <eLiterals name="justified" value="3" literal="justified"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DParagraph" eSuperTypes="#//DBodyContent">
+  <eClassifiers xsi:type="ecore:EClass" name="DParagraph" eSuperTypes="#//DBodyContent #//DReferenceableObject">
     <eStructuralFeatures xsi:type="ecore:EReference" name="paragraphContent" lowerBound="1"
         upperBound="-1" eType="#//DParagraphContent" containment="true"/>
   </eClassifiers>
@@ -109,9 +109,9 @@
         eType="#//DReferenceableObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DReferenceableObject">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DListContent" abstract="true" eSuperTypes="#//DBodyContent">
+  <eClassifiers xsi:type="ecore:EClass" name="DListContent" abstract="true" eSuperTypes="#//DBodyContent #//DReferenceableObject">
     <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" upperBound="-1"
         eType="#//DListItem" containment="true"/>
   </eClassifiers>

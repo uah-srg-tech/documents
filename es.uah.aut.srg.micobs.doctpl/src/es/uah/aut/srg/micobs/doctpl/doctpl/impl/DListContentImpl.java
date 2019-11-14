@@ -12,10 +12,12 @@ package es.uah.aut.srg.micobs.doctpl.doctpl.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DListContent;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DListItem;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -23,6 +25,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -34,12 +37,31 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DListContentImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DListContentImpl#getItems <em>Items</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class DListContentImpl extends DBodyContentImpl implements DListContent {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getItems() <em>Items</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -67,6 +89,27 @@ public abstract class DListContentImpl extends DBodyContentImpl implements DList
 	@Override
 	protected EClass eStaticClass() {
 		return doctplPackage.Literals.DLIST_CONTENT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DLIST_CONTENT__NAME, oldName, name));
 	}
 
 	/**
@@ -103,6 +146,8 @@ public abstract class DListContentImpl extends DBodyContentImpl implements DList
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case doctplPackage.DLIST_CONTENT__NAME:
+				return getName();
 			case doctplPackage.DLIST_CONTENT__ITEMS:
 				return getItems();
 		}
@@ -118,6 +163,9 @@ public abstract class DListContentImpl extends DBodyContentImpl implements DList
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case doctplPackage.DLIST_CONTENT__NAME:
+				setName((String)newValue);
+				return;
 			case doctplPackage.DLIST_CONTENT__ITEMS:
 				getItems().clear();
 				getItems().addAll((Collection<? extends DListItem>)newValue);
@@ -134,6 +182,9 @@ public abstract class DListContentImpl extends DBodyContentImpl implements DList
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case doctplPackage.DLIST_CONTENT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case doctplPackage.DLIST_CONTENT__ITEMS:
 				getItems().clear();
 				return;
@@ -149,10 +200,60 @@ public abstract class DListContentImpl extends DBodyContentImpl implements DList
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case doctplPackage.DLIST_CONTENT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case doctplPackage.DLIST_CONTENT__ITEMS:
 				return items != null && !items.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == DReferenceableObject.class) {
+			switch (derivedFeatureID) {
+				case doctplPackage.DLIST_CONTENT__NAME: return doctplPackage.DREFERENCEABLE_OBJECT__NAME;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == DReferenceableObject.class) {
+			switch (baseFeatureID) {
+				case doctplPackage.DREFERENCEABLE_OBJECT__NAME: return doctplPackage.DLIST_CONTENT__NAME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DListContentImpl
