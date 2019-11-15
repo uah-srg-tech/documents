@@ -736,6 +736,15 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDBodyContent_Indent() {
+		return (EAttribute)dBodyContentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDParagraph() {
 		return dParagraphEClass;
 	}
@@ -1062,6 +1071,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		dBodyContentEClass = createEClass(DBODY_CONTENT);
 		createEAttribute(dBodyContentEClass, DBODY_CONTENT__ALIGNMENT);
 		createEAttribute(dBodyContentEClass, DBODY_CONTENT__STYLE);
+		createEAttribute(dBodyContentEClass, DBODY_CONTENT__INDENT);
 
 		dParagraphEClass = createEClass(DPARAGRAPH);
 		createEReference(dParagraphEClass, DPARAGRAPH__PARAGRAPH_CONTENT);
@@ -1219,6 +1229,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		initEClass(dBodyContentEClass, DBodyContent.class, "DBodyContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDBodyContent_Alignment(), this.getDAlignment(), "alignment", null, 0, 1, DBodyContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDBodyContent_Style(), ecorePackage.getEString(), "style", null, 0, 1, DBodyContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDBodyContent_Indent(), ecorePackage.getEString(), "indent", null, 0, 1, DBodyContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dParagraphEClass, DParagraph.class, "DParagraph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDParagraph_ParagraphContent(), this.getDParagraphContent(), null, "paragraphContent", null, 1, -1, DParagraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

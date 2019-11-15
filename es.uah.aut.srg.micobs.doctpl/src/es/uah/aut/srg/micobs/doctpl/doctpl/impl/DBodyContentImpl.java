@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DBodyContentImpl#getAlignment <em>Alignment</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DBodyContentImpl#getStyle <em>Style</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DBodyContentImpl#getIndent <em>Indent</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +81,25 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected String style = STYLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIndent() <em>Indent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIndent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INDENT_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getIndent() <em>Indent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIndent()
+	 * @generated
+	 * @ordered
+	 */
+	protected String indent = INDENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,6 +192,27 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getIndent() {
+		return indent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIndent(String newIndent) {
+		String oldIndent = indent;
+		indent = newIndent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DBODY_CONTENT__INDENT, oldIndent, indent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -179,6 +220,8 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 				return getAlignment();
 			case doctplPackage.DBODY_CONTENT__STYLE:
 				return getStyle();
+			case doctplPackage.DBODY_CONTENT__INDENT:
+				return getIndent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -196,6 +239,9 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 				return;
 			case doctplPackage.DBODY_CONTENT__STYLE:
 				setStyle((String)newValue);
+				return;
+			case doctplPackage.DBODY_CONTENT__INDENT:
+				setIndent((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -215,6 +261,9 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 			case doctplPackage.DBODY_CONTENT__STYLE:
 				setStyle(STYLE_EDEFAULT);
 				return;
+			case doctplPackage.DBODY_CONTENT__INDENT:
+				setIndent(INDENT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -231,6 +280,8 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 				return isSetAlignment();
 			case doctplPackage.DBODY_CONTENT__STYLE:
 				return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
+			case doctplPackage.DBODY_CONTENT__INDENT:
+				return INDENT_EDEFAULT == null ? indent != null : !INDENT_EDEFAULT.equals(indent);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -249,6 +300,8 @@ public abstract class DBodyContentImpl extends MinimalEObjectImpl.Container impl
 		if (alignmentESet) result.append(alignment); else result.append("<unset>");
 		result.append(", style: ");
 		result.append(style);
+		result.append(", indent: ");
+		result.append(indent);
 		result.append(')');
 		return result.toString();
 	}

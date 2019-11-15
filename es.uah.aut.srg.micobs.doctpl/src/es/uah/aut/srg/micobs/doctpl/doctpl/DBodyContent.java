@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getAlignment <em>Alignment</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getStyle <em>Style</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getIndent <em>Indent</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDBodyContent()
@@ -112,4 +113,30 @@ public interface DBodyContent extends EObject {
 	 * @generated
 	 */
 	void setStyle(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Indent</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Indent</em>' attribute.
+	 * @see #setIndent(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDBodyContent_Indent()
+	 * @model
+	 * @generated
+	 */
+	String getIndent();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getIndent <em>Indent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Indent</em>' attribute.
+	 * @see #getIndent()
+	 * @generated
+	 */
+	void setIndent(String value);
 } // DBodyContent

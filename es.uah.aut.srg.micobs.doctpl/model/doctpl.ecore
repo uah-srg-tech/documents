@@ -73,6 +73,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="#//DAlignment"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="style" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DAlignment">
     <eLiterals name="left" literal="left"/>

@@ -450,13 +450,22 @@ public interface doctplPackage extends EPackage {
 	int DBODY_CONTENT__STYLE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBODY_CONTENT__INDENT = 2;
+
+	/**
 	 * The number of structural features of the '<em>DBody Content</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DBODY_CONTENT_FEATURE_COUNT = 2;
+	int DBODY_CONTENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>DBody Content</em>' class.
@@ -494,6 +503,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DABSTRACT_FIGURE__STYLE = DBODY_CONTENT__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_FIGURE__INDENT = DBODY_CONTENT__INDENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -558,6 +576,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DFIGURE_FROM_FILE__STYLE = DABSTRACT_FIGURE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DFIGURE_FROM_FILE__INDENT = DABSTRACT_FIGURE__INDENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -651,6 +678,15 @@ public interface doctplPackage extends EPackage {
 	int DABSTRACT_TABLE__STYLE = DBODY_CONTENT__STYLE;
 
 	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_TABLE__INDENT = DBODY_CONTENT__INDENT;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -713,6 +749,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DTABLE_FROM_FILE__STYLE = DABSTRACT_TABLE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTABLE_FROM_FILE__INDENT = DABSTRACT_TABLE__INDENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -804,6 +849,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DBASIC_TABLE__STYLE = DABSTRACT_TABLE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBASIC_TABLE__INDENT = DABSTRACT_TABLE__INDENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1164,6 +1218,15 @@ public interface doctplPackage extends EPackage {
 	int DPARAGRAPH__STYLE = DBODY_CONTENT__STYLE;
 
 	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DPARAGRAPH__INDENT = DBODY_CONTENT__INDENT;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1449,6 +1512,15 @@ public interface doctplPackage extends EPackage {
 	int DLIST_CONTENT__STYLE = DBODY_CONTENT__STYLE;
 
 	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DLIST_CONTENT__INDENT = DBODY_CONTENT__INDENT;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1559,6 +1631,15 @@ public interface doctplPackage extends EPackage {
 	int DITEMIZE__STYLE = DLIST_CONTENT__STYLE;
 
 	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DITEMIZE__INDENT = DLIST_CONTENT__INDENT;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1621,6 +1702,15 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DENUMERATE__STYLE = DLIST_CONTENT__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Indent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUMERATE__INDENT = DLIST_CONTENT__INDENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2158,6 +2248,17 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDBodyContent_Style();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getIndent <em>Indent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Indent</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent#getIndent()
+	 * @see #getDBodyContent()
+	 * @generated
+	 */
+	EAttribute getDBodyContent_Indent();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph <em>DParagraph</em>}'.
@@ -2857,6 +2958,14 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DBODY_CONTENT__STYLE = eINSTANCE.getDBodyContent_Style();
+
+		/**
+		 * The meta object literal for the '<em><b>Indent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DBODY_CONTENT__INDENT = eINSTANCE.getDBodyContent_Indent();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DParagraphImpl <em>DParagraph</em>}' class.
