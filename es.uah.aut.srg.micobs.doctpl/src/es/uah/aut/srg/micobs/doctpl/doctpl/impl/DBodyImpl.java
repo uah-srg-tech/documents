@@ -10,14 +10,21 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doctpl.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBasicTable;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DCell;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DListContent;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DListItem;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -157,4 +164,36 @@ public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 		return super.eIsSet(featureID);
 	}
 
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		for(DBodyContent bodyContent : getBodyContent()) {
+			if((bodyContent.eClass().getName() == ReferenceableObjectType) &&
+					(((DReferenceableObject)bodyContent).getName() != null)) {
+				objects.add((DReferenceableObject)bodyContent);
+			}
+			if(bodyContent.eClass().getName() == "DBasicTable") {
+				for(DRow row : ((DBasicTable)bodyContent).getRows()) {
+					for(DCell cell : row.getCells()) {
+						objects.addAll(cell.getReferenceableObjects(ReferenceableObjectType));
+					}
+				}
+			}
+			if((ReferenceableObjectType == "DParagraph") &&
+					((bodyContent.eClass().getName() == "DItemize") ||
+					(bodyContent.eClass().getName() == "DEnumerate"))) {
+				for(DListItem listItem : ((DListContent)bodyContent).getItems()) {
+					if(listItem.getParagraph() != null) {
+						for(DParagraph paragraph : listItem.getParagraph()) {
+							if(paragraph.getName() != null) {
+								objects.add((DReferenceableObject)paragraph);
+							}
+						}
+					}
+				}
+			}
+		}
+		return objects;
+	}
 } //DBodyImpl

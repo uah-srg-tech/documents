@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getFigures <em>Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getTables <em>Tables</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getSections <em>Sections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getParagraphs <em>Paragraphs</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDDocumentTemplate()
@@ -114,5 +115,21 @@ public interface DDocumentTemplate extends EObject {
 	 * @generated
 	 */
 	EList<DAbstractSection> getSections();
+
+	/**
+	 * Returns the value of the '<em><b>Paragraphs</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Paragraphs</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Paragraphs</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDDocumentTemplate_Paragraphs()
+	 * @model transient="true" volatile="true" derived="true"
+	 * @generated
+	 */
+	EList<DParagraph> getParagraphs();
 
 } // DDocumentTemplate

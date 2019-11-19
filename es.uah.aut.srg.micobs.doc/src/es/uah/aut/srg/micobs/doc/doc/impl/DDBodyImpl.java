@@ -15,12 +15,13 @@ import es.uah.aut.srg.micobs.doc.doc.docPackage;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -188,6 +189,11 @@ public class DDBodyImpl extends DDSectionContentImpl implements DDBody {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+		return ECollections.emptyEList();
 	}
 
 } //DDBodyImpl

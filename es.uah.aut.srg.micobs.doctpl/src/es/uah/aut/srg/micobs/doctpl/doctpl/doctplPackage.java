@@ -121,13 +121,22 @@ public interface doctplPackage extends EPackage {
 	int DDOCUMENT_TEMPLATE__SECTIONS = 4;
 
 	/**
+	 * The feature id for the '<em><b>Paragraphs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DDOCUMENT_TEMPLATE__PARAGRAPHS = 5;
+
+	/**
 	 * The number of structural features of the '<em>DDocument Template</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DDOCUMENT_TEMPLATE_FEATURE_COUNT = 5;
+	int DDOCUMENT_TEMPLATE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>DDocument Template</em>' class.
@@ -1836,6 +1845,17 @@ public interface doctplPackage extends EPackage {
 	EReference getDDocumentTemplate_Sections();
 
 	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getParagraphs <em>Paragraphs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Paragraphs</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getParagraphs()
+	 * @see #getDDocumentTemplate()
+	 * @generated
+	 */
+	EReference getDDocumentTemplate_Paragraphs();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractRelatedDocument <em>DAbstract Related Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2616,6 +2636,14 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DDOCUMENT_TEMPLATE__SECTIONS = eINSTANCE.getDDocumentTemplate_Sections();
+
+		/**
+		 * The meta object literal for the '<em><b>Paragraphs</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DDOCUMENT_TEMPLATE__PARAGRAPHS = eINSTANCE.getDDocumentTemplate_Paragraphs();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractRelatedDocumentImpl <em>DAbstract Related Document</em>}' class.

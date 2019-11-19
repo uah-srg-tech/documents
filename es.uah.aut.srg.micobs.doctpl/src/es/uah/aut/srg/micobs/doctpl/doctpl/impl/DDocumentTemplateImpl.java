@@ -15,6 +15,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
@@ -39,6 +40,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DDocumentTemplateImpl#getFigures <em>Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DDocumentTemplateImpl#getTables <em>Tables</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DDocumentTemplateImpl#getSections <em>Sections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DDocumentTemplateImpl#getParagraphs <em>Paragraphs</em>}</li>
  * </ul>
  *
  * @generated
@@ -133,6 +135,19 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DParagraph> getParagraphs() {
+		// TODO: implement this method to return the 'Paragraphs' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -146,6 +161,8 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 				return getTables();
 			case doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS:
 				return getSections();
+			case doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS:
+				return getParagraphs();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,6 +196,10 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 				getSections().clear();
 				getSections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
+			case doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS:
+				getParagraphs().clear();
+				getParagraphs().addAll((Collection<? extends DParagraph>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -206,6 +227,9 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 			case doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS:
 				getSections().clear();
 				return;
+			case doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS:
+				getParagraphs().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -228,6 +252,8 @@ public abstract class DDocumentTemplateImpl extends MinimalEObjectImpl.Container
 				return !getTables().isEmpty();
 			case doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS:
 				return !getSections().isEmpty();
+			case doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS:
+				return !getParagraphs().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -47,4 +47,6 @@ public interface DBody extends EObject {
 	 */
 	EList<DBodyContent> getBodyContent();
 
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
+
 } // DBody
