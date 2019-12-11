@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doctpl;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -33,20 +31,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface DListItem extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Paragraph</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph}.
+	 * Returns the value of the '<em><b>Paragraph</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Paragraph</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Paragraph</em>' containment reference list.
+	 * @return the value of the '<em>Paragraph</em>' containment reference.
+	 * @see #setParagraph(DParagraph)
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDListItem_Paragraph()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DParagraph> getParagraph();
+	DParagraph getParagraph();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DListItem#getParagraph <em>Paragraph</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Paragraph</em>' containment reference.
+	 * @see #getParagraph()
+	 * @generated
+	 */
+	void setParagraph(DParagraph value);
 
 	/**
 	 * Returns the value of the '<em><b>Sublist</b></em>' containment reference.
@@ -73,5 +81,5 @@ public interface DListItem extends EObject {
 	 * @generated
 	 */
 	void setSublist(DListContent value);
-
+	
 } // DListItem

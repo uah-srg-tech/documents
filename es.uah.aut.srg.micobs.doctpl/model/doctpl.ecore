@@ -119,8 +119,8 @@
         eType="#//DListItem" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DListItem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraph" lowerBound="1"
-        upperBound="-1" eType="#//DParagraph" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraph" eType="#//DParagraph"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sublist" eType="#//DListContent"
         containment="true"/>
   </eClassifiers>

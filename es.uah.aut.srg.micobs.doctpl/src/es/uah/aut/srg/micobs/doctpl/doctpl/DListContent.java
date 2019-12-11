@@ -45,4 +45,6 @@ public interface DListContent extends DBodyContent, DReferenceableObject {
 	 */
 	EList<DListItem> getItems();
 
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
+
 } // DListContent

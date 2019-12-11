@@ -14,22 +14,13 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DListContent;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DListItem;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,14 +38,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class DListItemImpl extends MinimalEObjectImpl.Container implements DListItem {
 	/**
-	 * The cached value of the '{@link #getParagraph() <em>Paragraph</em>}' containment reference list.
+	 * The cached value of the '{@link #getParagraph() <em>Paragraph</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getParagraph()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DParagraph> paragraph;
+	protected DParagraph paragraph;
 
 	/**
 	 * The cached value of the '{@link #getSublist() <em>Sublist</em>}' containment reference.
@@ -90,11 +81,42 @@ public class DListItemImpl extends MinimalEObjectImpl.Container implements DList
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DParagraph> getParagraph() {
-		if (paragraph == null) {
-			paragraph = new EObjectContainmentEList<DParagraph>(DParagraph.class, this, doctplPackage.DLIST_ITEM__PARAGRAPH);
-		}
+	public DParagraph getParagraph() {
 		return paragraph;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetParagraph(DParagraph newParagraph, NotificationChain msgs) {
+		DParagraph oldParagraph = paragraph;
+		paragraph = newParagraph;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, doctplPackage.DLIST_ITEM__PARAGRAPH, oldParagraph, newParagraph);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParagraph(DParagraph newParagraph) {
+		if (newParagraph != paragraph) {
+			NotificationChain msgs = null;
+			if (paragraph != null)
+				msgs = ((InternalEObject)paragraph).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - doctplPackage.DLIST_ITEM__PARAGRAPH, null, msgs);
+			if (newParagraph != null)
+				msgs = ((InternalEObject)newParagraph).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - doctplPackage.DLIST_ITEM__PARAGRAPH, null, msgs);
+			msgs = basicSetParagraph(newParagraph, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DLIST_ITEM__PARAGRAPH, newParagraph, newParagraph));
 	}
 
 	/**
@@ -149,7 +171,7 @@ public class DListItemImpl extends MinimalEObjectImpl.Container implements DList
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case doctplPackage.DLIST_ITEM__PARAGRAPH:
-				return ((InternalEList<?>)getParagraph()).basicRemove(otherEnd, msgs);
+				return basicSetParagraph(null, msgs);
 			case doctplPackage.DLIST_ITEM__SUBLIST:
 				return basicSetSublist(null, msgs);
 		}
@@ -177,13 +199,11 @@ public class DListItemImpl extends MinimalEObjectImpl.Container implements DList
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case doctplPackage.DLIST_ITEM__PARAGRAPH:
-				getParagraph().clear();
-				getParagraph().addAll((Collection<? extends DParagraph>)newValue);
+				setParagraph((DParagraph)newValue);
 				return;
 			case doctplPackage.DLIST_ITEM__SUBLIST:
 				setSublist((DListContent)newValue);
@@ -201,7 +221,7 @@ public class DListItemImpl extends MinimalEObjectImpl.Container implements DList
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case doctplPackage.DLIST_ITEM__PARAGRAPH:
-				getParagraph().clear();
+				setParagraph((DParagraph)null);
 				return;
 			case doctplPackage.DLIST_ITEM__SUBLIST:
 				setSublist((DListContent)null);
@@ -219,7 +239,7 @@ public class DListItemImpl extends MinimalEObjectImpl.Container implements DList
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case doctplPackage.DLIST_ITEM__PARAGRAPH:
-				return paragraph != null && !paragraph.isEmpty();
+				return paragraph != null;
 			case doctplPackage.DLIST_ITEM__SUBLIST:
 				return sublist != null;
 		}

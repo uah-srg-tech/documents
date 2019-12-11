@@ -1576,7 +1576,7 @@ public interface doctplPackage extends EPackage {
 	int DLIST_ITEM = 24;
 
 	/**
-	 * The feature id for the '<em><b>Paragraph</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Paragraph</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2503,10 +2503,10 @@ public interface doctplPackage extends EPackage {
 	EClass getDListItem();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DListItem#getParagraph <em>Paragraph</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DListItem#getParagraph <em>Paragraph</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Paragraph</em>'.
+	 * @return the meta object for the containment reference '<em>Paragraph</em>'.
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DListItem#getParagraph()
 	 * @see #getDListItem()
 	 * @generated
@@ -3182,7 +3182,7 @@ public interface doctplPackage extends EPackage {
 		EClass DLIST_ITEM = eINSTANCE.getDListItem();
 
 		/**
-		 * The meta object literal for the '<em><b>Paragraph</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Paragraph</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -19,7 +19,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -256,4 +256,20 @@ public abstract class DListContentImpl extends DBodyContentImpl implements DList
 		return result.toString();
 	}
 
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+
+		if(ReferenceableObjectType == "DParagraph") {
+			for(DListItem listItem : getItems()) {
+				if(listItem.getParagraph() != null) {
+					objects.add((DReferenceableObject)listItem.getParagraph());
+				}
+				if(listItem.getSublist() != null) {
+					objects.addAll(listItem.getSublist().getReferenceableObjects(ReferenceableObjectType));
+				}
+			}
+		}
+		return objects;
+	}
 } //DListContentImpl

@@ -15,8 +15,6 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DCell;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DListContent;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DListItem;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
@@ -183,15 +181,7 @@ public class DBodyImpl extends MinimalEObjectImpl.Container implements DBody {
 			if((ReferenceableObjectType == "DParagraph") &&
 					((bodyContent.eClass().getName() == "DItemize") ||
 					(bodyContent.eClass().getName() == "DEnumerate"))) {
-				for(DListItem listItem : ((DListContent)bodyContent).getItems()) {
-					if(listItem.getParagraph() != null) {
-						for(DParagraph paragraph : listItem.getParagraph()) {
-							if(paragraph.getName() != null) {
-								objects.add((DReferenceableObject)paragraph);
-							}
-						}
-					}
-				}
+				objects.addAll(((DListContent)bodyContent).getReferenceableObjects(ReferenceableObjectType));
 			}
 		}
 		return objects;
