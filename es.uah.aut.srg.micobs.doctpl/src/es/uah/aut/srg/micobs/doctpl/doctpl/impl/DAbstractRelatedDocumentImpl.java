@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractRelatedDocumentImpl#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractRelatedDocumentImpl#getRevision <em>Revision</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractRelatedDocumentImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractRelatedDocumentImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @generated
@@ -136,6 +137,26 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	 * @ordered
 	 */
 	protected String date = DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -266,6 +287,27 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DABSTRACT_RELATED_DOCUMENT__URL, oldUrl, url));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -279,6 +321,8 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 				return getRevision();
 			case doctplPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
 				return getDate();
+			case doctplPackage.DABSTRACT_RELATED_DOCUMENT__URL:
+				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -305,6 +349,9 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 				return;
 			case doctplPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
 				setDate((String)newValue);
+				return;
+			case doctplPackage.DABSTRACT_RELATED_DOCUMENT__URL:
+				setUrl((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -333,6 +380,9 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 			case doctplPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
+			case doctplPackage.DABSTRACT_RELATED_DOCUMENT__URL:
+				setUrl(URL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -355,6 +405,8 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 				return REVISION_EDEFAULT == null ? revision != null : !REVISION_EDEFAULT.equals(revision);
 			case doctplPackage.DABSTRACT_RELATED_DOCUMENT__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
+			case doctplPackage.DABSTRACT_RELATED_DOCUMENT__URL:
+				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -379,6 +431,8 @@ public abstract class DAbstractRelatedDocumentImpl extends DReferenceableObjectI
 		result.append(revision);
 		result.append(", date: ");
 		result.append(date);
+		result.append(", url: ");
+		result.append(url);
 		result.append(')');
 		return result.toString();
 	}

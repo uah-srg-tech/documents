@@ -25,6 +25,7 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractRelatedDocument#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractRelatedDocument#getRevision <em>Revision</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractRelatedDocument#getDate <em>Date</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractRelatedDocument#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDAbstractRelatedDocument()
@@ -161,5 +162,31 @@ public interface DAbstractRelatedDocument extends DReferenceableObject {
 	 * @generated
 	 */
 	void setDate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Url</em>' attribute.
+	 * @see #setUrl(String)
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage#getDAbstractRelatedDocument_Url()
+	 * @model
+	 * @generated
+	 */
+	String getUrl();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractRelatedDocument#getUrl <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Url</em>' attribute.
+	 * @see #getUrl()
+	 * @generated
+	 */
+	void setUrl(String value);
 
 } // DAbstractRelatedDocument
