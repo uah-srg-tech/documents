@@ -76,13 +76,76 @@ public interface doctplPackage extends EPackage {
 	int DDOCUMENT_TEMPLATE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DDOCUMENT_TEMPLATE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DDOCUMENT_TEMPLATE__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Issue</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DDOCUMENT_TEMPLATE__ISSUE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Revision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DDOCUMENT_TEMPLATE__REVISION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DDOCUMENT_TEMPLATE__DATE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Tbcs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DDOCUMENT_TEMPLATE__TBCS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Tbds</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DDOCUMENT_TEMPLATE__TBDS = 6;
+
+	/**
 	 * The feature id for the '<em><b>Applicable Documents</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS = 0;
+	int DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents</b></em>' reference list.
@@ -91,7 +154,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS = 1;
+	int DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Figures</b></em>' reference list.
@@ -100,7 +163,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DDOCUMENT_TEMPLATE__FIGURES = 2;
+	int DDOCUMENT_TEMPLATE__FIGURES = 9;
 
 	/**
 	 * The feature id for the '<em><b>Tables</b></em>' reference list.
@@ -109,7 +172,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DDOCUMENT_TEMPLATE__TABLES = 3;
+	int DDOCUMENT_TEMPLATE__TABLES = 10;
 
 	/**
 	 * The feature id for the '<em><b>Sections</b></em>' reference list.
@@ -118,7 +181,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DDOCUMENT_TEMPLATE__SECTIONS = 4;
+	int DDOCUMENT_TEMPLATE__SECTIONS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Paragraphs</b></em>' reference list.
@@ -127,7 +190,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DDOCUMENT_TEMPLATE__PARAGRAPHS = 5;
+	int DDOCUMENT_TEMPLATE__PARAGRAPHS = 12;
 
 	/**
 	 * The number of structural features of the '<em>DDocument Template</em>' class.
@@ -136,7 +199,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DDOCUMENT_TEMPLATE_FEATURE_COUNT = 6;
+	int DDOCUMENT_TEMPLATE_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>DDocument Template</em>' class.
@@ -155,7 +218,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDReferenceableObject()
 	 * @generated
 	 */
-	int DREFERENCEABLE_OBJECT = 22;
+	int DREFERENCEABLE_OBJECT = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -185,6 +248,162 @@ public interface doctplPackage extends EPackage {
 	int DREFERENCEABLE_OBJECT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractPlaceholderImpl <em>DAbstract Placeholder</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractPlaceholderImpl
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDAbstractPlaceholder()
+	 * @generated
+	 */
+	int DABSTRACT_PLACEHOLDER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_PLACEHOLDER__NAME = DREFERENCEABLE_OBJECT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_PLACEHOLDER__DESCRIPTION = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>DAbstract Placeholder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_PLACEHOLDER_FEATURE_COUNT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>DAbstract Placeholder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_PLACEHOLDER_OPERATION_COUNT = DREFERENCEABLE_OBJECT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBCImpl <em>DTBC</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBCImpl
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDTBC()
+	 * @generated
+	 */
+	int DTBC = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBC__NAME = DABSTRACT_PLACEHOLDER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBC__DESCRIPTION = DABSTRACT_PLACEHOLDER__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Parent TBC</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBC__PARENT_TBC = DABSTRACT_PLACEHOLDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>DTBC</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBC_FEATURE_COUNT = DABSTRACT_PLACEHOLDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>DTBC</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBC_OPERATION_COUNT = DABSTRACT_PLACEHOLDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBDImpl <em>DTBD</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBDImpl
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDTBD()
+	 * @generated
+	 */
+	int DTBD = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBD__NAME = DABSTRACT_PLACEHOLDER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBD__DESCRIPTION = DABSTRACT_PLACEHOLDER__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Parent TBD</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBD__PARENT_TBD = DABSTRACT_PLACEHOLDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>DTBD</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBD_FEATURE_COUNT = DABSTRACT_PLACEHOLDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>DTBD</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTBD_OPERATION_COUNT = DABSTRACT_PLACEHOLDER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractRelatedDocumentImpl <em>DAbstract Related Document</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -192,7 +411,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDAbstractRelatedDocument()
 	 * @generated
 	 */
-	int DABSTRACT_RELATED_DOCUMENT = 1;
+	int DABSTRACT_RELATED_DOCUMENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -283,7 +502,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDApplicableDocument()
 	 * @generated
 	 */
-	int DAPPLICABLE_DOCUMENT = 2;
+	int DAPPLICABLE_DOCUMENT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -374,7 +593,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDReferenceDocument()
 	 * @generated
 	 */
-	int DREFERENCE_DOCUMENT = 3;
+	int DREFERENCE_DOCUMENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -465,7 +684,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDBodyContent()
 	 * @generated
 	 */
-	int DBODY_CONTENT = 15;
+	int DBODY_CONTENT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -520,7 +739,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDAbstractFigure()
 	 * @generated
 	 */
-	int DABSTRACT_FIGURE = 4;
+	int DABSTRACT_FIGURE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -593,7 +812,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDFigureFromFile()
 	 * @generated
 	 */
-	int DFIGURE_FROM_FILE = 5;
+	int DFIGURE_FROM_FILE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -693,7 +912,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDAbstractTable()
 	 * @generated
 	 */
-	int DABSTRACT_TABLE = 6;
+	int DABSTRACT_TABLE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -766,7 +985,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDTableFromFile()
 	 * @generated
 	 */
-	int DTABLE_FROM_FILE = 7;
+	int DTABLE_FROM_FILE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -866,7 +1085,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDBasicTable()
 	 * @generated
 	 */
-	int DBASIC_TABLE = 8;
+	int DBASIC_TABLE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -957,7 +1176,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDRow()
 	 * @generated
 	 */
-	int DROW = 9;
+	int DROW = 12;
 
 	/**
 	 * The feature id for the '<em><b>Cells</b></em>' containment reference list.
@@ -994,7 +1213,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDBody()
 	 * @generated
 	 */
-	int DBODY = 14;
+	int DBODY = 17;
 
 	/**
 	 * The feature id for the '<em><b>Body Content</b></em>' containment reference list.
@@ -1031,7 +1250,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDCell()
 	 * @generated
 	 */
-	int DCELL = 10;
+	int DCELL = 13;
 
 	/**
 	 * The feature id for the '<em><b>Body Content</b></em>' containment reference list.
@@ -1104,7 +1323,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDAbstractSection()
 	 * @generated
 	 */
-	int DABSTRACT_SECTION = 11;
+	int DABSTRACT_SECTION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1141,7 +1360,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDFixedSection()
 	 * @generated
 	 */
-	int DFIXED_SECTION = 12;
+	int DFIXED_SECTION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1178,7 +1397,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDInstantiableSection()
 	 * @generated
 	 */
-	int DINSTANTIABLE_SECTION = 13;
+	int DINSTANTIABLE_SECTION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1233,7 +1452,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDParagraph()
 	 * @generated
 	 */
-	int DPARAGRAPH = 16;
+	int DPARAGRAPH = 19;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1306,7 +1525,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDParagraphContent()
 	 * @generated
 	 */
-	int DPARAGRAPH_CONTENT = 17;
+	int DPARAGRAPH_CONTENT = 20;
 
 	/**
 	 * The number of structural features of the '<em>DParagraph Content</em>' class.
@@ -1334,7 +1553,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDRun()
 	 * @generated
 	 */
-	int DRUN = 18;
+	int DRUN = 21;
 
 	/**
 	 * The feature id for the '<em><b>Bold</b></em>' attribute.
@@ -1416,7 +1635,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDTab()
 	 * @generated
 	 */
-	int DTAB = 19;
+	int DTAB = 22;
 
 	/**
 	 * The number of structural features of the '<em>DTab</em>' class.
@@ -1444,7 +1663,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDText()
 	 * @generated
 	 */
-	int DTEXT = 20;
+	int DTEXT = 23;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1481,7 +1700,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDHyperlink()
 	 * @generated
 	 */
-	int DHYPERLINK = 21;
+	int DHYPERLINK = 24;
 
 	/**
 	 * The feature id for the '<em><b>Run</b></em>' containment reference.
@@ -1527,7 +1746,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDListContent()
 	 * @generated
 	 */
-	int DLIST_CONTENT = 23;
+	int DLIST_CONTENT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1600,7 +1819,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDListItem()
 	 * @generated
 	 */
-	int DLIST_ITEM = 24;
+	int DLIST_ITEM = 27;
 
 	/**
 	 * The feature id for the '<em><b>Paragraph</b></em>' containment reference.
@@ -1646,7 +1865,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDItemize()
 	 * @generated
 	 */
-	int DITEMIZE = 25;
+	int DITEMIZE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1719,7 +1938,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDEnumerate()
 	 * @generated
 	 */
-	int DENUMERATE = 26;
+	int DENUMERATE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1792,7 +2011,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDAlignment()
 	 * @generated
 	 */
-	int DALIGNMENT = 27;
+	int DALIGNMENT = 30;
 
 
 	/**
@@ -1803,7 +2022,7 @@ public interface doctplPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDRunAttributes()
 	 * @generated
 	 */
-	int DRUN_ATTRIBUTES = 28;
+	int DRUN_ATTRIBUTES = 31;
 
 
 	/**
@@ -1815,6 +2034,83 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDDocumentTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getName()
+	 * @see #getDDocumentTemplate()
+	 * @generated
+	 */
+	EAttribute getDDocumentTemplate_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getId()
+	 * @see #getDDocumentTemplate()
+	 * @generated
+	 */
+	EAttribute getDDocumentTemplate_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getIssue <em>Issue</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Issue</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getIssue()
+	 * @see #getDDocumentTemplate()
+	 * @generated
+	 */
+	EAttribute getDDocumentTemplate_Issue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getRevision <em>Revision</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Revision</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getRevision()
+	 * @see #getDDocumentTemplate()
+	 * @generated
+	 */
+	EAttribute getDDocumentTemplate_Revision();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getDate <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getDate()
+	 * @see #getDDocumentTemplate()
+	 * @generated
+	 */
+	EAttribute getDDocumentTemplate_Date();
+
+	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getTbcs <em>Tbcs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Tbcs</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getTbcs()
+	 * @see #getDDocumentTemplate()
+	 * @generated
+	 */
+	EReference getDDocumentTemplate_Tbcs();
+
+	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getTbds <em>Tbds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Tbds</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getTbds()
+	 * @see #getDDocumentTemplate()
+	 * @generated
+	 */
+	EReference getDDocumentTemplate_Tbds();
 
 	/**
 	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate#getApplicableDocuments <em>Applicable Documents</em>}'.
@@ -1881,6 +2177,48 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDDocumentTemplate_Paragraphs();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DTBC <em>DTBC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>DTBC</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DTBC
+	 * @generated
+	 */
+	EClass getDTBC();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DTBC#getParentTBC <em>Parent TBC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent TBC</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DTBC#getParentTBC()
+	 * @see #getDTBC()
+	 * @generated
+	 */
+	EReference getDTBC_ParentTBC();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DTBD <em>DTBD</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>DTBD</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DTBD
+	 * @generated
+	 */
+	EClass getDTBD();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DTBD#getParentTBD <em>Parent TBD</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent TBD</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DTBD#getParentTBD()
+	 * @see #getDTBD()
+	 * @generated
+	 */
+	EReference getDTBD_ParentTBD();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractRelatedDocument <em>DAbstract Related Document</em>}'.
@@ -1977,6 +2315,27 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDReferenceDocument();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractPlaceholder <em>DAbstract Placeholder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>DAbstract Placeholder</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractPlaceholder
+	 * @generated
+	 */
+	EClass getDAbstractPlaceholder();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractPlaceholder#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractPlaceholder#getDescription()
+	 * @see #getDAbstractPlaceholder()
+	 * @generated
+	 */
+	EAttribute getDAbstractPlaceholder_Description();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure <em>DAbstract Figure</em>}'.
@@ -2636,6 +2995,62 @@ public interface doctplPackage extends EPackage {
 		EClass DDOCUMENT_TEMPLATE = eINSTANCE.getDDocumentTemplate();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DDOCUMENT_TEMPLATE__NAME = eINSTANCE.getDDocumentTemplate_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DDOCUMENT_TEMPLATE__ID = eINSTANCE.getDDocumentTemplate_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Issue</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DDOCUMENT_TEMPLATE__ISSUE = eINSTANCE.getDDocumentTemplate_Issue();
+
+		/**
+		 * The meta object literal for the '<em><b>Revision</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DDOCUMENT_TEMPLATE__REVISION = eINSTANCE.getDDocumentTemplate_Revision();
+
+		/**
+		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DDOCUMENT_TEMPLATE__DATE = eINSTANCE.getDDocumentTemplate_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Tbcs</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DDOCUMENT_TEMPLATE__TBCS = eINSTANCE.getDDocumentTemplate_Tbcs();
+
+		/**
+		 * The meta object literal for the '<em><b>Tbds</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DDOCUMENT_TEMPLATE__TBDS = eINSTANCE.getDDocumentTemplate_Tbds();
+
+		/**
 		 * The meta object literal for the '<em><b>Applicable Documents</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2682,6 +3097,42 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DDOCUMENT_TEMPLATE__PARAGRAPHS = eINSTANCE.getDDocumentTemplate_Paragraphs();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBCImpl <em>DTBC</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBCImpl
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDTBC()
+		 * @generated
+		 */
+		EClass DTBC = eINSTANCE.getDTBC();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent TBC</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DTBC__PARENT_TBC = eINSTANCE.getDTBC_ParentTBC();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBDImpl <em>DTBD</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBDImpl
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDTBD()
+		 * @generated
+		 */
+		EClass DTBD = eINSTANCE.getDTBD();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent TBD</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DTBD__PARENT_TBD = eINSTANCE.getDTBD_ParentTBD();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractRelatedDocumentImpl <em>DAbstract Related Document</em>}' class.
@@ -2760,6 +3211,24 @@ public interface doctplPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DREFERENCE_DOCUMENT = eINSTANCE.getDReferenceDocument();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractPlaceholderImpl <em>DAbstract Placeholder</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractPlaceholderImpl
+		 * @see es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplPackageImpl#getDAbstractPlaceholder()
+		 * @generated
+		 */
+		EClass DABSTRACT_PLACEHOLDER = eINSTANCE.getDAbstractPlaceholder();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DABSTRACT_PLACEHOLDER__DESCRIPTION = eINSTANCE.getDAbstractPlaceholder_Description();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractFigureImpl <em>DAbstract Figure</em>}' class.

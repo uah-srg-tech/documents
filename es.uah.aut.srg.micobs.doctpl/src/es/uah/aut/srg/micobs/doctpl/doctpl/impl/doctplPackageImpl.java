@@ -13,6 +13,7 @@ package es.uah.aut.srg.micobs.doctpl.doctpl.impl;
 import es.uah.aut.srg.micobs.common.commonPackage;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractPlaceholder;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractRelatedDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
@@ -71,6 +72,20 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass dtbcEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dtbdEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass dAbstractRelatedDocumentEClass = null;
 
 	/**
@@ -86,6 +101,13 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	private EClass dReferenceDocumentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dAbstractPlaceholderEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -340,8 +362,71 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDDocumentTemplate_Name() {
+		return (EAttribute)dDocumentTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDDocumentTemplate_Id() {
+		return (EAttribute)dDocumentTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDDocumentTemplate_Issue() {
+		return (EAttribute)dDocumentTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDDocumentTemplate_Revision() {
+		return (EAttribute)dDocumentTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDDocumentTemplate_Date() {
+		return (EAttribute)dDocumentTemplateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDDocumentTemplate_Tbcs() {
+		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDDocumentTemplate_Tbds() {
+		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getDDocumentTemplate_ApplicableDocuments() {
-		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(0);
+		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -350,7 +435,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EReference getDDocumentTemplate_ReferenceDocuments() {
-		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(1);
+		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -359,7 +444,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EReference getDDocumentTemplate_Figures() {
-		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(2);
+		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -368,7 +453,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EReference getDDocumentTemplate_Tables() {
-		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(3);
+		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -377,7 +462,7 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EReference getDDocumentTemplate_Sections() {
-		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(4);
+		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -386,7 +471,43 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 * @generated
 	 */
 	public EReference getDDocumentTemplate_Paragraphs() {
-		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(5);
+		return (EReference)dDocumentTemplateEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDTBC() {
+		return dtbcEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDTBC_ParentTBC() {
+		return (EReference)dtbcEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDTBD() {
+		return dtbdEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDTBD_ParentTBD() {
+		return (EReference)dtbdEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -468,6 +589,24 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 	 */
 	public EClass getDReferenceDocument() {
 		return dReferenceDocumentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDAbstractPlaceholder() {
+		return dAbstractPlaceholderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDAbstractPlaceholder_Description() {
+		return (EAttribute)dAbstractPlaceholderEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1030,12 +1169,28 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 
 		// Create classes and their features
 		dDocumentTemplateEClass = createEClass(DDOCUMENT_TEMPLATE);
+		createEAttribute(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__NAME);
+		createEAttribute(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__ID);
+		createEAttribute(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__ISSUE);
+		createEAttribute(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__REVISION);
+		createEAttribute(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__DATE);
+		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__TBCS);
+		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__TBDS);
 		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS);
 		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS);
 		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__FIGURES);
 		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__TABLES);
 		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__SECTIONS);
 		createEReference(dDocumentTemplateEClass, DDOCUMENT_TEMPLATE__PARAGRAPHS);
+
+		dAbstractPlaceholderEClass = createEClass(DABSTRACT_PLACEHOLDER);
+		createEAttribute(dAbstractPlaceholderEClass, DABSTRACT_PLACEHOLDER__DESCRIPTION);
+
+		dtbcEClass = createEClass(DTBC);
+		createEReference(dtbcEClass, DTBC__PARENT_TBC);
+
+		dtbdEClass = createEClass(DTBD);
+		createEReference(dtbdEClass, DTBD__PARENT_TBD);
 
 		dAbstractRelatedDocumentEClass = createEClass(DABSTRACT_RELATED_DOCUMENT);
 		createEAttribute(dAbstractRelatedDocumentEClass, DABSTRACT_RELATED_DOCUMENT__TITLE);
@@ -1165,6 +1320,9 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		dAbstractPlaceholderEClass.getESuperTypes().add(this.getDReferenceableObject());
+		dtbcEClass.getESuperTypes().add(this.getDAbstractPlaceholder());
+		dtbdEClass.getESuperTypes().add(this.getDAbstractPlaceholder());
 		dAbstractRelatedDocumentEClass.getESuperTypes().add(this.getDReferenceableObject());
 		dApplicableDocumentEClass.getESuperTypes().add(this.getDAbstractRelatedDocument());
 		dReferenceDocumentEClass.getESuperTypes().add(this.getDAbstractRelatedDocument());
@@ -1190,12 +1348,28 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(dDocumentTemplateEClass, DDocumentTemplate.class, "DDocumentTemplate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDDocumentTemplate_Name(), ecorePackage.getEString(), "name", null, 1, 1, DDocumentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDDocumentTemplate_Id(), ecorePackage.getEString(), "id", null, 1, 1, DDocumentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDDocumentTemplate_Issue(), ecorePackage.getEString(), "issue", null, 1, 1, DDocumentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDDocumentTemplate_Revision(), ecorePackage.getEString(), "revision", null, 1, 1, DDocumentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDDocumentTemplate_Date(), ecorePackage.getEString(), "date", null, 1, 1, DDocumentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDDocumentTemplate_Tbcs(), this.getDTBC(), null, "tbcs", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDDocumentTemplate_Tbds(), this.getDTBD(), null, "tbds", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDDocumentTemplate_ApplicableDocuments(), this.getDApplicableDocument(), null, "applicableDocuments", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDDocumentTemplate_ReferenceDocuments(), this.getDReferenceDocument(), null, "referenceDocuments", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDDocumentTemplate_Figures(), this.getDAbstractFigure(), null, "figures", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDDocumentTemplate_Tables(), this.getDAbstractTable(), null, "tables", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDDocumentTemplate_Sections(), this.getDAbstractSection(), null, "sections", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDDocumentTemplate_Paragraphs(), this.getDParagraph(), null, "paragraphs", null, 0, -1, DDocumentTemplate.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(dAbstractPlaceholderEClass, DAbstractPlaceholder.class, "DAbstractPlaceholder", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDAbstractPlaceholder_Description(), ecorePackage.getEString(), "description", null, 0, 1, DAbstractPlaceholder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dtbcEClass, es.uah.aut.srg.micobs.doctpl.doctpl.DTBC.class, "DTBC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDTBC_ParentTBC(), this.getDAbstractPlaceholder(), null, "parentTBC", null, 0, 1, es.uah.aut.srg.micobs.doctpl.doctpl.DTBC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dtbdEClass, es.uah.aut.srg.micobs.doctpl.doctpl.DTBD.class, "DTBD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDTBD_ParentTBD(), this.getDAbstractPlaceholder(), null, "parentTBD", null, 0, 1, es.uah.aut.srg.micobs.doctpl.doctpl.DTBD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dAbstractRelatedDocumentEClass, DAbstractRelatedDocument.class, "DAbstractRelatedDocument", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDAbstractRelatedDocument_Title(), ecorePackage.getEString(), "title", null, 1, 1, DAbstractRelatedDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

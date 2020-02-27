@@ -65,6 +65,8 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case doctplPackage.DTBC: return createDTBC();
+			case doctplPackage.DTBD: return createDTBD();
 			case doctplPackage.DAPPLICABLE_DOCUMENT: return createDApplicableDocument();
 			case doctplPackage.DREFERENCE_DOCUMENT: return createDReferenceDocument();
 			case doctplPackage.DFIGURE_FROM_FILE: return createDFigureFromFile();
@@ -122,6 +124,26 @@ public class doctplFactoryImpl extends EFactoryImpl implements doctplFactory {
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DTBC createDTBC() {
+		DTBCImpl dtbc = new DTBCImpl();
+		return dtbc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DTBD createDTBD() {
+		DTBDImpl dtbd = new DTBDImpl();
+		return dtbd;
 	}
 
 	/**

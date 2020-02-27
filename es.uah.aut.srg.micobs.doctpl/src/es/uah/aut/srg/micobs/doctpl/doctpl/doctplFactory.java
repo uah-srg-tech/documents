@@ -30,6 +30,24 @@ public interface doctplFactory extends EFactory {
 	doctplFactory eINSTANCE = es.uah.aut.srg.micobs.doctpl.doctpl.impl.doctplFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>DTBC</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DTBC</em>'.
+	 * @generated
+	 */
+	DTBC createDTBC();
+
+	/**
+	 * Returns a new object of class '<em>DTBD</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DTBD</em>'.
+	 * @generated
+	 */
+	DTBD createDTBD();
+
+	/**
 	 * Returns a new object of class '<em>DApplicable Document</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

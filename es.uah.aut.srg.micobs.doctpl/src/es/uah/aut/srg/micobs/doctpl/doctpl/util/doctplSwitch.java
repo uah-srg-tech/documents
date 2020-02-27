@@ -82,6 +82,29 @@ public class doctplSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case doctplPackage.DABSTRACT_PLACEHOLDER: {
+				DAbstractPlaceholder dAbstractPlaceholder = (DAbstractPlaceholder)theEObject;
+				T result = caseDAbstractPlaceholder(dAbstractPlaceholder);
+				if (result == null) result = caseDReferenceableObject(dAbstractPlaceholder);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case doctplPackage.DTBC: {
+				DTBC dtbc = (DTBC)theEObject;
+				T result = caseDTBC(dtbc);
+				if (result == null) result = caseDAbstractPlaceholder(dtbc);
+				if (result == null) result = caseDReferenceableObject(dtbc);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case doctplPackage.DTBD: {
+				DTBD dtbd = (DTBD)theEObject;
+				T result = caseDTBD(dtbd);
+				if (result == null) result = caseDAbstractPlaceholder(dtbd);
+				if (result == null) result = caseDReferenceableObject(dtbd);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case doctplPackage.DABSTRACT_RELATED_DOCUMENT: {
 				DAbstractRelatedDocument dAbstractRelatedDocument = (DAbstractRelatedDocument)theEObject;
 				T result = caseDAbstractRelatedDocument(dAbstractRelatedDocument);
@@ -292,6 +315,36 @@ public class doctplSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DTBC</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DTBC</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDTBC(DTBC object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DTBD</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DTBD</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDTBD(DTBD object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>DAbstract Related Document</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -333,6 +386,21 @@ public class doctplSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDReferenceDocument(DReferenceDocument object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DAbstract Placeholder</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DAbstract Placeholder</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDAbstractPlaceholder(DAbstractPlaceholder object) {
 		return null;
 	}
 

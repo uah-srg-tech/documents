@@ -82,6 +82,18 @@ public class doctplAdapterFactory extends AdapterFactoryImpl {
 				return createDDocumentTemplateAdapter();
 			}
 			@Override
+			public Adapter caseDAbstractPlaceholder(DAbstractPlaceholder object) {
+				return createDAbstractPlaceholderAdapter();
+			}
+			@Override
+			public Adapter caseDTBC(DTBC object) {
+				return createDTBCAdapter();
+			}
+			@Override
+			public Adapter caseDTBD(DTBD object) {
+				return createDTBDAdapter();
+			}
+			@Override
 			public Adapter caseDAbstractRelatedDocument(DAbstractRelatedDocument object) {
 				return createDAbstractRelatedDocumentAdapter();
 			}
@@ -224,6 +236,34 @@ public class doctplAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DTBC <em>DTBC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DTBC
+	 * @generated
+	 */
+	public Adapter createDTBCAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DTBD <em>DTBD</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DTBD
+	 * @generated
+	 */
+	public Adapter createDTBDAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractRelatedDocument <em>DAbstract Related Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -262,6 +302,20 @@ public class doctplAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDReferenceDocumentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractPlaceholder <em>DAbstract Placeholder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractPlaceholder
+	 * @generated
+	 */
+	public Adapter createDAbstractPlaceholderAdapter() {
 		return null;
 	}
 

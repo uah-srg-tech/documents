@@ -2,6 +2,16 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="doctpl" nsURI="http://srg.aut.uah.es/micobs/doctpl/doctpl" nsPrefix="micobs.doctpl">
   <eClassifiers xsi:type="ecore:EClass" name="DDocumentTemplate" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="issue" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="revision" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbcs" upperBound="-1" eType="#//DTBC"
+        volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbds" upperBound="-1" eType="#//DTBD"
+        volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocuments" upperBound="-1"
         eType="#//DApplicableDocument" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="referenceDocuments" upperBound="-1"
@@ -14,6 +24,16 @@
         eType="#//DAbstractSection" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="paragraphs" upperBound="-1"
         eType="#//DParagraph" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DAbstractPlaceholder" abstract="true"
+      eSuperTypes="#//DReferenceableObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DTBC" eSuperTypes="#//DAbstractPlaceholder">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentTBC" eType="#//DAbstractPlaceholder"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DTBD" eSuperTypes="#//DAbstractPlaceholder">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentTBD" eType="#//DAbstractPlaceholder"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DAbstractRelatedDocument" abstract="true"
       eSuperTypes="#//DReferenceableObject">
