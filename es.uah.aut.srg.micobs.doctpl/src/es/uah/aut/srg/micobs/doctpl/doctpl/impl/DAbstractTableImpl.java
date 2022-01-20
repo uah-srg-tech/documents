@@ -11,7 +11,6 @@
 package es.uah.aut.srg.micobs.doctpl.doctpl.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -28,33 +27,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractTableImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractTableImpl#getCaption <em>Caption</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAbstractTable {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getCaption() <em>Caption</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -99,27 +77,6 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, doctplPackage.DABSTRACT_TABLE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getCaption() {
 		return caption;
 	}
@@ -144,8 +101,6 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case doctplPackage.DABSTRACT_TABLE__NAME:
-				return getName();
 			case doctplPackage.DABSTRACT_TABLE__CAPTION:
 				return getCaption();
 		}
@@ -160,9 +115,6 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case doctplPackage.DABSTRACT_TABLE__NAME:
-				setName((String)newValue);
-				return;
 			case doctplPackage.DABSTRACT_TABLE__CAPTION:
 				setCaption((String)newValue);
 				return;
@@ -178,9 +130,6 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case doctplPackage.DABSTRACT_TABLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case doctplPackage.DABSTRACT_TABLE__CAPTION:
 				setCaption(CAPTION_EDEFAULT);
 				return;
@@ -196,8 +145,6 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case doctplPackage.DABSTRACT_TABLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case doctplPackage.DABSTRACT_TABLE__CAPTION:
 				return CAPTION_EDEFAULT == null ? caption != null : !CAPTION_EDEFAULT.equals(caption);
 		}
@@ -210,45 +157,11 @@ public abstract class DAbstractTableImpl extends DBodyContentImpl implements DAb
 	 * @generated
 	 */
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == DReferenceableObject.class) {
-			switch (derivedFeatureID) {
-				case doctplPackage.DABSTRACT_TABLE__NAME: return doctplPackage.DREFERENCEABLE_OBJECT__NAME;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == DReferenceableObject.class) {
-			switch (baseFeatureID) {
-				case doctplPackage.DREFERENCEABLE_OBJECT__NAME: return doctplPackage.DABSTRACT_TABLE__NAME;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", caption: ");
+		result.append(" (caption: ");
 		result.append(caption);
 		result.append(')');
 		return result.toString();

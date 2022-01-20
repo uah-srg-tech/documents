@@ -27,7 +27,7 @@ package es.uah.aut.srg.micobs.doctpl.doctpl;
  * @model abstract="true"
  * @generated
  */
-public interface DAbstractFigure extends DBodyContent, DReferenceableObject {
+public interface DAbstractFigure extends DBodyContent {
 	/**
 	 * Returns the value of the '<em><b>Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.micobs.doctpl.doctpl;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>DBody Content</b></em>'.
@@ -30,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface DBodyContent extends EObject {
+public interface DBodyContent extends DReferenceableObject {
 
 	/**
 	 * Returns the value of the '<em><b>Alignment</b></em>' attribute.

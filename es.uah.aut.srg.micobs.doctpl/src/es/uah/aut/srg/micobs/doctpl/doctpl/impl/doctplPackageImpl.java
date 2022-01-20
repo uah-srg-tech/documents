@@ -1327,22 +1327,19 @@ public class doctplPackageImpl extends EPackageImpl implements doctplPackage {
 		dApplicableDocumentEClass.getESuperTypes().add(this.getDAbstractRelatedDocument());
 		dReferenceDocumentEClass.getESuperTypes().add(this.getDAbstractRelatedDocument());
 		dAbstractFigureEClass.getESuperTypes().add(this.getDBodyContent());
-		dAbstractFigureEClass.getESuperTypes().add(this.getDReferenceableObject());
 		dFigureFromFileEClass.getESuperTypes().add(this.getDAbstractFigure());
 		dAbstractTableEClass.getESuperTypes().add(this.getDBodyContent());
-		dAbstractTableEClass.getESuperTypes().add(this.getDReferenceableObject());
 		dTableFromFileEClass.getESuperTypes().add(this.getDAbstractTable());
 		dBasicTableEClass.getESuperTypes().add(this.getDAbstractTable());
 		dCellEClass.getESuperTypes().add(this.getDBody());
 		dFixedSectionEClass.getESuperTypes().add(this.getDAbstractSection());
 		dInstantiableSectionEClass.getESuperTypes().add(this.getDAbstractSection());
 		dInstantiableSectionEClass.getESuperTypes().add(thecommonPackage.getMCommonReferenceableObj());
+		dBodyContentEClass.getESuperTypes().add(this.getDReferenceableObject());
 		dParagraphEClass.getESuperTypes().add(this.getDBodyContent());
-		dParagraphEClass.getESuperTypes().add(this.getDReferenceableObject());
 		dRunEClass.getESuperTypes().add(this.getDParagraphContent());
 		dHyperlinkEClass.getESuperTypes().add(this.getDParagraphContent());
 		dListContentEClass.getESuperTypes().add(this.getDBodyContent());
-		dListContentEClass.getESuperTypes().add(this.getDReferenceableObject());
 		dItemizeEClass.getESuperTypes().add(this.getDListContent());
 		dEnumerateEClass.getESuperTypes().add(this.getDListContent());
 

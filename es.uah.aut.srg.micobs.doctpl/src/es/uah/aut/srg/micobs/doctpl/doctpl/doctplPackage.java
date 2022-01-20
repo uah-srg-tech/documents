@@ -687,13 +687,22 @@ public interface doctplPackage extends EPackage {
 	int DBODY_CONTENT = 18;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBODY_CONTENT__NAME = DREFERENCEABLE_OBJECT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DBODY_CONTENT__ALIGNMENT = 0;
+	int DBODY_CONTENT__ALIGNMENT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -702,7 +711,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DBODY_CONTENT__STYLE = 1;
+	int DBODY_CONTENT__STYLE = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Indent</b></em>' attribute.
@@ -711,7 +720,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DBODY_CONTENT__INDENT = 2;
+	int DBODY_CONTENT__INDENT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>DBody Content</em>' class.
@@ -720,7 +729,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DBODY_CONTENT_FEATURE_COUNT = 3;
+	int DBODY_CONTENT_FEATURE_COUNT = DREFERENCEABLE_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>DBody Content</em>' class.
@@ -729,7 +738,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DBODY_CONTENT_OPERATION_COUNT = 0;
+	int DBODY_CONTENT_OPERATION_COUNT = DREFERENCEABLE_OBJECT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.doctpl.doctpl.impl.DAbstractFigureImpl <em>DAbstract Figure</em>}' class.
@@ -740,6 +749,15 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	int DABSTRACT_FIGURE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_FIGURE__NAME = DBODY_CONTENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -769,22 +787,13 @@ public interface doctplPackage extends EPackage {
 	int DABSTRACT_FIGURE__INDENT = DBODY_CONTENT__INDENT;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DABSTRACT_FIGURE__NAME = DBODY_CONTENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_FIGURE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DABSTRACT_FIGURE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>DAbstract Figure</em>' class.
@@ -793,7 +802,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_FIGURE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
+	int DABSTRACT_FIGURE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Figure</em>' class.
@@ -813,6 +822,15 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	int DFIGURE_FROM_FILE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DFIGURE_FROM_FILE__NAME = DABSTRACT_FIGURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -840,15 +858,6 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DFIGURE_FROM_FILE__INDENT = DABSTRACT_FIGURE__INDENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DFIGURE_FROM_FILE__NAME = DABSTRACT_FIGURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -915,6 +924,15 @@ public interface doctplPackage extends EPackage {
 	int DABSTRACT_TABLE = 9;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DABSTRACT_TABLE__NAME = DBODY_CONTENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -942,22 +960,13 @@ public interface doctplPackage extends EPackage {
 	int DABSTRACT_TABLE__INDENT = DBODY_CONTENT__INDENT;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DABSTRACT_TABLE__NAME = DBODY_CONTENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_TABLE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DABSTRACT_TABLE__CAPTION = DBODY_CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>DAbstract Table</em>' class.
@@ -966,7 +975,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DABSTRACT_TABLE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
+	int DABSTRACT_TABLE_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>DAbstract Table</em>' class.
@@ -986,6 +995,15 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 */
 	int DTABLE_FROM_FILE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTABLE_FROM_FILE__NAME = DABSTRACT_TABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1013,15 +1031,6 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DTABLE_FROM_FILE__INDENT = DABSTRACT_TABLE__INDENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DTABLE_FROM_FILE__NAME = DABSTRACT_TABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -1088,6 +1097,15 @@ public interface doctplPackage extends EPackage {
 	int DBASIC_TABLE = 11;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DBASIC_TABLE__NAME = DABSTRACT_TABLE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1113,15 +1131,6 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DBASIC_TABLE__INDENT = DABSTRACT_TABLE__INDENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DBASIC_TABLE__NAME = DABSTRACT_TABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -1455,6 +1464,15 @@ public interface doctplPackage extends EPackage {
 	int DPARAGRAPH = 19;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DPARAGRAPH__NAME = DBODY_CONTENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1482,22 +1500,13 @@ public interface doctplPackage extends EPackage {
 	int DPARAGRAPH__INDENT = DBODY_CONTENT__INDENT;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DPARAGRAPH__NAME = DBODY_CONTENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Paragraph Content</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DPARAGRAPH__PARAGRAPH_CONTENT = DBODY_CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>DParagraph</em>' class.
@@ -1506,7 +1515,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
+	int DPARAGRAPH_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>DParagraph</em>' class.
@@ -1749,6 +1758,15 @@ public interface doctplPackage extends EPackage {
 	int DLIST_CONTENT = 26;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DLIST_CONTENT__NAME = DBODY_CONTENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1776,22 +1794,13 @@ public interface doctplPackage extends EPackage {
 	int DLIST_CONTENT__INDENT = DBODY_CONTENT__INDENT;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DLIST_CONTENT__NAME = DBODY_CONTENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DLIST_CONTENT__ITEMS = DBODY_CONTENT_FEATURE_COUNT + 1;
+	int DLIST_CONTENT__ITEMS = DBODY_CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>DList Content</em>' class.
@@ -1800,7 +1809,7 @@ public interface doctplPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DLIST_CONTENT_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 2;
+	int DLIST_CONTENT_FEATURE_COUNT = DBODY_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>DList Content</em>' class.
@@ -1868,6 +1877,15 @@ public interface doctplPackage extends EPackage {
 	int DITEMIZE = 28;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DITEMIZE__NAME = DLIST_CONTENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1893,15 +1911,6 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DITEMIZE__INDENT = DLIST_CONTENT__INDENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DITEMIZE__NAME = DLIST_CONTENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -1941,6 +1950,15 @@ public interface doctplPackage extends EPackage {
 	int DENUMERATE = 29;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUMERATE__NAME = DLIST_CONTENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1966,15 +1984,6 @@ public interface doctplPackage extends EPackage {
 	 * @ordered
 	 */
 	int DENUMERATE__INDENT = DLIST_CONTENT__INDENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DENUMERATE__NAME = DLIST_CONTENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.

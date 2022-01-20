@@ -214,6 +214,7 @@ public class doctplSwitch<T> extends Switch<T> {
 			case doctplPackage.DBODY_CONTENT: {
 				DBodyContent dBodyContent = (DBodyContent)theEObject;
 				T result = caseDBodyContent(dBodyContent);
+				if (result == null) result = caseDReferenceableObject(dBodyContent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
